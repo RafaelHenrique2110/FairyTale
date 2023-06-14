@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -26,6 +28,9 @@ public class GameController : MonoBehaviour
     [SerializeField] Text txt_titulo_quest;
     [SerializeField] float sensibilidadeMouse = 0;
     [SerializeField]ListaCanvas canvas;
+    [SerializeField] int moedas;
+    [SerializeField] TMP_Text txt_moedas;
+    [SerializeField] GameObject painel_gameOver;
     List<MinionsDistancia> Observadores;
     public VarPoderesPlayer poderes_player;
     public VarCombatePlayer combates_player;
@@ -33,6 +38,7 @@ public class GameController : MonoBehaviour
     Definicao_Quest defirQuest;
     [SerializeField] GameObject Portal;
     public Assistente assistente;
+
 
     private void Start()
     {
@@ -258,6 +264,19 @@ public class GameController : MonoBehaviour
         {
             canvas.GetBoestoes()[i].DefinirBotaoHabilidades();
         }
+    }
+    public void ADDMoedas(int quantidades)
+    {
+        moedas += quantidades;
+        txt_moedas.text = moedas.ToString();
+    }
+    public void CarrgarCena(string nomeCena)
+    {
+        SceneManager.LoadScene(nomeCena);
+    }
+    public void GameOver()
+    {
+        painel_gameOver.SetActive(true);
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

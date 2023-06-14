@@ -69,6 +69,10 @@ public class Botoes : MonoBehaviour
       
 
     }
+    public void CarrgarCena(string nomeCena)
+    {
+        GameController.instance.CarrgarCena(nomeCena);
+    }
 
 
 }
