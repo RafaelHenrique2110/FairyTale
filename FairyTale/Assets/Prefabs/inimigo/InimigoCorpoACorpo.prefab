@@ -605,7 +605,6 @@ MonoBehaviour:
   anin: {fileID: 5313064119586494784}
   inventario:
   - {fileID: 3071626378376455667, guid: 0191adfe3cc98b14f958bafe56982271, type: 3}
-  - {fileID: 3071626378376455667, guid: 0191adfe3cc98b14f958bafe56982271, type: 3}
 --- !u!1 &5313064120466916475
 GameObject:
   m_ObjectHideFlags: 0

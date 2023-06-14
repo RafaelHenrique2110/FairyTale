@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Espada
+  - terminaFase
+  - Chapeleiro
+  - mudar_Combate
+  - "munic\xE3o"
+  - mao_inimigo
+  - moedas
   layers:
   - Default
   - TransparentFX

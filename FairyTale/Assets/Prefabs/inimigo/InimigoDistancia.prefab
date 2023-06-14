@@ -259,7 +259,6 @@ MonoBehaviour:
   anin: {fileID: 2552859669698573606}
   inventario:
   - {fileID: 3071626378376455667, guid: 0191adfe3cc98b14f958bafe56982271, type: 3}
-  - {fileID: 3071626378376455667, guid: 0191adfe3cc98b14f958bafe56982271, type: 3}
 --- !u!95 &2552859669698573606
 Animator:
   serializedVersion: 4

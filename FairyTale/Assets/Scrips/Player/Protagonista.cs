@@ -128,7 +128,18 @@ public class Protagonista : MonoBehaviour
         if (other.CompareTag("mao_inimigo"))
         {
            protagonista.TomarDano(1f, this.gameObject);
+            if (protagonista.Vida <= 0)
+            {
+                GameController.instance.GameOver();
+            }
         }
+        if (other.CompareTag("moedas"))
+        {
+            GameController.instance.ADDMoedas(1);
+            Destroy(other.gameObject);
+        }
+
+
     }
     private void OnTriggerStay(Collider other)
     {
