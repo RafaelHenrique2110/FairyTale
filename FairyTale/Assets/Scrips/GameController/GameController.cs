@@ -39,6 +39,10 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject Portal;
     public Assistente assistente;
 
+    public TMP_Text txtSlot1;
+    public TMP_Text txtSlot2;
+    [SerializeField] Image slot1;
+    [SerializeField] Image slot2;
 
     private void Start()
     {
@@ -277,6 +281,16 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
+    }
+    public void AtualizarSlot(string slot1, string slot2)
+    {
+        txtSlot1.text = slot1;
+        txtSlot2.text = slot2;
+    }
+    public void SelecionarSlot(Color Corslota1, Color Corsloat2)
+    {
+        slot1.color = Corslota1;
+        slot2.color = Corsloat2;
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

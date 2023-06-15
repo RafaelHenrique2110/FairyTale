@@ -16,5 +16,7 @@ public class VarMovimentacaoPlayer : MonoBehaviour
         movimentacoes[3] = new Definocao_movimentacaoPlayer(new Dash());
         movimentacoes[4] = new Definocao_movimentacaoPlayer(new Sem_Dash());
         movimentacoes[5] = new Definocao_movimentacaoPlayer(new Correr2());
+
+        
     }
 }
