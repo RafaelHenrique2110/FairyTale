@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
     public TMP_Text txtSlot2;
     [SerializeField] Image slot1;
     [SerializeField] Image slot2;
+    [SerializeField] GameObject hud;
 
     private void Start()
     {
@@ -65,7 +66,7 @@ public class GameController : MonoBehaviour
        
     }
     
-    //////FUNÇOES Player///////
+    //////FUNï¿½OES Player///////
     public void AtualizarTimePoder(int n)
     {
         txt_timePoder.text = "" + n;
@@ -141,7 +142,7 @@ public class GameController : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //////FUNÇOES Mouse /////////
+    //////FUNï¿½OES Mouse /////////
 
     float mouse = 0;
     public void RotacaoMouse(Transform rotate)
@@ -152,7 +153,7 @@ public class GameController : MonoBehaviour
    
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //////FUNÇOES GLOBAIS///////
+    //////FUNï¿½OES GLOBAIS///////
     public void MoverProjetil(Transform dir, float speed)
     {
 
@@ -291,6 +292,12 @@ public class GameController : MonoBehaviour
     {
         slot1.color = Corslota1;
         slot2.color = Corsloat2;
+    }
+    public void AbilitarHud(){
+        hud.gameObject.SetActive(true);
+    }
+   public void AtivarPlayer(bool definir){
+          player.GetComponent<Protagonista>().Ativar(definir);
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

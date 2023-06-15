@@ -23,7 +23,7 @@ public class Protagonista : MonoBehaviour
     [SerializeField] VarMovimentacaoPlayer movimentacoes;
     [SerializeField] GameObject[] arma;
     Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
-   
+     [SerializeField] bool ativado;
     private void Start()
     {
         protagonista.AplicarPoder(poderes);
@@ -40,6 +40,7 @@ public class Protagonista : MonoBehaviour
     bool ativarAtaque=true;
     private void Update()
     {
+        if( ativado){
         DetectarInimigoProximo();
         if (Input.GetKeyDown("1"))
         {
@@ -83,6 +84,7 @@ public class Protagonista : MonoBehaviour
 
         protagonista.UsarPoder(arma, anim);
         transform.position = protagonista.Move(transform, speed, anim);
+        }
     }
     void DetectarInimigoProximo()
     {
@@ -105,6 +107,9 @@ public class Protagonista : MonoBehaviour
         ativarAtaque = true;
 
     }
+    public void Ativar(bool definir){
+        ativado= definir;
+    }
     float tempoResetCombo = 1f;
     void ResetarCombo()
     {
@@ -122,7 +127,7 @@ public class Protagonista : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.CompareTag("munic„o"))
+        if (other.CompareTag("munic√£o"))
         {
             protagonista.TomarDano(1f, this.gameObject);
             Destroy(other.gameObject);
