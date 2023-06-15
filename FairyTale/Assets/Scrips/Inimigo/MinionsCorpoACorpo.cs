@@ -79,6 +79,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             Instantiate(inventario[i].gameObject, transform.position, transform.rotation);
         }
     }
+    
     public Inimigo Minion { get { return minion; } }
 
 }
