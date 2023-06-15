@@ -45,11 +45,13 @@ public class Protagonista : MonoBehaviour
         {
             itemSelecionado = 1;
            protagonista.CombateCorpoACorpo();
+            GameController.instance.SelecionarSlot(Color.green, (Color.white));
         }
         if (Input.GetKeyDown("2"))
         {
             itemSelecionado = 2;
             protagonista.CombateDistancia();
+            GameController.instance.SelecionarSlot(Color.white, (Color.green));
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))

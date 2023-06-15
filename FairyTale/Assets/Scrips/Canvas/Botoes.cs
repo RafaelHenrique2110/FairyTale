@@ -24,7 +24,7 @@ public class Botoes : MonoBehaviour
         {
             GameController.instance.AumentarVidaPlayer(25);
         }
-       
+      
        
     }
     public void TrocarPoderPlayer()
@@ -33,12 +33,15 @@ public class Botoes : MonoBehaviour
         GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
         AtualizarBotaoHabilidades();
         FecharPainel();
+
     }
     public void TrocarCombatePlayer()
     {
         GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
         AtualizarBotaoHabilidades();
         FecharPainel();
+        GameController.instance.AtualizarSlot("Ataque","Disparo");
+
     }
     public void TrocarDash()
     {
