@@ -18,6 +18,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
     Inimigo minion = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
     void Start()
     {
+        
         GameController.instance.assistente.AdicionarObservador(this);
 
         minion.Patrulhar();
