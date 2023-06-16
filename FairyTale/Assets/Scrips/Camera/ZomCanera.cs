@@ -27,6 +27,7 @@ public class ZomCanera : MonoBehaviour
         {
             GameController.instance.AbilitarHud();
              GameController.instance.AtivarPlayer(true);
+             
             return;
         }
 

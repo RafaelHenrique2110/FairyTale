@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04111825, g: 0.07249487, b: 0.12565583, a: 1}
+  m_IndirectSpecularColor: {r: 0.041117735, g: 0.07249477, b: 0.12565547, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1466,6 +1466,7 @@ MonoBehaviour:
   arma:
   - {fileID: 907568463}
   - {fileID: 1896276651}
+  ativado: 0
 --- !u!114 &78144198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7814,7 +7815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &414240659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16043,7 +16044,7 @@ Transform:
   - {fileID: 409984635}
   - {fileID: 377259677}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955483970
 GameObject:
@@ -19421,7 +19422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182858395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -427.5, z: 102.3}
+  m_LocalPosition: {x: -4, y: -427.5, z: 100}
   m_LocalScale: {x: 277.20016, y: 40.616, z: 29.700449}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20948,7 +20949,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5.3
+  orthographic size: 117.08
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -23343,6 +23344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458790138}
   - component: {fileID: 1458790137}
+  - component: {fileID: 1458790139}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -23372,7 +23374,7 @@ MonoBehaviour:
   m_Follow: {fileID: 78144194}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 5.3
+    OrthographicSize: 117.08
     NearClipPlane: -17.25
     FarClipPlane: 5000
     Dutch: 0
@@ -23404,6 +23406,20 @@ Transform:
   m_Father: {fileID: 953178149}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 30.646, y: 0.371, z: 0}
+--- !u!114 &1458790139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458790136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805514db25a94d14c94bc3a49fb95f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decreaseTime: 7
+  targetOrthoSize: 5.3
 --- !u!1001 &1459590482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28289,6 +28305,7 @@ MonoBehaviour:
   txtSlot2: {fileID: 1632678042}
   slot1: {fileID: 1113801377}
   slot2: {fileID: 1665559420}
+  hud: {fileID: 414240658}
 --- !u!1001 &1773495333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34648,7 +34665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8453978700772942553, guid: af5a8d39add67294a933e357071aa2cf, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8453978700772942553, guid: af5a8d39add67294a933e357071aa2cf, type: 3}
       propertyPath: m_LocalPosition.x
