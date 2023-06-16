@@ -249,10 +249,10 @@ MonoBehaviour:
   - {fileID: 2552859670244741556}
   - {fileID: 2552859670546196509}
   target:
-  - {fileID: 921128097899779210, guid: aa362d4e11d36134787e89fa89f8bb40, type: 3}
-  - {fileID: 6390844683448494385, guid: d9091f123955fa74daa7285baecae71d, type: 3}
-  - {fileID: 551248785419448006, guid: 5063a61f661194b499f54eec48964452, type: 3}
-  Posicionamento: {fileID: 390078948549243812, guid: cae79744f5338b64fa8e73f3a694b2e5, type: 3}
+  - {fileID: 5727706414364792476, guid: d9091f123955fa74daa7285baecae71d, type: 3}
+  - {fileID: 6894820418775738495, guid: 5063a61f661194b499f54eec48964452, type: 3}
+  - {fileID: 2329171074395350619, guid: 89122213c7496a045b95d8ab4603face, type: 3}
+  Posicionamento: {fileID: 7813866897436221320, guid: cae79744f5338b64fa8e73f3a694b2e5, type: 3}
   sprite_vida: {fileID: 7911356994341217438}
   arma: {fileID: 2552859670780409969}
   r: {fileID: 2552859669698573600}
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6362984980706211215
