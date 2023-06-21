@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657737, g: 0.49641407, b: 0.57481873, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657773, g: 0.4964143, b: 0.5748195, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2716,7 +2716,7 @@ MonoBehaviour:
   txtSlot2: {fileID: 0}
   slot1: {fileID: 0}
   slot2: {fileID: 0}
-  hud: {fileID: 0}
+  hud: {fileID: 1731817953}
 --- !u!4 &230357203
 Transform:
   m_ObjectHideFlags: 0
@@ -8137,6 +8137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671085641}
   - component: {fileID: 671085640}
+  - component: {fileID: 671085642}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -8166,7 +8167,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1003948204}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 5.03
+    OrthographicSize: 52.12
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -8198,6 +8199,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671085642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671085639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805514db25a94d14c94bc3a49fb95f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decreaseTime: 5
+  targetOrthoSize: 5
 --- !u!1 &676898621
 GameObject:
   m_ObjectHideFlags: 0
@@ -22983,7 +22998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1731817954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27403,7 +27418,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5.03
+  orthographic size: 52.12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
