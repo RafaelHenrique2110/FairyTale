@@ -130,11 +130,14 @@ public class Protagonista : MonoBehaviour
         if (other.CompareTag("municão"))
         {
             protagonista.TomarDano(1f, this.gameObject);
+            GameController.instance.Save();
+
             Destroy(other.gameObject);
         }
         if (other.CompareTag("mao_inimigo"))
         {
-           protagonista.TomarDano(1f, this.gameObject);
+            GameController.instance.Save();
+            protagonista.TomarDano(1f, this.gameObject);
             if (protagonista.Vida <= 0)
             {
                 GameController.instance.GameOver();

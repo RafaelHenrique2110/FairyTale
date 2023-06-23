@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameController : MonoBehaviour
 {
@@ -44,16 +45,18 @@ public class GameController : MonoBehaviour
     [SerializeField] Image slot1;
     [SerializeField] Image slot2;
     [SerializeField] GameObject hud;
-
+    [SerializeField] GameObject ObjInfoGame;
+     
     private void Start()
     {
         assistente = new Assistente();
         instance = this;
-        AtualizarVidaPlayer(Player.Vida);
+
         AdiquirirPoderesPlayer();
         AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
         AplicarQuest(new Definicao_Quest(new Quest1()));
+         DefinirProgresso();
 
     }
     private void Update()
@@ -87,8 +90,11 @@ public class GameController : MonoBehaviour
 
     public void AumentarVidaPlayer(float atribuicao)
     {
-        Player.AumentaVida(atribuicao);
+        Player.AumentaMaximoVida(atribuicao);
+        Save();
+       
     }
+    
     public void TrocarPoderPlayer(Definicao_Poder_Player poder)
     {
        Player.DefinirPoder(poder);
@@ -118,6 +124,7 @@ public class GameController : MonoBehaviour
     {
         Player.DefinirDash(dash);
     }
+   
 
     public bool CombateCorpoPlayer()
     {
@@ -298,6 +305,23 @@ public class GameController : MonoBehaviour
     }
    public void AtivarPlayer(bool definir){
           player.GetComponent<Protagonista>().Ativar(definir);
+   }
+   public void DefinirProgresso()
+    {
+        ObjInfoGame = GameObject.Find("InfoGame");
+        InfoGame infoGame= ObjInfoGame.GetComponent<InfoGame>();
+        //player.GetOrAddComponent<Protagonista>().Player.DefinirMaximoVida(infoGame.limiteVidaPlayer);
+        Player.AtualizarPlayer(infoGame.GetPlayerAtualizado());
+
+   }
+    public void AtualizarGame()
+    {
+        DefinirProgresso();
+        AtualizarVidaPlayer(Player.Vida);
+    }
+    public void Save()
+    {
+        ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

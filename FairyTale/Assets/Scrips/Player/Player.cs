@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     VarMovimentacaoPlayer movimentacoes;
     Definicao_Poder_Player definir_poder;
     Definicao_Poder_Player sem_poder = new Definicao_Poder_Player(new Sem_Poder());
+ 
    
     public Player(float limiteVida, float limiteForca, float limiteEscudo, float limiteEstamina, float limiteTimePoder)
     {
@@ -30,9 +32,15 @@ public class Player : MonoBehaviour
         this.limiteEstamina = limiteEstamina;
         this.limiteTimePoder = limiteTimePoder;
         this.limiteVida = limiteVida;
+       
      
     }
-   
+    public  void AtualizarPlayer(Player playerAtualizado)
+    {
+        DefinirMaximoVida(playerAtualizado.LimmiteVida);
+        DefinirVida(playerAtualizado.vida);
+        definir_combate_distancia = playerAtualizado.DefiniCombateDistancia;
+    }
 
     public void Esperar()
     {
@@ -87,12 +95,24 @@ public class Player : MonoBehaviour
         vida = GameController.instance.Somar(vida,n);
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
     }
-    public void AumentaVida(float atribuicao)
+    public void AumentaMaximoVida(float atribuicao)
     {
         limiteVida = GameController.instance.Somar(limiteVida,atribuicao);
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
         Debug.Log(limiteVida);
     }
+    public void DefinirMaximoVida(float atribuicao)
+    {
+        limiteVida = atribuicao;
+        GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
+      
+    }
+     void DefinirVida(float atribuicao)
+    {
+        this.vida = atribuicao;
+        GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
+    }
+
     public void AumentaEscudo(float atribuicao)
     {
         escudo = GameController.instance.Somar(escudo, atribuicao);
@@ -217,7 +237,7 @@ public class Player : MonoBehaviour
     }
     public Vector3 Move(Transform dir, float speed, Animator anin)
     {
-       
+        Debug.Log("limite" + limiteVida);
         if (Input.GetKey(KeyCode.W))
         {
             dir.rotation = Quaternion.Euler(0, 0, 0);
@@ -254,6 +274,7 @@ public class Player : MonoBehaviour
         return dir.position;
     }
     public DefinicaoCombate DefiniCombate { get { return definir_combate; } }
+    public DefinicaoCombate DefiniCombateDistancia { get { return definir_combate_distancia; } }
     public Definicao_Poder_Player Definir_Poder { get { return definir_poder; } }
     public float Vida { get { return vida; } }
     public float LimmiteVida { get { return limiteVida; } }
