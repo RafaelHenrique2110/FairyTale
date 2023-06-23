@@ -37,9 +37,12 @@ public class Player : MonoBehaviour
     }
     public  void AtualizarPlayer(Player playerAtualizado)
     {
+        
+       // GameController.instance.DefinirPlayer(playerAtualizado);
         DefinirMaximoVida(playerAtualizado.LimmiteVida);
         DefinirVida(playerAtualizado.vida);
-        definir_combate_distancia = playerAtualizado.DefiniCombateDistancia;
+       definir_combate_distancia = playerAtualizado.DefiniCombateDistancia;
+        definir_poder = playerAtualizado.DefiniPoder;
     }
 
     public void Esperar()
@@ -80,7 +83,7 @@ public class Player : MonoBehaviour
             GameController.instance.AtualizarEstaminaPlayer(estamina / limiteEstamina);
         }
     }
-    public  void TomarDano(float dano,GameObject obj)
+    public  void TomarDano(float dano)
     {
         
         if (vida > 0)
@@ -98,6 +101,7 @@ public class Player : MonoBehaviour
     public void AumentaMaximoVida(float atribuicao)
     {
         limiteVida = GameController.instance.Somar(limiteVida,atribuicao);
+        vida = limiteVida;
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
         Debug.Log(limiteVida);
     }
@@ -274,6 +278,7 @@ public class Player : MonoBehaviour
         return dir.position;
     }
     public DefinicaoCombate DefiniCombate { get { return definir_combate; } }
+    public Definicao_Poder_Player DefiniPoder { get { return definir_poder; } }
     public DefinicaoCombate DefiniCombateDistancia { get { return definir_combate_distancia; } }
     public Definicao_Poder_Player Definir_Poder { get { return definir_poder; } }
     public float Vida { get { return vida; } }

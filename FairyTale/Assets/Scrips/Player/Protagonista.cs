@@ -33,6 +33,7 @@ public class Protagonista : MonoBehaviour
         protagonista.CombateCorpoACorpo();
         protagonista.DesabilitarPoder();
         protagonista.DesabilitarCombateDistancia();
+       
        // protagonista.DesabilitarDash();
         // protagonista.AbilitarMovimentacao();
     }
@@ -124,12 +125,16 @@ public class Protagonista : MonoBehaviour
 
 
     }
+   public void AtualizarConfigPlayer(Player player)
+    {
+        protagonista = player;
+    }
     private void OnTriggerEnter(Collider other)
     {
         
         if (other.CompareTag("municão"))
         {
-            protagonista.TomarDano(1f, this.gameObject);
+            protagonista.TomarDano(1f);
             GameController.instance.Save();
 
             Destroy(other.gameObject);
@@ -137,7 +142,7 @@ public class Protagonista : MonoBehaviour
         if (other.CompareTag("mao_inimigo"))
         {
             GameController.instance.Save();
-            protagonista.TomarDano(1f, this.gameObject);
+            protagonista.TomarDano(1f);
             if (protagonista.Vida <= 0)
             {
                 GameController.instance.GameOver();
@@ -164,6 +169,7 @@ public class Protagonista : MonoBehaviour
 
         }
     }
+    
     public Player Player { get { return protagonista; } }
    
 

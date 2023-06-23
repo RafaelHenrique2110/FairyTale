@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -124,8 +125,10 @@ public class GameController : MonoBehaviour
     {
         Player.DefinirDash(dash);
     }
-   
-
+   public void DefinirPlayer(Player novaConfig)
+    {
+       player.GetComponent<Protagonista>().AtualizarConfigPlayer(novaConfig);
+    }
     public bool CombateCorpoPlayer()
     {
 
@@ -289,6 +292,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
+
     }
     public void AtualizarSlot(string slot1, string slot2)
     {
@@ -314,11 +318,6 @@ public class GameController : MonoBehaviour
         Player.AtualizarPlayer(infoGame.GetPlayerAtualizado());
 
    }
-    public void AtualizarGame()
-    {
-        DefinirProgresso();
-        AtualizarVidaPlayer(Player.Vida);
-    }
     public void Save()
     {
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
