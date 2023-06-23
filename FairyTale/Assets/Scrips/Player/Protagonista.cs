@@ -58,6 +58,7 @@ public class Protagonista : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+                MirarRotate();
             Debug.Log(resetarCombo);
             if (combo > 0&& ativarAtaque)
             {
@@ -128,6 +129,22 @@ public class Protagonista : MonoBehaviour
    public void AtualizarConfigPlayer(Player player)
     {
         protagonista = player;
+    }
+    void MirarRotate()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit)) // Verifica se o raio atingiu um objeto
+        {
+            Vector3 targetDirection = hit.point - transform.position;
+            targetDirection.y = 0; // Mantém o vetor no plano horizontal
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+
+            // Rotaciona suavemente o jogador para a nova rotação
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 400f);
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {

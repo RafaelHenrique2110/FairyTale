@@ -283,7 +283,17 @@ public class GameController : MonoBehaviour
     public void ADDMoedas(int quantidades)
     {
         moedas += quantidades;
-        txt_moedas.text = moedas.ToString();
+        AtualizarMoedas();
+    }
+    public void GastarMoedas(int valor)
+    {
+        moedas -= valor;
+        AtualizarMoedas();
+    } 
+    public void AtualizarMoedas()
+    {
+       txt_moedas.text = moedas.ToString();
+        
     }
     public void CarrgarCena(string nomeCena)
     {
@@ -321,6 +331,10 @@ public class GameController : MonoBehaviour
     public void Save()
     {
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
+    }
+    public int GetMoedas()
+    {
+        return moedas;
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }

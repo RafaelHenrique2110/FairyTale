@@ -6,6 +6,7 @@ using UnityEngine;
 public class AbilidadePlayerScriptObject : ScriptableObject
 { 
    public int indexPoder;
-   public string nomePoder;
+   public Sprite nomePoder;
+   public string descricao;
 
 }
