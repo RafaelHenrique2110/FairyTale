@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class Barras : MonoBehaviour
 {
-    [SerializeField]float nivelVida;
+    [SerializeField] float nivelVida; 
     [SerializeField] float limiteNivelVida;
     [SerializeField] Text txt_nivel_vida_playe;
     [SerializeField] Image barra_nivel_vida_playe;
+    public float NivelVida { get { return nivelVida; } }
     private void Start()
     {
         AtualizarNivelBarraVida(nivelVida);
@@ -21,6 +22,10 @@ public class Barras : MonoBehaviour
             nivelVida++;
             AtualizarNivelBarraVida(nivelVida);
         }
+    }
+   void Atualizar(Barras barra)
+    {
+        this.nivelVida = barra.Nivelvida;
     }
     void AtualizarNivelBarraVida(float nivel)
     {

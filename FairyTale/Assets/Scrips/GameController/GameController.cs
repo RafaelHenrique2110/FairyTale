@@ -325,6 +325,12 @@ public class GameController : MonoBehaviour
    public void AtivarPlayer(bool definir){
           player.GetComponent<Protagonista>().Ativar(definir);
    }
+    void AtualizarLoja(Barras barra)
+    {
+
+        hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
+
+    }
    public void DefinirProgresso()
     {
         ObjInfoGame = GameObject.Find("InfoGame");
