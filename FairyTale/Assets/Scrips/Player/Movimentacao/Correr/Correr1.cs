@@ -10,7 +10,7 @@ public class Correr1 : MonoBehaviour, I_movimentacaoPlayer
     {
         anin.SetBool("Correr", true);
         anin.SetBool("Andar", false);
-        speed = 10;
+        speed = 5;
         Debug.Log("Correr_Player");
         Mover_Player mover = new Mover_Player(dir, speed, anin);
         dir.position = mover.MoverPlayer();

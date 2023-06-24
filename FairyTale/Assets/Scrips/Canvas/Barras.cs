@@ -10,7 +10,6 @@ public class Barras : MonoBehaviour
     [SerializeField] float limiteNivelVida;
     [SerializeField] Text txt_nivel_vida_playe;
     [SerializeField] Image barra_nivel_vida_playe;
-    public float NivelVida { get { return nivelVida; } }
     private void Start()
     {
         AtualizarNivelBarraVida(nivelVida);
@@ -21,11 +20,13 @@ public class Barras : MonoBehaviour
         {
             nivelVida++;
             AtualizarNivelBarraVida(nivelVida);
+            GameController.instance.Save();
         }
     }
-   void Atualizar(Barras barra)
+   public void Atualizar(float barra)
     {
-        this.nivelVida = barra.Nivelvida;
+        this.nivelVida = barra;
+        AtualizarNivelBarraVida(nivelVida);
     }
     void AtualizarNivelBarraVida(float nivel)
     {

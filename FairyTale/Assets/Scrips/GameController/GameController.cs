@@ -328,7 +328,7 @@ public class GameController : MonoBehaviour
     void AtualizarLoja(Barras barra)
     {
 
-        hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
+      ///  hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
 
     }
    public void DefinirProgresso()
@@ -338,13 +338,14 @@ public class GameController : MonoBehaviour
         //player.GetOrAddComponent<Protagonista>().Player.DefinirMaximoVida(infoGame.limiteVidaPlayer);
         Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
         AtualizarMoedas(infoGame.GetMoedasSalvas());
+        hud.GetComponent<Barras>().Atualizar(infoGame.GetLojaSalva());
 
    }
     public void Save()
     {
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
         ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
-        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>());
+        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
     }
     public int GetMoedas()
     {

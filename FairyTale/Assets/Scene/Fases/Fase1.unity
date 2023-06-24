@@ -6832,6 +6832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: {fileID: 1792239044}
   descricao: {fileID: 508349985}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis:
   - {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   - {fileID: 11400000, guid: 7b9833351dbff4e46b0febe62568abaa, type: 2}
@@ -13515,7 +13516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132c1239d65d8404dac6756844821ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scena: Fase1
+  scena: SafeRoom
 --- !u!1 &704161843
 GameObject:
   m_ObjectHideFlags: 0
@@ -14117,6 +14118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: {fileID: 0}
   descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis:
   - {fileID: 11400000, guid: 1a199b6bffe263e40b2594117aca1aa8, type: 2}
   - {fileID: 11400000, guid: b8cd3040544ec174f98d25f4fa21fb78, type: 2}
@@ -16714,6 +16716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: {fileID: 0}
   descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis: []
   so: {fileID: 0}
   painel: {fileID: 0}
@@ -20042,6 +20045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: {fileID: 573667442}
   descricao: {fileID: 194896034}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis:
   - {fileID: 11400000, guid: 0cd2efc79b75cd044ba4d62afc182011, type: 2}
   - {fileID: 11400000, guid: 8e655331eccf45a42b9eba57775656f7, type: 2}
@@ -22358,7 +22362,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287248523}
-  m_LocalRotation: {x: 0.42452565, y: 0.0010194934, z: -0.000478014, w: 0.90541524}
+  m_LocalRotation: {x: 0.42452565, y: 0.0010194624, z: -0.00047799936, w: 0.90541524}
   m_LocalPosition: {x: -806.33997, y: 347.8, z: -635.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24996,7 +25000,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458790136}
-  m_LocalRotation: {x: 0.42452565, y: 0.0010194934, z: -0.000478014, w: 0.90541524}
+  m_LocalRotation: {x: 0.42452565, y: 0.0010194624, z: -0.00047799936, w: 0.90541524}
   m_LocalPosition: {x: -806.33997, y: 347.8, z: -635.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33668,6 +33672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: {fileID: 0}
   descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis: []
   so: {fileID: 0}
   painel: {fileID: 1107408414}
