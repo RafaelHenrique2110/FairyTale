@@ -169,6 +169,7 @@ public class Protagonista : MonoBehaviour
         {
             GameController.instance.ADDMoedas(1);
             Destroy(other.gameObject);
+            GameController.instance.Save();
         }
 
 

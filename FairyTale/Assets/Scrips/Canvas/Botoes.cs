@@ -32,12 +32,18 @@ public class Botoes : MonoBehaviour
                 barra_nivel.AumentarNivelBarraVida();
                 GameController.instance.GastarMoedas(preco);
                 preco = preco * 2;
-                Debug.Log("preço"+preco);
+                AtualizarPrecoCompraNivelVida(preco);
+                GameController.instance.Save();
+              
             }
            
         }
       
        
+    }
+     void AtualizarPrecoCompraNivelVida(int n)
+    {
+        precoNivelBarra.text = n.ToString()+".00 R$";
     }
     public void TrocarPoderPlayer()
     {

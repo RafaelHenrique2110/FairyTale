@@ -283,17 +283,22 @@ public class GameController : MonoBehaviour
     public void ADDMoedas(int quantidades)
     {
         moedas += quantidades;
-        AtualizarMoedas();
+        AtualizarHudMoedas();
     }
     public void GastarMoedas(int valor)
     {
         moedas -= valor;
-        AtualizarMoedas();
+        AtualizarHudMoedas();
     } 
-    public void AtualizarMoedas()
+    public void AtualizarHudMoedas()
     {
        txt_moedas.text = moedas.ToString();
         
+    }
+    public void AtualizarMoedas(int moedaSalva)
+    {
+        moedas = moedaSalva;
+        GameController.instance.AtualizarHudMoedas();
     }
     public void CarrgarCena(string nomeCena)
     {
@@ -325,12 +330,15 @@ public class GameController : MonoBehaviour
         ObjInfoGame = GameObject.Find("InfoGame");
         InfoGame infoGame= ObjInfoGame.GetComponent<InfoGame>();
         //player.GetOrAddComponent<Protagonista>().Player.DefinirMaximoVida(infoGame.limiteVidaPlayer);
-        Player.AtualizarPlayer(infoGame.GetPlayerAtualizado());
+        Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
+        AtualizarMoedas(infoGame.GetMoedasSalvas());
 
    }
     public void Save()
     {
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
+        ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
+        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>());
     }
     public int GetMoedas()
     {
