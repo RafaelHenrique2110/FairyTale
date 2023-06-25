@@ -331,7 +331,12 @@ public class GameController : MonoBehaviour
       ///  hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
 
     }
-   public void DefinirProgresso()
+    public void AtualizarMelhoriaHabilidades(int indexMeloriaGerreiro, int indexMeloriaDistancia)
+    {
+        canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaGerreiro);
+        canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaDistancia);
+    }
+    public void DefinirProgresso()
     {
         ObjInfoGame = GameObject.Find("InfoGame");
         InfoGame infoGame= ObjInfoGame.GetComponent<InfoGame>();
@@ -340,12 +345,15 @@ public class GameController : MonoBehaviour
         AtualizarMoedas(infoGame.GetMoedasSalvas());
         hud.GetComponent<Barras>().Atualizar(infoGame.GetLojaSalva());
 
+        AtualizarMelhoriaHabilidades(infoGame.GetNivelAprimoramentosGerreiro(), infoGame.GetNivelAprimoramentosDistamcia());
+
    }
     public void Save()
     {
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
         ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
         ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+        ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
     }
     public int GetMoedas()
     {

@@ -13,7 +13,7 @@ public class Botoes : MonoBehaviour
     int indexHabilidade;
     [SerializeField] List<AbilidadePlayerScriptObject> habilidadesDisponiveis;
     [SerializeField] AbilidadePlayerScriptObject so;
-    int indexLita=0;
+    public int indexLita=0;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
 
@@ -79,9 +79,16 @@ public class Botoes : MonoBehaviour
         {
             indexLita++;
             so = habilidadesDisponiveis[indexLita];
+            GameController.instance.Save();
         }
        
 
+    }
+    public void AtualizarIndexMelhoriaHabilidades(int indexLista)
+    {
+        this.indexLita= indexLista;
+        so = habilidadesDisponiveis[indexLita];
+       DefinirBotaoHabilidades();
     }
     public void DefinirBotaoHabilidades()
     {
@@ -94,6 +101,10 @@ public class Botoes : MonoBehaviour
     public void CarrgarCena(string nomeCena)
     {
         GameController.instance.CarrgarCena(nomeCena);
+    }
+    public int GetIndexBotao()
+    {
+        return indexLita;
     }
 
 

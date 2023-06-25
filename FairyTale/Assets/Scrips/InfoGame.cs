@@ -7,6 +7,8 @@ public class InfoGame : MonoBehaviour
    Player player;
    [SerializeField] int moedas;
     [SerializeField]  float barrasMelhoriasPlayer;
+    [SerializeField] int nivelBotaoDistancia;
+    [SerializeField] int nivelBotaoGuerreiro;
     private static InfoGame instance;
 
     private void Awake()
@@ -43,7 +45,12 @@ public class InfoGame : MonoBehaviour
     {
         this.barrasMelhoriasPlayer = barrasMelhoriasPlayer;
     }
-   public  Player GetPlayerSalvo()
+    public void SaveNivelAprimoramentos(int botaoGuerreiro, int botaoDistancia)
+    {
+        this.nivelBotaoDistancia = botaoDistancia;
+        this.nivelBotaoGuerreiro = botaoGuerreiro;
+    }
+    public  Player GetPlayerSalvo()
     {
         return player;
     }
@@ -51,6 +58,15 @@ public class InfoGame : MonoBehaviour
     {
         return moedas;
     }
+    public int GetNivelAprimoramentosGerreiro()
+    {
+        return nivelBotaoGuerreiro;
+    }
+    public int GetNivelAprimoramentosDistamcia()
+    {
+        return nivelBotaoDistancia;
+    }
+
     public float GetLojaSalva()
     {
         return barrasMelhoriasPlayer;

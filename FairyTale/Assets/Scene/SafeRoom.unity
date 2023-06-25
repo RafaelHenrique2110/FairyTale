@@ -4424,6 +4424,8 @@ MonoBehaviour:
   limiteVidaPlayer: 100
   moedas: 10
   barrasMelhoriasPlayer: 0
+  nivelBotaoDistancia: 0
+  nivelBotaoGuerreiro: 0
 --- !u!4 &320523364
 Transform:
   m_ObjectHideFlags: 0
@@ -9202,7 +9204,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671085639}
-  m_LocalRotation: {x: 0.39864993, y: -0.000000017780131, z: 0.000000007728735, w: 0.91710323}
+  m_LocalRotation: {x: 0.39864993, y: 0.000000017780136, z: -0.000000007728738, w: 0.91710323}
   m_LocalPosition: {x: -24.39, y: 16.1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13156,6 +13158,7 @@ MonoBehaviour:
   precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis: []
   so: {fileID: 0}
+  indexLita: 0
   painel: {fileID: 0}
   barra_nivel: {fileID: 0}
 --- !u!1 &963308453
@@ -25765,6 +25768,7 @@ GameObject:
   - component: {fileID: 1731817956}
   - component: {fileID: 1731817954}
   - component: {fileID: 1731817961}
+  - component: {fileID: 1731817962}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -25903,6 +25907,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPausa: {fileID: 110383459}
+--- !u!114 &1731817962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731817953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3e51b5c1d5fc84f96e96f18dd4c126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  botoes:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1742614040
 GameObject:
   m_ObjectHideFlags: 0
@@ -28830,6 +28849,7 @@ MonoBehaviour:
   precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis: []
   so: {fileID: 0}
+  indexLita: 0
   painel: {fileID: 2046222294}
   barra_nivel: {fileID: 0}
 --- !u!1 &1983923083
@@ -30766,7 +30786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075178968}
-  m_LocalRotation: {x: 0.39864993, y: -0.000000017780131, z: 0.000000007728735, w: 0.91710323}
+  m_LocalRotation: {x: 0.39864993, y: 0.000000017780136, z: -0.000000007728738, w: 0.91710323}
   m_LocalPosition: {x: -24.39, y: 16.1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32010,6 +32030,7 @@ MonoBehaviour:
   precoNivelBarra: {fileID: 1069585622}
   habilidadesDisponiveis: []
   so: {fileID: 0}
+  indexLita: 0
   painel: {fileID: 1069585621}
   barra_nivel: {fileID: 1731817954}
 --- !u!1 &370960570207741084

@@ -10,5 +10,9 @@ public class ListaCanvas : MonoBehaviour
     {
         return botoes;
     }
+   public  List<Botoes> GetListaBotoes()
+    {
+        return botoes;
+    }
 
 }
