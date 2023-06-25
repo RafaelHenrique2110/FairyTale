@@ -13517,7 +13517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132c1239d65d8404dac6756844821ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scena: Fase1
+  scena: SafeRoom
 --- !u!1 &704161843
 GameObject:
   m_ObjectHideFlags: 0

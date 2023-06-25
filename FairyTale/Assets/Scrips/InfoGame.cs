@@ -6,15 +6,29 @@ public class InfoGame : MonoBehaviour
    [SerializeField] float limiteVidaPlayer;
    Player player;
    [SerializeField] int moedas;
-    [SerializeField] Barras barrasMelhoriasPlayer;
-
+    [SerializeField]  float barrasMelhoriasPlayer;
+    private static InfoGame instance;
 
     private void Awake()
     {
-       
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         player = new Player(limiteVidaPlayer, 0, 0, 0, 0);
 
+    }
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
+        }
     }
     public void SavePlayer(Player player)
     {
@@ -25,7 +39,7 @@ public class InfoGame : MonoBehaviour
     {
         this.moedas= moedas;
     }
-    public void SaveLoja(Barras barrasMelhoriasPlayer)
+    public void SaveLoja(float barrasMelhoriasPlayer)
     {
         this.barrasMelhoriasPlayer = barrasMelhoriasPlayer;
     }
@@ -37,7 +51,7 @@ public class InfoGame : MonoBehaviour
     {
         return moedas;
     }
-    public Barras GetLojaSalva()
+    public float GetLojaSalva()
     {
         return barrasMelhoriasPlayer;
     }

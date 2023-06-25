@@ -578,7 +578,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5313064119586494789}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8f9ab57715481024a9de02e36faf3907, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
   m_Controller: {fileID: 9100000, guid: d742157a7ec4f594aae87b923253e7c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
       propertyPath: m_Controller
@@ -1338,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8f9ab57715481024a9de02e36faf3907, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8f9ab57715481024a9de02e36faf3907, type: 3}
       propertyPath: m_StaticEditorFlags
