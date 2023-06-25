@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641347, b: 0.5748174, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658, g: 0.49641353, b: 0.5748174, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1125,6 +1125,7 @@ MonoBehaviour:
   slot1: {fileID: 265662682}
   slot2: {fileID: 1514190464}
   hud: {fileID: 823340757}
+  ObjInfoGame: {fileID: 0}
 --- !u!1 &62966998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4495,7 +4496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e5e900e605d1e44b2ef120ae82366c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: {fileID: 681107437}
+  nome: {fileID: 0}
+  descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis:
   - {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   - {fileID: 11400000, guid: 7b9833351dbff4e46b0febe62568abaa, type: 2}
@@ -4503,6 +4506,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d2cb64cf5164d64293815ea1e90cbdd, type: 2}
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 466920733}
+  barra_nivel: {fileID: 0}
 --- !u!114 &201726449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,7 +4802,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7203647, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7093,9 +7097,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: {fileID: 0}
+  descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis: []
   so: {fileID: 0}
   painel: {fileID: 0}
+  barra_nivel: {fileID: 0}
 --- !u!114 &365985285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9692,7 +9699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &522510979
 Transform:
   m_ObjectHideFlags: 0
@@ -9709,7 +9716,7 @@ Transform:
   - {fileID: 1342350012}
   - {fileID: 310589476}
   m_Father: {fileID: 1812758427}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523723675 stripped
 GameObject:
@@ -12566,6 +12573,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.059658, y: 3.8880832, z: 5.202642}
   m_Center: {x: 0.06695306, y: 1.7656385, z: -0.15435362}
+--- !u!4 &701644964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+  m_PrefabInstance: {fileID: 1837384643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &709062416
 GameObject:
   m_ObjectHideFlags: 0
@@ -13137,7 +13149,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738879269}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8f9ab57715481024a9de02e36faf3907, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
   m_Controller: {fileID: 9100000, guid: d3669102bcd7648458f423c2f1c2e601, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -24717,7 +24729,7 @@ Transform:
   m_Children:
   - {fileID: 342721382}
   m_Father: {fileID: 1812758427}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1371532331
 BoxCollider:
@@ -29392,13 +29404,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e5e900e605d1e44b2ef120ae82366c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: {fileID: 681107437}
+  nome: {fileID: 0}
+  descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis:
   - {fileID: 11400000, guid: 0cd2efc79b75cd044ba4d62afc182011, type: 2}
   - {fileID: 11400000, guid: 8e655331eccf45a42b9eba57775656f7, type: 2}
   - {fileID: 11400000, guid: 52d52c297ee12434da087c55096493cc, type: 2}
   so: {fileID: 11400000, guid: 0cd2efc79b75cd044ba4d62afc182011, type: 2}
   painel: {fileID: 466920733}
+  barra_nivel: {fileID: 0}
 --- !u!114 &1613083152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33338,6 +33353,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 701644964}
   - {fileID: 1371532330}
   - {fileID: 522510979}
   m_Father: {fileID: 738879270}
@@ -33923,6 +33939,71 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+--- !u!1001 &1837384643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1812758427}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.011
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998598
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.01674616
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 91.919
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8374653932339497046, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a4eaeee426314f4b9b31cacb30741bb, type: 2}
+    - target: {fileID: 919132149155446097, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_Name
+      value: Cat2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d3669102bcd7648458f423c2f1c2e601, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
 --- !u!1 &1842225322
 GameObject:
   m_ObjectHideFlags: 0
@@ -38366,9 +38447,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: {fileID: 0}
+  descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis: []
   so: {fileID: 0}
   painel: {fileID: 466920733}
+  barra_nivel: {fileID: 0}
 --- !u!65 &2053137628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38695,13 +38779,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e5e900e605d1e44b2ef120ae82366c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: {fileID: 1477577955}
+  nome: {fileID: 0}
+  descricao: {fileID: 0}
+  precoNivelBarra: {fileID: 0}
   habilidadesDisponiveis:
   - {fileID: 11400000, guid: 1a199b6bffe263e40b2594117aca1aa8, type: 2}
   - {fileID: 11400000, guid: b8cd3040544ec174f98d25f4fa21fb78, type: 2}
   - {fileID: 11400000, guid: ae0563659ae8c97499d5d625535d7f96, type: 2}
   so: {fileID: 11400000, guid: 1a199b6bffe263e40b2594117aca1aa8, type: 2}
   painel: {fileID: 466920733}
+  barra_nivel: {fileID: 0}
 --- !u!114 &2060347827
 MonoBehaviour:
   m_ObjectHideFlags: 0
