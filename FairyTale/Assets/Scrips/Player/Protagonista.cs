@@ -23,7 +23,7 @@ public class Protagonista : MonoBehaviour
     [SerializeField] VarMovimentacaoPlayer movimentacoes;
     [SerializeField] GameObject[] arma;
     Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
-   
+     [SerializeField] bool ativado;
     private void Start()
     {
         protagonista.AplicarPoder(poderes);
@@ -33,6 +33,7 @@ public class Protagonista : MonoBehaviour
         protagonista.CombateCorpoACorpo();
         protagonista.DesabilitarPoder();
         protagonista.DesabilitarCombateDistancia();
+       
        // protagonista.DesabilitarDash();
         // protagonista.AbilitarMovimentacao();
     }
@@ -40,6 +41,7 @@ public class Protagonista : MonoBehaviour
     bool ativarAtaque=true;
     private void Update()
     {
+        if( ativado){
         DetectarInimigoProximo();
         if (Input.GetKeyDown("1"))
         {
@@ -56,6 +58,7 @@ public class Protagonista : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+                MirarRotate();
             Debug.Log(resetarCombo);
             if (combo > 0&& ativarAtaque)
             {
@@ -83,6 +86,7 @@ public class Protagonista : MonoBehaviour
 
         protagonista.UsarPoder(arma, anim);
         transform.position = protagonista.Move(transform, speed, anim);
+        }
     }
     void DetectarInimigoProximo()
     {
@@ -105,6 +109,9 @@ public class Protagonista : MonoBehaviour
         ativarAtaque = true;
 
     }
+    public void Ativar(bool definir){
+        ativado= definir;
+    }
     float tempoResetCombo = 1f;
     void ResetarCombo()
     {
@@ -119,17 +126,40 @@ public class Protagonista : MonoBehaviour
 
 
     }
+   public void AtualizarConfigPlayer(Player player)
+    {
+        protagonista = player;
+    }
+    void MirarRotate()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit)) // Verifica se o raio atingiu um objeto
+        {
+            Vector3 targetDirection = hit.point - transform.position;
+            targetDirection.y = 0; // Mantém o vetor no plano horizontal
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+
+            // Rotaciona suavemente o jogador para a nova rotação
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 400f);
+        }
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.CompareTag("munic�o"))
+        if (other.CompareTag("municão"))
         {
-            protagonista.TomarDano(1f, this.gameObject);
+            protagonista.TomarDano(1f);
+            GameController.instance.Save();
+
             Destroy(other.gameObject);
         }
         if (other.CompareTag("mao_inimigo"))
         {
-           protagonista.TomarDano(1f, this.gameObject);
+            GameController.instance.Save();
+            protagonista.TomarDano(1f);
             if (protagonista.Vida <= 0)
             {
                 GameController.instance.GameOver();
@@ -139,6 +169,7 @@ public class Protagonista : MonoBehaviour
         {
             GameController.instance.ADDMoedas(1);
             Destroy(other.gameObject);
+            GameController.instance.Save();
         }
 
 
@@ -156,6 +187,7 @@ public class Protagonista : MonoBehaviour
 
         }
     }
+    
     public Player Player { get { return protagonista; } }
    
 

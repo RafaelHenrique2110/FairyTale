@@ -7,25 +7,43 @@ using TMPro;
 
 public class Botoes : MonoBehaviour
 {
-   [SerializeField] TMP_Text nome;
+   [SerializeField] Image nome;
+    [SerializeField] TMP_Text descricao;
+    [SerializeField] TMP_Text precoNivelBarra;
     int indexHabilidade;
     [SerializeField] List<AbilidadePlayerScriptObject> habilidadesDisponiveis;
     [SerializeField] AbilidadePlayerScriptObject so;
     int indexLita=0;
     [SerializeField] GameObject painel;
+    [SerializeField] Barras barra_nivel;
 
     public void FecharPainel()
     {
         painel.SetActive(false);
     }
-    public void AumentarNivelPlayer(Barras barra_nivel)
+    public void AumentarNivelPlayer(int preco)
     {
+        
         if(barra_nivel.Nivelvida < barra_nivel.LimiteNivelvida)
         {
-            GameController.instance.AumentarVidaPlayer(25);
+            if (GameController.instance.GetMoedas()>= preco)
+            {
+                GameController.instance.AumentarVidaPlayer(25);
+                barra_nivel.AumentarNivelBarraVida();
+                GameController.instance.GastarMoedas(preco);
+                preco = preco * 2;
+                AtualizarPrecoCompraNivelVida(preco);
+                GameController.instance.Save();
+              
+            }
+           
         }
       
        
+    }
+     void AtualizarPrecoCompraNivelVida(int n)
+    {
+        precoNivelBarra.text = n.ToString()+".00 R$";
     }
     public void TrocarPoderPlayer()
     {
@@ -68,8 +86,9 @@ public class Botoes : MonoBehaviour
     public void DefinirBotaoHabilidades()
     {
         indexHabilidade = so.indexPoder;
-        nome.text = so.nomePoder;
-      
+        nome.sprite  = so.nomePoder;
+        descricao.text= so.descricao;
+        
 
     }
     public void CarrgarCena(string nomeCena)

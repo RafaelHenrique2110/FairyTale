@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -43,16 +45,19 @@ public class GameController : MonoBehaviour
     public TMP_Text txtSlot2;
     [SerializeField] Image slot1;
     [SerializeField] Image slot2;
-
+    [SerializeField] GameObject hud;
+    [SerializeField] GameObject ObjInfoGame;
+     
     private void Start()
     {
         assistente = new Assistente();
         instance = this;
-        AtualizarVidaPlayer(Player.Vida);
+
         AdiquirirPoderesPlayer();
         AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
         AplicarQuest(new Definicao_Quest(new Quest1()));
+         DefinirProgresso();
 
     }
     private void Update()
@@ -65,7 +70,7 @@ public class GameController : MonoBehaviour
        
     }
     
-    //////FUNÇOES Player///////
+    //////FUNï¿½OES Player///////
     public void AtualizarTimePoder(int n)
     {
         txt_timePoder.text = "" + n;
@@ -86,8 +91,11 @@ public class GameController : MonoBehaviour
 
     public void AumentarVidaPlayer(float atribuicao)
     {
-        Player.AumentaVida(atribuicao);
+        Player.AumentaMaximoVida(atribuicao);
+        Save();
+       
     }
+    
     public void TrocarPoderPlayer(Definicao_Poder_Player poder)
     {
        Player.DefinirPoder(poder);
@@ -117,7 +125,10 @@ public class GameController : MonoBehaviour
     {
         Player.DefinirDash(dash);
     }
-
+   public void DefinirPlayer(Player novaConfig)
+    {
+       player.GetComponent<Protagonista>().AtualizarConfigPlayer(novaConfig);
+    }
     public bool CombateCorpoPlayer()
     {
 
@@ -141,7 +152,7 @@ public class GameController : MonoBehaviour
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //////FUNÇOES Mouse /////////
+    //////FUNï¿½OES Mouse /////////
 
     float mouse = 0;
     public void RotacaoMouse(Transform rotate)
@@ -152,7 +163,7 @@ public class GameController : MonoBehaviour
    
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //////FUNÇOES GLOBAIS///////
+    //////FUNï¿½OES GLOBAIS///////
     public void MoverProjetil(Transform dir, float speed)
     {
 
@@ -272,7 +283,22 @@ public class GameController : MonoBehaviour
     public void ADDMoedas(int quantidades)
     {
         moedas += quantidades;
-        txt_moedas.text = moedas.ToString();
+        AtualizarHudMoedas();
+    }
+    public void GastarMoedas(int valor)
+    {
+        moedas -= valor;
+        AtualizarHudMoedas();
+    } 
+    public void AtualizarHudMoedas()
+    {
+       txt_moedas.text = moedas.ToString();
+        
+    }
+    public void AtualizarMoedas(int moedaSalva)
+    {
+        moedas = moedaSalva;
+        GameController.instance.AtualizarHudMoedas();
     }
     public void CarrgarCena(string nomeCena)
     {
@@ -281,6 +307,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
+
     }
     public void AtualizarSlot(string slot1, string slot2)
     {
@@ -291,6 +318,38 @@ public class GameController : MonoBehaviour
     {
         slot1.color = Corslota1;
         slot2.color = Corsloat2;
+    }
+    public void AbilitarHud(){
+        hud.gameObject.SetActive(true);
+    }
+   public void AtivarPlayer(bool definir){
+          player.GetComponent<Protagonista>().Ativar(definir);
+   }
+    void AtualizarLoja(Barras barra)
+    {
+
+      ///  hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
+
+    }
+   public void DefinirProgresso()
+    {
+        ObjInfoGame = GameObject.Find("InfoGame");
+        InfoGame infoGame= ObjInfoGame.GetComponent<InfoGame>();
+        //player.GetOrAddComponent<Protagonista>().Player.DefinirMaximoVida(infoGame.limiteVidaPlayer);
+        Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
+        AtualizarMoedas(infoGame.GetMoedasSalvas());
+        hud.GetComponent<Barras>().Atualizar(infoGame.GetLojaSalva());
+
+   }
+    public void Save()
+    {
+        ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
+        ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
+        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+    }
+    public int GetMoedas()
+    {
+        return moedas;
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
