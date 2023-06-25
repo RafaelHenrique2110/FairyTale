@@ -344,8 +344,11 @@ public class GameController : MonoBehaviour
         Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
         AtualizarMoedas(infoGame.GetMoedasSalvas());
         hud.GetComponent<Barras>().Atualizar(infoGame.GetLojaSalva());
-
-        AtualizarMelhoriaHabilidades(infoGame.GetNivelAprimoramentosGerreiro(), infoGame.GetNivelAprimoramentosDistamcia());
+        if (SceneManager.GetActiveScene().name == "Fase1")
+        {
+            AtualizarMelhoriaHabilidades(infoGame.GetNivelAprimoramentosGerreiro(), infoGame.GetNivelAprimoramentosDistamcia());
+        }
+           
 
    }
     public void Save()
@@ -353,8 +356,12 @@ public class GameController : MonoBehaviour
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
         ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
         ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
-        ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
+        if (SceneManager.GetActiveScene().name=="Fase1")
+        {
+            ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
+        }
     }
+        
     public int GetMoedas()
     {
         return moedas;

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Distancia3
   m_EditorClassIdentifier: 
   indexPoder: 4
-  nomePoder: {fileID: 21300000, guid: 1ec4f0ca4a8698243932b8a5e24e58b4, type: 3}
+  nomePoder: {fileID: 21300000, guid: c777345f7d95e0b4fb610a63931c5f56, type: 3}
   descricao: "Voc\xEA recebe um ataque secund\xE1rio que \xE9 um disparo de magia
     com uma \xE1rea de dano maior (tecla 2)"

@@ -19,6 +19,7 @@ public class Barras : MonoBehaviour
         if(nivelVida< limiteNivelVida)
         {
             nivelVida++;
+            Debug.Log("NivelVida" + nivelVida);
             AtualizarNivelBarraVida(nivelVida);
             GameController.instance.Save();
         }

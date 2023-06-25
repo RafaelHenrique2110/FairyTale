@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Tank3
   m_EditorClassIdentifier: 
   indexPoder: 4
-  nomePoder: {fileID: 21300000, guid: c7d2ef23889e226428bab90b45189620, type: 3}
+  nomePoder: {fileID: 21300000, guid: 97190e3013d72b24bb865520d69eadee, type: 3}
   descricao: O escudo evolui para impedir de levar danos por 3 segundos

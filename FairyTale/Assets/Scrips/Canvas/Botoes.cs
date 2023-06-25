@@ -13,7 +13,7 @@ public class Botoes : MonoBehaviour
     int indexHabilidade;
     [SerializeField] List<AbilidadePlayerScriptObject> habilidadesDisponiveis;
     [SerializeField] AbilidadePlayerScriptObject so;
-    public int indexLita=0;
+   [SerializeField] int indexLita=0;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
 
@@ -28,6 +28,7 @@ public class Botoes : MonoBehaviour
         {
             if (GameController.instance.GetMoedas()>= preco)
             {
+              
                 GameController.instance.AumentarVidaPlayer(25);
                 barra_nivel.AumentarNivelBarraVida();
                 GameController.instance.GastarMoedas(preco);
@@ -75,7 +76,7 @@ public class Botoes : MonoBehaviour
     }
     public void AtualizarBotaoHabilidades()
     {
-        if(indexLita< habilidadesDisponiveis.Count)
+        if(indexLita< habilidadesDisponiveis.Count-1)
         {
             indexLita++;
             so = habilidadesDisponiveis[indexLita];
