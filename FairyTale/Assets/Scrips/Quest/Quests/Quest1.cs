@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Quest1 : MonoBehaviour, I_Quest
 {
-    int inimigos_Mortos =0, inimigos_para_matar=5;
+    int inimigos_Mortos =0, inimigos_para_matar = 10;
     string titulo_quest = "Elimine os  Inimigos! ";
     string requisitos_quest;
    
