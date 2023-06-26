@@ -11,6 +11,7 @@ TagManager:
   - "munic\xE3o"
   - mao_inimigo
   - moedas
+  - gato
   layers:
   - Default
   - TransparentFX

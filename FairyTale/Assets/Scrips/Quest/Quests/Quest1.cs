@@ -17,7 +17,7 @@ public class Quest1 : MonoBehaviour, I_Quest
             GameController.instance.AplicarQuest(new Definicao_Quest(new Quest2()));
         }
         
-        Debug.Log("INIMIGOS MORTOS "+inimigos_Mortos);
+        //Debug.Log("INIMIGOS MORTOS "+inimigos_Mortos);
    }
    public void AtualizarQuest()
    {
