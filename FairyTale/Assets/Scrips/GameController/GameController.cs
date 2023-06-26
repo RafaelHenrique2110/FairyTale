@@ -97,6 +97,10 @@ public class GameController : MonoBehaviour
         Save();
        
     }
+    void ResetarVidaPlayer()
+    {
+        Player.ResetarVidaPlayer();
+    }
     
     public void TrocarPoderPlayer(Definicao_Poder_Player poder)
     {
@@ -309,6 +313,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
+        ResetarVidaPlayer();
 
     }
     public void AtualizarSlot(string slot1, string slot2)

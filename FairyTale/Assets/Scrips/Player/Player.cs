@@ -95,8 +95,12 @@ public class Player : MonoBehaviour
     }
     public void Curar(float n)
     {
-        vida = GameController.instance.Somar(vida,n);
-        GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
+        if (vida < limiteVida)
+        {
+            vida = GameController.instance.Somar(vida, n);
+            GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
+        }
+        
     }
     public void AumentaMaximoVida(float atribuicao)
     {
@@ -104,6 +108,11 @@ public class Player : MonoBehaviour
         vida = limiteVida;
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
         Debug.Log(limiteVida);
+    }
+    public void ResetarVidaPlayer()
+    {
+        vida = limiteVida;
+        GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
     }
     public void DefinirMaximoVida(float atribuicao)
     {

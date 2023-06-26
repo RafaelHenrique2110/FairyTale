@@ -12,6 +12,7 @@ TagManager:
   - mao_inimigo
   - moedas
   - gato
+  - Vida
   layers:
   - Default
   - TransparentFX

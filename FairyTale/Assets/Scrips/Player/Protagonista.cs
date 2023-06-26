@@ -24,8 +24,9 @@ public class Protagonista : MonoBehaviour
     [SerializeField] GameObject[] arma;
     Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
      [SerializeField] bool ativado;
+  
 
-    
+
 
     private void Start()
     {
@@ -177,6 +178,15 @@ public class Protagonista : MonoBehaviour
         if (other.CompareTag("gato"))
         {
             GameController.instance.ativarDialogo(true);
+        }
+        if (other.CompareTag("Vida"))
+        {
+            if(protagonista.Vida< protagonista.LimmiteVida)
+            {
+                protagonista.Curar(8);
+                Destroy(other.gameObject);
+            }
+           
         }
 
 
