@@ -10,6 +10,8 @@ public class ColtrolerDialogo : MonoBehaviour
 
     public TMP_Text dialogText;
 
+    public GameObject menuDialogo;
+
     private Queue<string> sentences;
 
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class ColtrolerDialogo : MonoBehaviour
     }
 
     public void ComecaDialogo(Dialogo dialogo)
-    {
+    {        
         nameText.text = dialogo.name;
 
         sentences.Clear();
@@ -45,6 +47,6 @@ public class ColtrolerDialogo : MonoBehaviour
     }
     void EndDialogue()
     {
-        Debug.Log("Fim da conversa");
+        menuDialogo.SetActive(false);
     }
 }

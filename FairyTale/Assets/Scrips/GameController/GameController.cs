@@ -47,7 +47,9 @@ public class GameController : MonoBehaviour
     [SerializeField] Image slot2;
     [SerializeField] GameObject hud;
     [SerializeField] GameObject ObjInfoGame;
-     
+
+    [SerializeField] GameObject BtnDialogo;
+
     private void Start()
     {
         assistente = new Assistente();
@@ -367,5 +369,11 @@ public class GameController : MonoBehaviour
         return moedas;
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///
+
+    public void ativarDialogo(bool ativo)
+    {
+        BtnDialogo.SetActive(ativo);
+    }
 }
 
