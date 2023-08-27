@@ -68,7 +68,7 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
-           //minion.Inpulso();
+           //ChapeuzunhoV.Inpulso();
             minion.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
             minion.AtualizarVida(sprite_vida);
             StartCoroutine(minion.VoltarConciencia(anin)); 
