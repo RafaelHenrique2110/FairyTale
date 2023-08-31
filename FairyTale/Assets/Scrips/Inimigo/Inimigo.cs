@@ -16,6 +16,7 @@ public class Inimigo : MonoBehaviour
     Definicao_Movimentacao_Inimigo definir_movimento_patrulhar = new Definicao_Movimentacao_Inimigo(new Patrulhar());
     Definicao_Movimentacao_Inimigo definir_movimento_seguir = new Definicao_Movimentacao_Inimigo(new Seguir());
     Definicao_Movimentacao_Inimigo definir_movimento_Mirar= new Definicao_Movimentacao_Inimigo(new Mirar());
+    Definicao_Movimentacao_Inimigo definir_movimento_Voar = new Definicao_Movimentacao_Inimigo(new Voar());
     float distancia;
    
 
@@ -32,6 +33,11 @@ public class Inimigo : MonoBehaviour
     {
 
         definicao_movimentacao = definir_movimento_patrulhar;
+    }
+    public void Voar()
+    {
+
+        definicao_movimentacao = definir_movimento_Voar;
     }
     public void Seguir()
     {

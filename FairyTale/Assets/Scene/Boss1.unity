@@ -6355,6 +6355,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434319636}
   m_Mesh: {fileID: -1384440512499823282, guid: 5bceab3966de75a40aec092d7599677c, type: 3}
+--- !u!1 &442102915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442102916}
+  m_Layer: 0
+  m_Name: target_voou
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442102916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442102915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.238684, y: 1.48, z: -6.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442794933
 GameObject:
   m_ObjectHideFlags: 0
@@ -8991,7 +9022,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7783505, y: 1}
+    m_SensorSize: {x: 1.4156977, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9007,7 +9038,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671085639}
-  m_LocalRotation: {x: 0.39864993, y: 0.000000024766177, z: -0.000000010765457, w: 0.9171032}
+  m_LocalRotation: {x: 0.39864993, y: 0.000000017780136, z: -0.000000007728738, w: 0.91710323}
   m_LocalPosition: {x: -24.39, y: 16.1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -30354,7 +30385,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075178968}
-  m_LocalRotation: {x: 0.39864993, y: 0.000000024766177, z: -0.000000010765457, w: 0.9171032}
+  m_LocalRotation: {x: 0.39864993, y: 0.000000017780136, z: -0.000000007728738, w: 0.91710323}
   m_LocalPosition: {x: -24.39, y: 16.1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -32575,6 +32606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chapeuzinhao
       objectReference: {fileID: 0}
+    - target: {fileID: 7982083352645394014, guid: d7104f9a65a182749ac2d9117459f9d3, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7982083352645394015, guid: d7104f9a65a182749ac2d9117459f9d3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -33172,7 +33207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   sensores: []
-  target: []
+  target:
+  - {fileID: 442102916}
   Posicionamento: {fileID: 0}
   sprite_vida: {fileID: 3533620862932861560}
   arma: {fileID: 0}

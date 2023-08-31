@@ -18,7 +18,8 @@ public class Chapeuzinho : MonoBehaviour
 
     private void Start()
     {
-        ChapeuzunhoV.Seguir();
+        // ChapeuzunhoV.Seguir();
+        ChapeuzunhoV.Voar();
     }
     void FixedUpdate()
     {

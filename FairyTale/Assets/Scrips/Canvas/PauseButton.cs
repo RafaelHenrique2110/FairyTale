@@ -10,6 +10,7 @@ public class PauseButton : MonoBehaviour
 
     public GameObject menuPausa;
 
+ 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
