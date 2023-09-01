@@ -10,6 +10,7 @@ public class Inimigo : MonoBehaviour
     public GameObject arma;
     public  Definicao_Combate_Inimigo definir_combate_basico;
     Definicao_Combate_Inimigo definir_combate_raio = new Definicao_Combate_Inimigo(new Raio());
+    Definicao_Combate_Inimigo definir_combate_TacarCesta = new Definicao_Combate_Inimigo(new JogarCesta());
     Definicao_Combate_Inimigo definir_combate_soco = new Definicao_Combate_Inimigo(new Soco());
     Definicao_Combate_Inimigo definir_combate_desabilitado = new Definicao_Combate_Inimigo(new CombateDesabilitado ());
     Definicao_Movimentacao_Inimigo definicao_movimentacao;
@@ -19,7 +20,7 @@ public class Inimigo : MonoBehaviour
     Definicao_Movimentacao_Inimigo definir_movimento_Voar = new Definicao_Movimentacao_Inimigo(new Voar());
     float distancia;
    
-
+    
     public Inimigo(float tamanhoVida, float tamanhoForca, float tamanhoEscudo)
     {
         forca = tamanhoForca;
@@ -39,6 +40,7 @@ public class Inimigo : MonoBehaviour
 
         definicao_movimentacao = definir_movimento_Voar;
     }
+    
     public void Seguir()
     {
        definicao_movimentacao = definir_movimento_seguir;
@@ -60,6 +62,10 @@ public class Inimigo : MonoBehaviour
     public void PegarRaio()
     {
         definir_combate_basico = definir_combate_raio;
+    }
+    public void PegarCesta()
+    {
+        definir_combate_basico = definir_combate_TacarCesta;
     }
     public Vector3 Mover(Transform[] target, Transform dir, float speed, Animator anin, Inimigo inimigo)
     {

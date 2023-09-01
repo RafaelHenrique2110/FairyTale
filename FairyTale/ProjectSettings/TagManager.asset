@@ -13,6 +13,7 @@ TagManager:
   - moedas
   - gato
   - Vida
+  - targetVoltar
   layers:
   - Default
   - TransparentFX
