@@ -18,13 +18,15 @@ public class Chapeuzinho : MonoBehaviour
 
     private void Start()
     {
-        ChapeuzunhoV.Seguir();
+        ChapeuzunhoV.Voar();
+        ChapeuzunhoV.PegarCesta();
     }
     void FixedUpdate()
     {
       
         ChapeuzunhoV.DetectarMovimento(sensores, anin);
         transform.position = ChapeuzunhoV.Mover(target, transform, speed, anin, ChapeuzunhoV);
+        ChapeuzunhoV.UsarArma(arma,anin,ChapeuzunhoV);
     }
 
     private void OnTriggerEnter(Collider other)
