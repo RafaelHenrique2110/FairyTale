@@ -215,15 +215,12 @@ public class GameController : MonoBehaviour
         {
             AlterarValorQuest();
             inimmigos.Remove(obj);
-            Matar(obj);
+           
             
         }
         return vida;
     }
-    public void Matar(GameObject obj)
-    {
-        Destroy(obj);
-    }
+   
   
     public void FinalizarAnimacao( float time, string animacao)
     {

@@ -64,6 +64,8 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
             if (minion.Vida <= 0)
             {
                 DroparIten(inventario);
+                minion.Matar(this.gameObject);
+
             }
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
@@ -74,6 +76,7 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
             StartCoroutine(minion.VoltarConciencia(anin)); 
 
         }
+        
         
     }
     public void DroparIten(List<GameObject> inventario)
