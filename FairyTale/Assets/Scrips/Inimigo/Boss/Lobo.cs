@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
+
+public class Lobo : MonoBehaviour
 {
-    static float tamanhoVida = 20, tamanhoForca = 100, tamanhoEscudo = 20;
+    static float tamanhoVida = 200, tamanhoForca = 5, tamanhoEscudo = 5;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;
@@ -15,28 +16,26 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
     [SerializeField] Rigidbody r;
     [SerializeField] Animator anin;
     [SerializeField] List<GameObject> inventario;
-    Inimigo minion = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
+    [SerializeField] Chapeuzinho chapeuzinho;
+    Inimigo lobo = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
     void Start()
     {
-        
-        GameController.instance.assistente.AdicionarObservador(this);
 
-        minion.Patrulhar();
-       
+        lobo.Seguir();
+
 
     }
     void FixedUpdate()
     {
-        minion.Socar();
-       minion.DetectarMovimento(sensores, anin);
-        transform.position = minion.Mover(target, transform, speed, anin,minion);
+        lobo.Socar();
+        transform.position = lobo.Mover(target, transform, speed, anin, lobo);
     }
-    
+
 
     public void Notificar()
     {
-       
-        minion.Seguir();
+
+        lobo.Seguir();
     }
 
 
@@ -45,30 +44,33 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
 
         if (other.CompareTag("municão"))
         {
-            if (minion.Vida <= 0)
+            if (lobo.Vida <= 0)
             {
                 DroparIten(inventario);
             }
             anin.SetBool("Dano", true);
-            minion.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
-            minion.AtualizarVida( sprite_vida);
+            lobo.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
+            lobo.AtualizarVida(sprite_vida);
             Destroy(other.gameObject);
-            StartCoroutine(minion.VoltarConciencia(anin));
+            StartCoroutine(lobo.VoltarConciencia(anin));
 
         }
         if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
         {
-            if (minion.Vida <= 0)
+            if (lobo.Vida <= 0)
             {
-                DroparIten(inventario);
-                minion.Matar(this.gameObject);
+                chapeuzinho.Chapeuzinhov.Seguir();
+                chapeuzinho.Chapeuzinhov.Socar();
+                chapeuzinho.HabilitarGravidade(true);
+                this.enabled = false;
+               gameObject.SetActive(false);
             }
-            minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
+            lobo.definir_combate_basico = lobo.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
-            minion.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
-            minion.AtualizarVida( sprite_vida);
-            StartCoroutine(minion.VoltarConciencia(anin));
+            lobo.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
+            lobo.AtualizarVida(sprite_vida);
+            StartCoroutine(lobo.VoltarConciencia(anin));
 
         }
 
@@ -81,7 +83,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             Instantiate(inventario[i].gameObject, transform.position, transform.rotation);
         }
     }
-    
-    public Inimigo Minion { get { return minion; } }
+
+    public Inimigo lOBO { get { return lobo; } }
 
 }

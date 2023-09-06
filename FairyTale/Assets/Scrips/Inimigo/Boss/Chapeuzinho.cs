@@ -13,6 +13,7 @@ public class Chapeuzinho : MonoBehaviour
     [SerializeField] Image sprite_vida;
     [SerializeField] GameObject arma;
     [SerializeField] Animator anin;
+    [SerializeField] Rigidbody r;
     [SerializeField] List<GameObject> inventario;
     Inimigo ChapeuzunhoV = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
 
@@ -27,6 +28,7 @@ public class Chapeuzinho : MonoBehaviour
         ChapeuzunhoV.DetectarMovimento(sensores, anin);
         transform.position = ChapeuzunhoV.Mover(target, transform, speed, anin, ChapeuzunhoV);
         ChapeuzunhoV.UsarArma(arma,anin,ChapeuzunhoV);
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,6 +70,10 @@ public class Chapeuzinho : MonoBehaviour
         {
             Instantiate(inventario[i].gameObject, transform.position, transform.rotation);
         }
+    }
+    public void HabilitarGravidade(bool habilitar)
+    {
+        r.useGravity =habilitar;
     }
 
     public Inimigo Chapeuzinhov { get { return ChapeuzunhoV; } }

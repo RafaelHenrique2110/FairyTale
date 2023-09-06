@@ -169,7 +169,16 @@ public class Protagonista : MonoBehaviour
                 GameController.instance.GameOver();
             }
         }
-        if (other.CompareTag("moedas"))
+
+        if (other.CompareTag("cesta"))
+        {
+            protagonista.TomarDano(20f);
+            if (protagonista.Vida <= 0)
+            {
+                GameController.instance.GameOver();
+            }
+        }
+            if (other.CompareTag("moedas"))
         {
             GameController.instance.ADDMoedas(1);
             Destroy(other.gameObject);

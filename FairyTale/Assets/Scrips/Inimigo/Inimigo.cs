@@ -84,7 +84,7 @@ public class Inimigo : MonoBehaviour
      
         if (distancia <= 1)
         {
-            Debug.Log("ATIVOUSOCOO");
+            
             definir_combate_basico = definir_combate_soco;
 
         }
@@ -123,7 +123,11 @@ public class Inimigo : MonoBehaviour
         vida = GameController.instance.RemoverVida(dano, vida, obj);
 
     }
-   
+    public void Matar(GameObject obj)
+    {
+        Destroy(obj);
+    }
+
     public IEnumerator VoltarConciencia(Animator anim)
     {
 
