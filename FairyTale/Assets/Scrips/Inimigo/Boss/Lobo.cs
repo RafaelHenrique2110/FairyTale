@@ -42,35 +42,48 @@ public class Lobo : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("municão"))
+        if (other.CompareTag("municï¿½o"))
         {
-            if (lobo.Vida <= 0)
-            {
-                DroparIten(inventario);
-            }
+            
             anin.SetBool("Dano", true);
             lobo.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
             lobo.AtualizarVida(sprite_vida);
             Destroy(other.gameObject);
-            StartCoroutine(lobo.VoltarConciencia(anin));
+            if (lobo.Vida <= 0)
+            {
+                chapeuzinho.Chapeuzinhov.Seguir();
+                chapeuzinho.Chapeuzinhov.Socar();
+                lobo.EntrarEmComa(gameObject);
+
+            }
+            if (lobo.Vida > 0)
+            {
+                StartCoroutine(lobo.VoltarConciencia(anin));
+            }
+            
 
         }
         if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
         {
+           
+           lobo.definir_combate_basico = lobo.Definir_Combate_Desabilitado;
+            anin.SetBool("Dano", true);
+            anin.SetBool("Soco", false);
+            lobo.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
+            lobo.AtualizarVida(sprite_vida);
             if (lobo.Vida <= 0)
             {
                 chapeuzinho.Chapeuzinhov.Seguir();
                 chapeuzinho.Chapeuzinhov.Socar();
                 chapeuzinho.HabilitarGravidade(true);
-                this.enabled = false;
-               gameObject.SetActive(false);
+                lobo.EntrarEmComa(gameObject);
+
+
             }
-            lobo.definir_combate_basico = lobo.Definir_Combate_Desabilitado;
-            anin.SetBool("Dano", true);
-            anin.SetBool("Soco", false);
-            lobo.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
-            lobo.AtualizarVida(sprite_vida);
-            StartCoroutine(lobo.VoltarConciencia(anin));
+            if (lobo.Vida > 0)
+            {
+                StartCoroutine(lobo.VoltarConciencia(anin));
+            }
 
         }
 
@@ -85,5 +98,7 @@ public class Lobo : MonoBehaviour
     }
 
     public Inimigo lOBO { get { return lobo; } }
+    public Image GetSpriteVida { get { return sprite_vida; } }
+    public Animator GetAnimator { get { return anin; } }
 
 }
