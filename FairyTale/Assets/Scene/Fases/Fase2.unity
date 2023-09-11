@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13014492, g: 0.09454236, b: 0.124829195, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (5)
@@ -432,6 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.645
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (11)
@@ -592,7 +600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -675,7 +683,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -861,6 +869,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.439
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (6)
@@ -953,6 +965,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.823
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (10)
@@ -1303,6 +1319,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (6)
@@ -1383,6 +1403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (2)
@@ -1558,6 +1582,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 12.952
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (13)
@@ -2108,6 +2136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.149
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (16)
@@ -3131,7 +3163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3224,6 +3256,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.823
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (7)
@@ -3316,6 +3352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (15)
@@ -3408,6 +3448,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (18)
@@ -3857,7 +3901,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4659,6 +4703,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.28
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (4)
@@ -4741,7 +4789,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5534,6 +5582,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.929
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09
@@ -5710,6 +5762,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.899
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (2)
@@ -6010,7 +6066,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6356,7 +6412,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7047,7 +7103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7140,6 +7196,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.539
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11
@@ -7298,7 +7358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7803,6 +7863,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (7)
@@ -8541,6 +8605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.28
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (5)
@@ -8936,6 +9004,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.823
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (8)
@@ -9235,7 +9307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10397,6 +10469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (31)
@@ -10860,6 +10936,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (28)
@@ -11035,6 +11115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.823
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (11)
@@ -11810,7 +11894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12139,6 +12223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (29)
@@ -12720,7 +12808,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13325,7 +13413,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14044,7 +14132,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14207,7 +14295,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14706,6 +14794,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (23)
@@ -15444,7 +15536,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15944,6 +16036,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (30)
@@ -16981,7 +17077,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17351,6 +17447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (6)
@@ -17433,7 +17533,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17602,6 +17702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (13)
@@ -17684,7 +17788,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18466,6 +18570,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (19)
@@ -18774,7 +18882,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18857,7 +18965,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19368,6 +19476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (9)
@@ -19632,6 +19744,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (10)
@@ -20794,6 +20910,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 722257274}
     m_Modifications:
+    - target: {fileID: -9154795635413605543, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: -8679921383154817045, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -20842,6 +20962,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d3fe0caaa1a1d454caf65d63ca4f07dc, type: 2}
+    - target: {fileID: -7023974396876390944, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
       propertyPath: m_Name
       value: Cat2
@@ -21333,6 +21457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (24)
@@ -21425,6 +21553,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (21)
@@ -21661,6 +21793,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (12)
@@ -22593,6 +22729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (7)
@@ -22992,6 +23132,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (8)
@@ -23830,6 +23974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.899
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (1)
@@ -24495,6 +24643,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (3)
@@ -24577,7 +24729,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24746,6 +24898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (4)
@@ -25087,10 +25243,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.107
       objectReference: {fileID: 0}
+    - target: {fileID: -8143710011712545758, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -6093592463355912122, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1806680513116206669, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1461304994638716399, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1120989108687609925, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -804731622281664130, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -678588488315902003, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: d71bcf164509fc84db45af9180db1116, type: 3}
       propertyPath: m_Name
       value: Casinha (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6745302439343835087, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 7071182760956848314, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 7202271454713460447, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71bcf164509fc84db45af9180db1116, type: 3}
 --- !u!4 &1084309506 stripped
@@ -26438,6 +26634,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.598
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (8)
@@ -26671,6 +26871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (11)
@@ -27573,7 +27777,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28382,6 +28586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.721
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (4)
@@ -29494,6 +29702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (2)
@@ -30723,6 +30935,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (20)
@@ -30865,7 +31081,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31499,7 +31715,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31582,7 +31798,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32835,7 +33051,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32928,6 +33144,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.539
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (9)
@@ -33176,7 +33396,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33634,6 +33854,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.929
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (4)
@@ -34111,7 +34335,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34502,6 +34726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (27)
@@ -34678,6 +34906,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.539
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (3)
@@ -36191,6 +36423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (22)
@@ -36260,6 +36496,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (14)
@@ -36518,10 +36758,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.974
       objectReference: {fileID: 0}
+    - target: {fileID: -8143710011712545758, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -6093592463355912122, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1806680513116206669, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1461304994638716399, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1120989108687609925, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -804731622281664130, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -678588488315902003, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: d71bcf164509fc84db45af9180db1116, type: 3}
       propertyPath: m_Name
       value: Casinha
       objectReference: {fileID: 0}
+    - target: {fileID: 6745302439343835087, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 7071182760956848314, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 7202271454713460447, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71bcf164509fc84db45af9180db1116, type: 3}
 --- !u!4 &1570632566 stripped
@@ -36801,10 +37081,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.371
       objectReference: {fileID: 0}
+    - target: {fileID: -8143710011712545758, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -6093592463355912122, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1806680513116206669, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1461304994638716399, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -1120989108687609925, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -804731622281664130, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -678588488315902003, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: d71bcf164509fc84db45af9180db1116, type: 3}
       propertyPath: m_Name
       value: Casinha (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6745302439343835087, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 7071182760956848314, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 7202271454713460447, guid: d71bcf164509fc84db45af9180db1116, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71bcf164509fc84db45af9180db1116, type: 3}
 --- !u!4 &1579743176 stripped
@@ -37045,6 +37365,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05
@@ -37403,6 +37727,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (10)
@@ -37610,6 +37938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.899
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (6)
@@ -38331,6 +38663,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.823
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (9)
@@ -38487,6 +38823,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.929
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (1)
@@ -38579,6 +38919,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.957
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (5)
@@ -38671,6 +39015,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (8)
@@ -39124,6 +39472,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (26)
@@ -39483,7 +39835,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39659,6 +40011,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (15)
@@ -39829,6 +40185,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (17)
@@ -40080,7 +40440,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40830,6 +41190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.929
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (2)
@@ -41247,6 +41611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.808
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (25)
@@ -42401,7 +42769,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42654,6 +43022,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.929
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3184c8a016da6e34abff1686da99650b, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (3)
@@ -43228,6 +43600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10
@@ -43743,6 +44119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (1)
@@ -44644,7 +45024,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45212,6 +45592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ea25f0f06a711d48a2bd754e29ecb0e, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_10 (14)
@@ -47049,6 +47433,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: b0ba9b7cecd675b45894beca57389899, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (1)
@@ -48133,7 +48521,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48493,7 +48881,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48586,6 +48974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.899
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (5)
@@ -48814,7 +49206,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48907,6 +49299,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.899
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ed75b99c26237b4d844c1581c5da1b2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (7)
