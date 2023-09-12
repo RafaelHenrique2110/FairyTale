@@ -18,6 +18,7 @@ public class Inimigo : MonoBehaviour
     Definicao_Movimentacao_Inimigo definir_movimento_seguir = new Definicao_Movimentacao_Inimigo(new Seguir());
     Definicao_Movimentacao_Inimigo definir_movimento_Mirar= new Definicao_Movimentacao_Inimigo(new Mirar());
     Definicao_Movimentacao_Inimigo definir_movimento_Voar = new Definicao_Movimentacao_Inimigo(new Voar());
+    Definicao_Movimentacao_Inimigo desabilitar_movimentacao = new Definicao_Movimentacao_Inimigo(new DesabilitarMovimento());
     float distancia;
    
     
@@ -49,6 +50,7 @@ public class Inimigo : MonoBehaviour
     {
         Debug.Log("tamanhovIDA" + tamanhoVida);
         sprite_vida.fillAmount = vida /tamanhoVida;
+        
     }
     public void Posicionar(Transform target)
     {
@@ -74,6 +76,10 @@ public class Inimigo : MonoBehaviour
         distancia = Vector3.Distance(GameController.instance.PlayerTransform.position, dir.position);
         return dir.position;
     }
+    public void DesabilitarMovimentação()
+    {
+        definicao_movimentacao = desabilitar_movimentacao;
+    }
     public void Mirar()
     {
       
@@ -84,7 +90,7 @@ public class Inimigo : MonoBehaviour
      
         if (distancia <= 1)
         {
-            Debug.Log("ATIVOUSOCOO");
+            
             definir_combate_basico = definir_combate_soco;
 
         }
@@ -123,13 +129,46 @@ public class Inimigo : MonoBehaviour
         vida = GameController.instance.RemoverVida(dano, vida, obj);
 
     }
-   
+    public void GanharVida(float quntidade)
+    {
+        vida = GameController.instance.Somar(vida, quntidade);
+
+    }
+    public void Matar(GameObject obj)
+    {
+        Destroy(obj);
+    }
+
     public IEnumerator VoltarConciencia(Animator anim)
     {
 
         yield return new WaitForSeconds(1f);
         anim.SetBool("Dano", false);
 
+
+
+    }
+    public void VoltarDoComa(Animator anim, GameObject OB)
+    {
+        Destroy(OB);
+        Debug.Log("ENTROU A CORROTINA");
+       
+        Lobo lobo = anim.GetComponent<Lobo>();
+        anim.SetBool("Dano", false);
+        anim.transform.Rotate(0, 0, 0);
+        GanharVida(200);
+        AtualizarVida(lobo.GetSpriteVida);
+       Seguir();
+
+
+    }
+    public void EntrarEmComa(GameObject obj)
+    {
+        DesabilitarMovimentação();
+        Lobo lobo = obj.GetComponent<Lobo>();
+        // obj.transform.Rotate(90, 0, 0);
+        
+       
     }
     public Definicao_Combate_Inimigo Definir_Combate_Desabilitado { get { return definir_combate_desabilitado; } }
     public Definicao_Combate_Inimigo Definir_Combate_Soco { get { return definir_combate_soco; } }

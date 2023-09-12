@@ -37,25 +37,28 @@ public class Cesta : MonoBehaviour
     void Ir()
     {
         transform.Translate(dirIr.normalized * 10 * Time.deltaTime);
-        Invoke("Pegar", tepoIda);
+        Invoke("Pegar", tepoVolta);
     }
     void Voltar()
     {
         dirVoltar= targetVoltar.position- transform.position;
-        if(dirVoltar.magnitude > 0.1){
-            transform.Translate(dirVoltar.normalized * 20 * Time.deltaTime);
-            Invoke("Tacar", tepoVolta);
-           
+        if(dirVoltar.magnitude > 0.5){
+            transform.position+=dirVoltar.normalized * 20 * Time.deltaTime;
+            
+
         }
-        
+        if (dirVoltar.magnitude <= 0.5)
+        {
+            transform.rotation = targetVoltar.transform.rotation;
+            //transform.parent = targetVoltar;
+            Invoke("Tacar", tepoIda);
+        }
+
+
+
+
     }
    
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("targetVoltar"))
-        {
-            transform.parent = targetVoltar;
-        }
-    }
+   
 }
 

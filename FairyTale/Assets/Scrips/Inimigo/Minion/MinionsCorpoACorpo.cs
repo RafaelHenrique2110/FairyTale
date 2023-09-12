@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
 {
-    static float tamanhoVida = 20, tamanhoForca = 5, tamanhoEscudo = 5;
+    static float tamanhoVida = 20, tamanhoForca = 100, tamanhoEscudo = 20;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;
@@ -61,6 +61,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             if (minion.Vida <= 0)
             {
                 DroparIten(inventario);
+                minion.Matar(this.gameObject);
             }
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
