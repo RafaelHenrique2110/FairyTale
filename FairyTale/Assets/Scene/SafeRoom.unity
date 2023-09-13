@@ -23,9 +23,9 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1.5
+  m_AmbientIntensity: 1.71
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.24973297, g: 0.42469266, b: 0.8679245, a: 1}
+  m_SubtractiveShadowColor: {r: 0.12771448, g: 0.27699584, b: 0.6603774, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 3a6db933fef1d4c759bf21220420505f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 16.1, z: -15.02}
+  m_FollowOffset: {x: -0.11000061, y: 12.58, z: -11.12}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -9937,8 +9937,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.759434, g: 0.89755875, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Color: {r: 0.7607843, g: 0.88311315, b: 1, a: 1}
+  m_Intensity: 0.55
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12005,9 +12005,9 @@ MonoBehaviour:
   m_Follow: {fileID: 1003948204}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 52.12
+    OrthographicSize: 6.5
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 4997.76
     Dutch: 0
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
@@ -12028,8 +12028,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671085639}
-  m_LocalRotation: {x: 0.39864993, y: 0.000000024766177, z: -0.000000010765457, w: 0.9171032}
-  m_LocalPosition: {x: -24.39, y: 16.1, z: -20}
+  m_LocalRotation: {x: 0.4109029, y: 0.004509037, z: -0.0020322981, w: 0.91166574}
+  m_LocalPosition: {x: -24.5, y: 12.58, z: -16.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33759,10 +33759,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
+  far clip plane: 4997.76
   field of view: 40
   orthographic: 1
-  orthographic size: 52.12
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -33785,8 +33785,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075178968}
-  m_LocalRotation: {x: 0.39864993, y: 0.000000024766177, z: -0.000000010765457, w: 0.9171032}
-  m_LocalPosition: {x: -24.39, y: 16.1, z: -20}
+  m_LocalRotation: {x: 0.4109029, y: 0.004509037, z: -0.0020322981, w: 0.91166574}
+  m_LocalPosition: {x: -24.5, y: 12.58, z: -16.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
