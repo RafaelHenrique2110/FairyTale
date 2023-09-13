@@ -23,7 +23,7 @@ public class Corpo_A_Corpo1 : MonoBehaviour, I_Combate_Player
             GameController.instance.FinalizarAnimacao(1f, animacao[1] );
         }
        
-        Debug.Log("corpoa a corpo 2");
+      
     }
     
    

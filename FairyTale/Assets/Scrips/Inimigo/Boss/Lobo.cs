@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class Lobo : MonoBehaviour
 {
-    static float tamanhoVida = 200, tamanhoForca = 5, tamanhoEscudo = 5;
+    static float tamanhoVida = 200, tamanhoForca = 10, tamanhoEscudo = 5;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;
@@ -29,6 +30,7 @@ public class Lobo : MonoBehaviour
     {
         lobo.Socar();
         transform.position = lobo.Mover(target, transform, speed, anin, lobo);
+       lobo.UsarArma(arma, GetAnimator, lobo);
     }
 
 
@@ -42,7 +44,7 @@ public class Lobo : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("munic�o"))
+        if (other.CompareTag("municão"))
         {
             
             anin.SetBool("Dano", true);
@@ -77,6 +79,9 @@ public class Lobo : MonoBehaviour
                 chapeuzinho.Chapeuzinhov.Socar();
                 chapeuzinho.HabilitarGravidade(true);
                 lobo.EntrarEmComa(gameObject);
+                StartCoroutine(lobo.VoltarDoComa(gameObject,200));
+                StartCoroutine(NotificarChapeuzinho(11));
+              
 
 
             }
@@ -87,6 +92,22 @@ public class Lobo : MonoBehaviour
 
         }
 
+    }
+    public IEnumerator  NotificarChapeuzinho(float time)
+    {
+        yield return new WaitForSeconds(time);
+        if(lobo.Vida <= 0)
+        {
+            chapeuzinho.Chapeuzinhov.Seguir();
+            chapeuzinho.Chapeuzinhov.Socar();
+            chapeuzinho.HabilitarGravidade(true);
+        }
+        else
+        {
+            chapeuzinho.HabilitarGravidade(false);
+            chapeuzinho.Chapeuzinhov.Voar();
+            chapeuzinho.Chapeuzinhov.PegarCesta();
+        }
     }
     public void DroparIten(List<GameObject> inventario)
     {

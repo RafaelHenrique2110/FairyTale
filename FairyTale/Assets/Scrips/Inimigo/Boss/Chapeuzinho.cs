@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Chapeuzinho : MonoBehaviour
 {
-    static float tamanhoVida = 500, tamanhoForca = 200, tamanhoEscudo = 50;
+    static float tamanhoVida = 500, tamanhoForca = 100, tamanhoEscudo = 20;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;

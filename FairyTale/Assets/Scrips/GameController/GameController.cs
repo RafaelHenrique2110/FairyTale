@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     public VarPoderesPlayer poderes_player;
     public VarCombatePlayer combates_player;
     public VarMovimentacaoPlayer  movimentacoes_player;
-    Definicao_Quest defirQuest;
+    Definicao_Quest Quest;
     [SerializeField] GameObject Portal;
     public Assistente assistente;
 
@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject ObjInfoGame;
 
     [SerializeField] GameObject BtnDialogo;
+    [SerializeField]  TipoQuste quest;
 
     private void Start()
     {
@@ -58,7 +59,7 @@ public class GameController : MonoBehaviour
         AdiquirirPoderesPlayer();
         AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
-        AplicarQuest(new Definicao_Quest(new Quest1()));
+       // AplicarQuest(new Definicao_Quest(quest));
          DefinirProgresso();
 
     }
@@ -251,15 +252,15 @@ public class GameController : MonoBehaviour
     }
     public void AplicarQuest(Definicao_Quest quest)
     {
-        defirQuest= quest;
+        Quest= quest;
     }
     public void AlterarValorQuest()
     {
-        defirQuest.AlterarQuest();
+        Quest.AlterarQuest();
     }
     public void ExecutarQuest()
     {
-        defirQuest.ExecutarQuest();
+        quest.ExecuraQuest();
 
     }
     public  void AtualizarCanvasQuest(string txt1, string txt2)

@@ -6,7 +6,7 @@ public class Quest2 : MonoBehaviour, I_Quest
 {
     string titulo_quest = "Vá para o portal! ";
     string requisitos_quest;
-    public void ExecutarQuest()
+    public void DefinirExecucaoQuest()
     {
         GameController.instance.AtivarPortal();
     }

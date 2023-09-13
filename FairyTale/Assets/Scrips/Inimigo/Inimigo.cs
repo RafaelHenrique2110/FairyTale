@@ -48,7 +48,7 @@ public class Inimigo : MonoBehaviour
     }
     public void AtualizarVida( Image sprite_vida)
     {
-        Debug.Log("tamanhovIDA" + tamanhoVida);
+    
         sprite_vida.fillAmount = vida /tamanhoVida;
         
     }
@@ -78,6 +78,7 @@ public class Inimigo : MonoBehaviour
     }
     public void DesabilitarMovimentação()
     {
+
         definicao_movimentacao = desabilitar_movimentacao;
     }
     public void Mirar()
@@ -90,13 +91,15 @@ public class Inimigo : MonoBehaviour
      
         if (distancia <= 1)
         {
-            
+            Definicao_Combate_Inimigo definir_combate_soco = new Definicao_Combate_Inimigo(new Soco());
             definir_combate_basico = definir_combate_soco;
+          
 
         }
         if (distancia > 1 && distancia < 2)
         {
             definir_combate_basico = definir_combate_desabilitado;
+           
         }
     }
     bool notificar = true;
@@ -148,15 +151,15 @@ public class Inimigo : MonoBehaviour
 
 
     }
-    public void VoltarDoComa(Animator anim, GameObject OB)
+    public IEnumerator VoltarDoComa(GameObject OB, float vida)
     {
-        Destroy(OB);
+        yield return new WaitForSeconds(10f);
         Debug.Log("ENTROU A CORROTINA");
-       
-        Lobo lobo = anim.GetComponent<Lobo>();
-        anim.SetBool("Dano", false);
-        anim.transform.Rotate(0, 0, 0);
-        GanharVida(200);
+        OB.GetComponent<Rigidbody>().isKinematic = false;
+        Lobo lobo = OB.GetComponent<Lobo>();
+        lobo.GetAnimator.SetBool("Dano", false);
+       OB.transform.Rotate(0, 0, 0);
+        GanharVida(vida);
         AtualizarVida(lobo.GetSpriteVida);
        Seguir();
 
@@ -166,7 +169,9 @@ public class Inimigo : MonoBehaviour
     {
         DesabilitarMovimentação();
         Lobo lobo = obj.GetComponent<Lobo>();
-        // obj.transform.Rotate(90, 0, 0);
+         obj.transform.Rotate(90, 0, 0);
+         obj.GetComponent<Rigidbody>().isKinematic = true;
+       
         
        
     }

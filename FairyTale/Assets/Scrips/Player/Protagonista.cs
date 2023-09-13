@@ -63,7 +63,7 @@ public class Protagonista : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
                 MirarRotate();
-            Debug.Log(resetarCombo);
+          
             if (combo > 0&& ativarAtaque)
             {
                 if (itemSelecionado !=2)

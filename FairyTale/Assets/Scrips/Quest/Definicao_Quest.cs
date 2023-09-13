@@ -11,7 +11,7 @@ public class Definicao_Quest : MonoBehaviour
     }
     public void ExecutarQuest()
     {
-        i_quest.ExecutarQuest();
+        i_quest.DefinirExecucaoQuest();
         i_quest.AtualizarQuest();
     }
    public  void AlterarQuest()
