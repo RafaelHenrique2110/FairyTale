@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +102,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Habilidade Classe Guerreiro 2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 525
+        width: 303
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32244dc7ce9454740b9ff463aa5244f0
+      internalID: -964910023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Guerreiro 4
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 533
+        width: 251
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4aa0753d01f844591149d16c2ea739
+      internalID: -1691558743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Guerreiro 1
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 90
+        width: 251
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e68ec792caf754aaae3dc6ad8e9e21
+      internalID: -2030937173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Guerreiro 5
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 293
+        width: 271
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8194f18f01b028c45a75d9601eb69d79
+      internalID: 316752808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Guerreiro 3
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 84
+        width: 251
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d67dcecbb3e9a44aa63690574a6c0f
+      internalID: 1128911570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Habilidade Classe Guerreiro 2: -2030937173
+      Habilidade Classe Guerreiro 5: 316752808
+      Habilidade Classe Guerreiro 3: -1691558743
+      Habilidade Classe Guerreiro 1: 1128911570
+      Habilidade Classe Guerreiro 4: -1691558743
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

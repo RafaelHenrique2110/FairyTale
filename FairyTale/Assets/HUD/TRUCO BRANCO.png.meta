@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +102,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Habilidade Classe Coisa 1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 382
+        width: 233
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1b464abbe99394aaa7de6f373949d1
+      internalID: 841165603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Coisa 4
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 396
+        width: 233
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713444acdf50ac94698fd4c6e34d00ad
+      internalID: 811823638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Coisa 5
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 207
+        width: 233
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd77d95d7530510468976ec14192aab1
+      internalID: -802716990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Coisa 2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 52
+        width: 233
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0954db1d16dc9f348b4e098e360b4288
+      internalID: 1376988002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Habilidade Classe Coisa 3
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 52
+        width: 233
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49054b28a9053a4db5cddb5a70b5dc3
+      internalID: 1090342271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Habilidade Classe Coisa 4: 811823638
+      Habilidade Classe Coisa 5: -802716990
+      Habilidade Classe Coisa 1: 841165603
+      Habilidade Classe Coisa 3: 1090342271
+      Habilidade Classe Coisa 2: 1376988002
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
