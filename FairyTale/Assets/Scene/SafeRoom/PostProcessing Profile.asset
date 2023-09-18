@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Value: 0.59
   scatter:
     m_OverrideState: 1
-    m_Value: 0.127
+    m_Value: 0.08
   clamp:
     m_OverrideState: 1
     m_Value: 65472
@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Value: {fileID: 0}
     dimension: 1
   dirtIntensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &-7174717461978533700
 MonoBehaviour:
