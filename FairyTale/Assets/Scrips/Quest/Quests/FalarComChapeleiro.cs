@@ -10,7 +10,7 @@ public class FalarComChapeleiro : So_Quest
     {
         AtualizarQuest();
     }
-    public void AtualizarQuest()
+    public override void AtualizarQuest()
     {
         GameController.instance.AtualizarCanvasQuest(requisitos_quest, titulo_quest);
     }

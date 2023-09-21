@@ -15,7 +15,12 @@ public class So_Quest : ScriptableObject
     {
 
     }
-    
+    public  virtual void AtualizarQuest()
+    {
+
+    }
+
+
 
 
 }

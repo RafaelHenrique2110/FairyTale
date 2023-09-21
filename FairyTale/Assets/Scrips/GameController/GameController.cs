@@ -59,7 +59,9 @@ public class GameController : MonoBehaviour
         AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
        AplicarQuest(Quest);
-         DefinirProgresso();
+        AtualizarQuest();
+        DefinirProgresso();
+       
 
     }
     private void Update()
@@ -113,6 +115,10 @@ public class GameController : MonoBehaviour
     public void TrocarMovimento( Definocao_movimentacaoPlayer correr)
     {
         Player.DefinirMovimento( correr);
+    }
+    public void AlterarValorQuest()
+    {
+        Quest.AlterarQuest();
     }
 
     public void AdiquirirPoderesPlayer()
@@ -254,14 +260,14 @@ public class GameController : MonoBehaviour
     {
         Quest= quest;
     }
-    public void AlterarValorQuest()
-    {
-        Quest.AlterarQuest();
-    }
     public void ExecutarQuest()
     {
         Quest.ExecuteQuest();
 
+    }
+    public void AtualizarQuest()
+    {
+        Quest.AtualizarQuest();
     }
     public  void AtualizarCanvasQuest(string txt1, string txt2)
     {

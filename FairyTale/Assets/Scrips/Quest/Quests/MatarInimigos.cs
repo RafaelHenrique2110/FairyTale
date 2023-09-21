@@ -26,11 +26,11 @@ public class MatarInimigos :  So_Quest
         Debug.Log("mate inimigos");
         DefinirExecucaoQuest();
     }
-    public void AtualizarQuest()
+    public override void  AtualizarQuest()
    {
         GameController.instance.AtualizarCanvasQuest(requisitos_quest, titulo_quest);
    }
-    public  void Alterar()
+    public override void AlterarQuest()
     {
         inimigos_Mortos++;
         AtualizarQuest();
