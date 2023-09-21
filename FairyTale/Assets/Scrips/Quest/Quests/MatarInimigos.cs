@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Quest1 : TipoQuste, I_Quest
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Quest/MatarInimigos", order = 1)]
+public class MatarInimigos :  So_Quest
 {
-    int inimigos_Mortos =0, inimigos_para_matar = 10;
-    string titulo_quest = "Elimine os  Inimigos! ";
-    string requisitos_quest;
+    [SerializeField] So_Quest proxQuest;
+    [SerializeField] int inimigos_para_matar = 10;
+    int inimigos_Mortos = 0;
+    [SerializeField] string titulo_quest = "Titulo ";
+    [SerializeField]string requisitos_quest;
    
    public  void DefinirExecucaoQuest()
    {
@@ -14,13 +16,14 @@ public class Quest1 : TipoQuste, I_Quest
        
         if(inimigos_Mortos>=inimigos_para_matar)
         {
-            GameController.instance.AplicarQuest(new Definicao_Quest(new Quest2()));
+            GameController.instance.AplicarQuest(proxQuest);
         }
         
-        //Debug.Log("INIMIGOS MORTOS "+inimigos_Mortos);
+       
    }
-    public override void ExecuraQuest()
+    public override void  ExecuteQuest()
     {
+        Debug.Log("mate inimigos");
         DefinirExecucaoQuest();
     }
     public void AtualizarQuest()

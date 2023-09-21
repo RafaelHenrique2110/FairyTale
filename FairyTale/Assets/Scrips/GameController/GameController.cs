@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     public VarPoderesPlayer poderes_player;
     public VarCombatePlayer combates_player;
     public VarMovimentacaoPlayer  movimentacoes_player;
-    Definicao_Quest Quest;
+    [SerializeField] So_Quest Quest;
     [SerializeField] GameObject Portal;
     public Assistente assistente;
 
@@ -49,7 +49,6 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject ObjInfoGame;
 
     [SerializeField] GameObject BtnDialogo;
-    [SerializeField]  TipoQuste quest;
 
     private void Start()
     {
@@ -59,7 +58,7 @@ public class GameController : MonoBehaviour
         AdiquirirPoderesPlayer();
         AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
-       // AplicarQuest(new Definicao_Quest(quest));
+       AplicarQuest(Quest);
          DefinirProgresso();
 
     }
@@ -85,7 +84,7 @@ public class GameController : MonoBehaviour
     }
     public void AtualizarVidaPlayer(float n)
     {
-        txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
+        //txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
         sprite_vida.fillAmount = n;
     }
 
@@ -246,11 +245,12 @@ public class GameController : MonoBehaviour
         }
 
     }
+   
     public void AdicionarInimigosLista(GameObject inimigo)
     {
         inimmigos.Add(inimigo);
     }
-    public void AplicarQuest(Definicao_Quest quest)
+    public void AplicarQuest(So_Quest quest)
     {
         Quest= quest;
     }
@@ -260,7 +260,7 @@ public class GameController : MonoBehaviour
     }
     public void ExecutarQuest()
     {
-        quest.ExecuraQuest();
+        Quest.ExecuteQuest();
 
     }
     public  void AtualizarCanvasQuest(string txt1, string txt2)
@@ -338,8 +338,8 @@ public class GameController : MonoBehaviour
     }
     public void AtualizarMelhoriaHabilidades(int indexMeloriaGerreiro, int indexMeloriaDistancia)
     {
-        canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaGerreiro);
-        canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaDistancia);
+      //  canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaGerreiro);
+       // canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaDistancia);
     }
     public void DefinirProgresso()
     {

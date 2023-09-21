@@ -11,9 +11,9 @@ public class Botoes : MonoBehaviour
     [SerializeField] TMP_Text descricao;
     [SerializeField] TMP_Text precoNivelBarra;
     int indexHabilidade;
-    [SerializeField] List<AbilidadePlayerScriptObject> habilidadesDisponiveis;
+    int indexLita;
+    [SerializeField] AbilidadePlayerScriptObject habilidade;
     [SerializeField] AbilidadePlayerScriptObject so;
-   [SerializeField] int indexLita=0;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
 
@@ -76,19 +76,14 @@ public class Botoes : MonoBehaviour
     }
     public void AtualizarBotaoHabilidades()
     {
-        if(indexLita< habilidadesDisponiveis.Count-1)
-        {
-            indexLita++;
-            so = habilidadesDisponiveis[indexLita];
-            GameController.instance.Save();
-        }
-       
+
+       so = habilidade;
+        GameController.instance.Save();
 
     }
     public void AtualizarIndexMelhoriaHabilidades(int indexLista)
     {
-        this.indexLita= indexLista;
-        so = habilidadesDisponiveis[indexLita];
+        so = habilidade;
        DefinirBotaoHabilidades();
     }
     public void DefinirBotaoHabilidades()
