@@ -16,29 +16,34 @@ public class ArmaBranca : MonoBehaviour
     private void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
+       // if (Input.GetKeyDown(KeyCode.Mouse0))
+       // {
           
            
-        }
-        if (ativar)
-        {
-            t = t + 1 * speed * Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, Mathf.Lerp(minimum, maximum, t), 0);
-        }
+        //}
+       // if (ativar)
+      //  {
+            //t = t + 1 * speed * Time.deltaTime;
+            //transform.rotation = Quaternion.Euler(0, Mathf.Lerp(minimum, maximum, t), 0);
+     //   }
         if (transform.rotation.y>= 1)
         {
-            ativar = false;
-            obj.SetActive(false);
-            transform.rotation = rotate;
-            t = 0;
+            // ativar = false;
+           
+           // transform.rotation = rotate;
+           // t = 0;
            
         }
     }
     public void Usar()
     {
         obj.SetActive(true);
-        ativar = true;
+        Invoke("DesativarArma",1f);
+       // ativar = true;
+    }
+    public void DesativarArma()
+    {
+        obj.SetActive(false);
     }
            
     public float Dano { get { return dano; } }
