@@ -64,8 +64,8 @@ public class Protagonista : MonoBehaviour
         {
                 MirarRotate();
           
-            if (combo > 0&& ativarAtaque)
-            {
+            //if (combo > 0&& ativarAtaque)
+            //{
                 if (itemSelecionado !=2)
                 {
                     Invoke("DiminuirCombo", 0.1f);
@@ -75,11 +75,11 @@ public class Protagonista : MonoBehaviour
                 protagonista.Atacar(arma, anim);
                
                 
-            }
-            if (combo <= 1f)
-            {
-                resetarCombo = true;
-            }
+            //}
+            //if (combo <= 1f)
+            //{
+            //    resetarCombo = true;
+            //}
 
 
         }

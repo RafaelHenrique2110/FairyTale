@@ -11,7 +11,7 @@ public class Soco : MonoBehaviour, I_Combate_Inimigo
     {
         tempo = tempo - Time.deltaTime;
            
-        Debug.Log("Socarrrrrrrrrrrrrrr");
+        
         anim.SetBool("Correr", false);
         anim.SetBool("Soco", true);
 
