@@ -195,15 +195,11 @@ public class Player : MonoBehaviour
 
     public void Atacar(GameObject [] arma, Animator anim)
     {
-      
-       
-           
-            definir_combate.Atacar(arma, anim);
-        
-        
-
+                        
+        definir_combate.Atacar(arma, anim);
     }
-  
+
+
     public void PausarPoder()
     {
         liberarPoder = false;

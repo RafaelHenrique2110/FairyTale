@@ -11,9 +11,9 @@ public class Botoes : MonoBehaviour
     [SerializeField] TMP_Text descricao;
     [SerializeField] TMP_Text precoNivelBarra;
     int indexHabilidade;
-    [SerializeField] List<AbilidadePlayerScriptObject> habilidadesDisponiveis;
+    int indexLita;
+    [SerializeField] AbilidadePlayerScriptObject habilidade;
     [SerializeField] AbilidadePlayerScriptObject so;
-   [SerializeField] int indexLita=0;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
 
@@ -50,14 +50,14 @@ public class Botoes : MonoBehaviour
     {
 
         GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+       //AtualizarBotaoHabilidades();
         FecharPainel();
 
     }
     public void TrocarCombatePlayer()
     {
         GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+        //AtualizarBotaoHabilidades();
         FecharPainel();
         GameController.instance.AtualizarSlot("Ataque","Disparo");
 
@@ -65,30 +65,25 @@ public class Botoes : MonoBehaviour
     public void TrocarDash()
     {
         GameController.instance.TrocarDash(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+      //  AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void TrocarMovimentacao()
     {
         GameController.instance.TrocarMovimento( GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+       // AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void AtualizarBotaoHabilidades()
     {
-        if(indexLita< habilidadesDisponiveis.Count-1)
-        {
-            indexLita++;
-            so = habilidadesDisponiveis[indexLita];
-            GameController.instance.Save();
-        }
-       
+
+       so = habilidade;
+        GameController.instance.Save();
 
     }
     public void AtualizarIndexMelhoriaHabilidades(int indexLista)
     {
-        this.indexLita= indexLista;
-        so = habilidadesDisponiveis[indexLita];
+        so = habilidade;
        DefinirBotaoHabilidades();
     }
     public void DefinirBotaoHabilidades()

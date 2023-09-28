@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class Lobo : MonoBehaviour
 {
-    static float tamanhoVida = 200, tamanhoForca = 10, tamanhoEscudo = 5;
+    static float tamanhoVida = 20, tamanhoForca = 10, tamanhoEscudo = 5;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;

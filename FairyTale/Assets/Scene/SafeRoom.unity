@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 563520528}
-  m_IndirectSpecularColor: {r: 0.16669425, g: 0.23912054, b: 0.5628369, a: 1}
+  m_IndirectSpecularColor: {r: 0.16669488, g: 0.23912176, b: 0.5628399, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4154,8 +4154,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.069418885, y: 0.085229754, z: 0.76713336}
-  m_Center: {x: 0.048630524, y: 0.13256718, z: 0.48384544}
+  m_Size: {x: 0.58986074, y: 0.40503246, z: 0.76713336}
+  m_Center: {x: 0.06335729, y: 0.29246852, z: 0.48384544}
 --- !u!114 &151336807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6063,8 +6063,8 @@ MonoBehaviour:
   sprite_vida: {fileID: 850796907}
   txt_timePoder: {fileID: 421186715}
   txt_vida: {fileID: 0}
-  txt_requisitos_quest: {fileID: 0}
-  txt_titulo_quest: {fileID: 0}
+  txt_requisitos_quest: {fileID: 202327690}
+  txt_titulo_quest: {fileID: 2082795262}
   sensibilidadeMouse: 15
   canvas: {fileID: 0}
   moedas: 10
@@ -6073,6 +6073,7 @@ MonoBehaviour:
   poderes_player: {fileID: 0}
   combates_player: {fileID: 0}
   movimentacoes_player: {fileID: 0}
+  Quest: {fileID: 11400000, guid: 56d8c1b72f91f0c41925e096cb947734, type: 2}
   Portal: {fileID: 576238002}
   assistente: {fileID: 0}
   txtSlot1: {fileID: 627957588}
@@ -6082,7 +6083,6 @@ MonoBehaviour:
   hud: {fileID: 1731817953}
   ObjInfoGame: {fileID: 0}
   BtnDialogo: {fileID: 495031970}
-  quest: {fileID: 0}
 --- !u!4 &230357203
 Transform:
   m_ObjectHideFlags: 0
@@ -14840,9 +14840,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
-  habilidadesDisponiveis: []
+  habilidade: {fileID: 0}
   so: {fileID: 0}
-  indexLita: 0
   painel: {fileID: 0}
   barra_nivel: {fileID: 0}
 --- !u!1001 &713223226
@@ -19023,9 +19022,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
-  habilidadesDisponiveis: []
+  habilidade: {fileID: 0}
   so: {fileID: 0}
-  indexLita: 0
   painel: {fileID: 0}
   barra_nivel: {fileID: 0}
 --- !u!1 &963308453
@@ -28487,9 +28485,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
-  habilidadesDisponiveis: []
+  habilidade: {fileID: 0}
   so: {fileID: 0}
-  indexLita: 0
   painel: {fileID: 0}
   barra_nivel: {fileID: 0}
 --- !u!1 &1581595231
@@ -32549,7 +32546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!96 &1867840134
 TrailRenderer:
   serializedVersion: 2
@@ -32622,7 +32619,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.55423945, b: 0, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -34169,9 +34166,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
-  habilidadesDisponiveis: []
+  habilidade: {fileID: 0}
   so: {fileID: 0}
-  indexLita: 0
   painel: {fileID: 2046222294}
   barra_nivel: {fileID: 0}
 --- !u!4 &1978677127 stripped
@@ -37956,9 +37952,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 1069585622}
-  habilidadesDisponiveis: []
+  habilidade: {fileID: 0}
   so: {fileID: 0}
-  indexLita: 0
   painel: {fileID: 1069585621}
   barra_nivel: {fileID: 1731817954}
 --- !u!1001 &412140202046648902
