@@ -3149,8 +3149,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.940343, y: 0.3186918, z: 1.6718941}
-  m_Center: {x: -0.009123212, y: 0.015836164, z: 0.93622583}
+  m_Size: {x: 0.940343, y: 0.3186918, z: 1.0119841}
+  m_Center: {x: -0.00912321, y: 0.015836164, z: 0.6062708}
 --- !u!114 &151336807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10626,7 +10626,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671085639}
-  m_LocalRotation: {x: 0.40817973, y: 0.08657127, z: -0.03891898, w: 0.9079538}
+  m_LocalRotation: {x: 0.40817973, y: 0.08657123, z: -0.038918965, w: 0.9079538}
   m_LocalPosition: {x: -27.09, y: 16.1, z: -19.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16606,6 +16606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003948204}
   - component: {fileID: 1003948203}
+  - component: {fileID: 1003948205}
   - component: {fileID: 1003948202}
   - component: {fileID: 1003948201}
   - component: {fileID: 1003948200}
@@ -16723,9 +16724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2195047b4fe59d34196b71d8cbde43d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limiteCombo: 2
+  limiteCombo: 3
   RaioComfonto: 0
-  combo: 2
+  combo: 3
   anim: {fileID: 1003948198}
   poderes: {fileID: 1003948202}
   combates: {fileID: 1003948201}
@@ -16733,6 +16734,7 @@ MonoBehaviour:
   arma:
   - {fileID: 731245354}
   - {fileID: 151336805}
+  dashed: {fileID: 1003948205}
   ativado: 0
 --- !u!4 &1003948204
 Transform:
@@ -16753,6 +16755,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1003948205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003948197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c672237df0f15544bdb8d4898aef8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 0.3
 --- !u!1001 &1004216607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34473,7 +34488,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075178968}
-  m_LocalRotation: {x: 0.40817973, y: 0.08657127, z: -0.03891898, w: 0.9079538}
+  m_LocalRotation: {x: 0.40817973, y: 0.08657123, z: -0.038918965, w: 0.9079538}
   m_LocalPosition: {x: -27.09, y: 16.1, z: -19.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41735,6 +41750,7 @@ GameObject:
   - component: {fileID: 4943324320269364159}
   - component: {fileID: 4943324320269364153}
   - component: {fileID: 4943324320269364160}
+  - component: {fileID: 4943324320269364161}
   m_Layer: 3
   m_Name: Chapeuzinhao
   m_TagString: Untagged
@@ -41801,6 +41817,20 @@ MonoBehaviour:
   anin: {fileID: 4943324320269364153}
   r: {fileID: 4943324320269364159}
   inventario: []
+  dashed: {fileID: 4943324320269364161}
+--- !u!114 &4943324320269364161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943324320269364156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c672237df0f15544bdb8d4898aef8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 0.3
 --- !u!33 &4943324320348757768
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42734,7 +42764,7 @@ GameObject:
   m_Layer: 0
   m_Name: mixamorig:LeftHand
   m_TagString: mao_inimigo
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43317,7 +43347,7 @@ GameObject:
   m_Layer: 0
   m_Name: mixamorig:RightHand
   m_TagString: mao_inimigo
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45002,6 +45032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7568348437732245610}
   - component: {fileID: 7568348437732245611}
+  - component: {fileID: 7568348437732245616}
   - component: {fileID: 7568348437732245614}
   - component: {fileID: 7568348437732245615}
   m_Layer: 3
@@ -45068,6 +45099,7 @@ MonoBehaviour:
   anin: {fileID: 7568348437732245615}
   inventario: []
   chapeuzinho: {fileID: 4943324320269364160}
+  dashed: {fileID: 7568348437732245616}
 --- !u!95 &7568348437732245615
 Animator:
   serializedVersion: 4
@@ -45088,6 +45120,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7568348437732245616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568348437732245608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c672237df0f15544bdb8d4898aef8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 0.3
 --- !u!1 &7568348437804119256
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class Protagonista : MonoBehaviour
     [SerializeField] VarCombatePlayer combates;
     [SerializeField] VarMovimentacaoPlayer movimentacoes;
     [SerializeField] GameObject[] arma;
+    [SerializeField] Dashed dashed;
     Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
      [SerializeField] bool ativado;
   
@@ -64,25 +65,24 @@ public class Protagonista : MonoBehaviour
         {
                 MirarRotate();
           
-            //if (combo > 0&& ativarAtaque)
-            //{
+            if (combo > 0&& ativarAtaque)
+            {
                 if (itemSelecionado !=2)
                 {
-                    Invoke("DiminuirCombo", 0.1f);
+                    Invoke("DiminuirCombo", 0.5f);
                     ativarAtaque = false;
                 }
                 
                 protagonista.Atacar(arma, anim);
-               
-                
-            //}
-            //if (combo <= 1f)
-            //{
-            //    resetarCombo = true;
-            //}
+
+                }
+                if (combo <= 1f)
+                {
+                    resetarCombo = true;
+                }
 
 
-        }
+            }
         if (resetarCombo)
         {
           ResetarCombo();
@@ -91,6 +91,10 @@ public class Protagonista : MonoBehaviour
         protagonista.UsarPoder(arma, anim);
         transform.position = protagonista.Move(transform, speed, anim);
         }
+    }
+    public void Dash()
+    {
+        dashed.Dash(transform.forward, 5);
     }
     void DetectarInimigoProximo()
     {

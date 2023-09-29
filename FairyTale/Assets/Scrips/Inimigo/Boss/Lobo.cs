@@ -17,6 +17,7 @@ public class Lobo : MonoBehaviour
     [SerializeField] Animator anin;
     [SerializeField] List<GameObject> inventario;
     [SerializeField] Chapeuzinho chapeuzinho;
+    [SerializeField] Dashed dashed;
     Inimigo lobo = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
     void Start()
     {
@@ -66,8 +67,8 @@ public class Lobo : MonoBehaviour
         }
         if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
         {
-           
-           lobo.definir_combate_basico = lobo.Definir_Combate_Desabilitado;
+            dashed.Dash(other.transform.forward, 5);
+            lobo.definir_combate_basico = lobo.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
             lobo.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
