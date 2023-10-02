@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Image sprite_estamina;
     [SerializeField] Image sprite_vida;
     [SerializeField] Text txt_timePoder;
+    [SerializeField] Image fillPoder;
     [SerializeField] Text txt_vida;
     [SerializeField] Text txt_requisitos_quest;
     [SerializeField] Text txt_titulo_quest;
@@ -78,6 +79,8 @@ public class GameController : MonoBehaviour
     public void AtualizarTimePoder(int n)
     {
         txt_timePoder.text = "" + n;
+        fillPoder.fillAmount = n* 0.1f;
+        
     }
     public void AtualizarEstaminaPlayer(float n)
     {
