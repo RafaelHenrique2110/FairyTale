@@ -12,7 +12,7 @@ public class ArmaBranca : MonoBehaviour
     [SerializeField] bool ativar= false;
     [SerializeField] int dano;
     [SerializeField] Quaternion rotate;
-    [SerializeField] GameObject obj;
+   
     private void Update()
     {
        
@@ -37,14 +37,16 @@ public class ArmaBranca : MonoBehaviour
     }
     public void Usar()
     {
-        obj.SetActive(true);
-        Invoke("DesativarArma",1f);
-       // ativar = true;
+        Invoke("AtavarArma", 1f);
+
     }
-    public void DesativarArma()
+    public void AtivarArma()
     {
-        obj.SetActive(false);
+       
+        Invoke("DesativarArma", 0.1f);
+        // ativar = true;
     }
+   
            
     public float Dano { get { return dano; } }
 }

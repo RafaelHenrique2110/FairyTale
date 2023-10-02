@@ -15,6 +15,7 @@ public class Chapeuzinho : MonoBehaviour
     [SerializeField] Animator anin;
     [SerializeField] Rigidbody r;
     [SerializeField] List<GameObject> inventario;
+    [SerializeField] Dashed dashed;
     Inimigo ChapeuzunhoV = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
 
     private void Start()
@@ -53,6 +54,7 @@ public class Chapeuzinho : MonoBehaviour
             {
                 DroparIten(inventario);
             }
+            dashed.Dash(other.transform.forward, 5);
             ChapeuzunhoV.definir_combate_basico = ChapeuzunhoV.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
