@@ -66,12 +66,12 @@ public class Player : MonoBehaviour
     {
         movimento_Correr= movimentacoes.movimentacoes[2];
     }
-    public void DiminurTimePoder()
+    public void Almentar()
     {
-        if (timePoder > 0)
+        if (timePoder < limiteTimePoder)
         {
-            timePoder = timePoder - Time.deltaTime;
-            GameController.instance.AtualizarTimePoder((int)timePoder);
+            timePoder = timePoder + Time.deltaTime;
+            GameController.instance.AtualizarTimePoder(timePoder/limiteTimePoder);
         }
 
     }
@@ -212,18 +212,19 @@ public class Player : MonoBehaviour
     public void UsarPoder(GameObject[] arma, Animator anim)
     {
         
-        DiminurTimePoder();
+        Almentar();
        
-        if (Input.GetKeyDown("f") && timePoder <= 0) 
+        if (Input.GetKeyDown("f") && timePoder >= limiteTimePoder) 
         {        
            // if (definir_poder!=sem_poder)
            // {
                 DispausarPoder();
                 Debug.Log("aaoaooaoa");
-                timePoder = limiteTimePoder;
-          //  }
-           
-  
+                timePoder =0;
+            GameController.instance.AtualizarTimePoder((int)timePoder);
+            //  }
+
+
         }
         if (liberarPoder)
         {

@@ -76,10 +76,10 @@ public class GameController : MonoBehaviour
     }
     
     //////FUN�OES Player///////
-    public void AtualizarTimePoder(int n)
+    public void AtualizarTimePoder(float n)
     {
         txt_timePoder.text = "" + n;
-        fillPoder.fillAmount = n* 0.1f;
+        fillPoder.fillAmount = n;
         
     }
     public void AtualizarEstaminaPlayer(float n)
