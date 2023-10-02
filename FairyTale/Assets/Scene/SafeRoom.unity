@@ -4175,7 +4175,6 @@ MonoBehaviour:
   ativar: 0
   dano: 2
   rotate: {x: 0, y: 0.008726535, z: 0, w: 0.9999619}
-  obj: {fileID: 1867840133}
 --- !u!4 &151336808
 Transform:
   m_ObjectHideFlags: 0
@@ -6577,7 +6576,6 @@ MonoBehaviour:
   ativar: 0
   dano: 1
   rotate: {x: 0, y: 0, z: 0, w: 0}
-  obj: {fileID: 0}
 --- !u!136 &258121079
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19839,7 +19837,14 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tand
+    more ...\n\tFrom animation clip 'Standing Melee Attack Horizontal'\n\tFrom animation
+    clip 'Standing Melee Attack Horizontal'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -19938,6 +19943,7 @@ MonoBehaviour:
   arma:
   - {fileID: 731245354}
   - {fileID: 151336805}
+  dashed: {fileID: 0}
   ativado: 0
 --- !u!4 &1003948204
 Transform:
@@ -23218,7 +23224,7 @@ GameObject:
   - component: {fileID: 1279063641}
   - component: {fileID: 1279063640}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: PortalLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29933,6 +29939,7 @@ MonoBehaviour:
   arma:
   - {fileID: 741126098}
   - {fileID: 258121076}
+  dashed: {fileID: 0}
   ativado: 0
 --- !u!4 &1671285059
 Transform:
