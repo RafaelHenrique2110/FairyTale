@@ -36,7 +36,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Combate_lado_normal
-  m_Speed: 2
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5944432158785551475}
@@ -52,7 +52,7 @@ AnimatorState:
   m_Motion: {fileID: -203655887218126122, guid: 9fdf691096b0a5d44add1faac4a05ef3, type: 3}
   m_Tag: 
   m_SpeedParameter: 
-  m_MirrorParameter: 
+  m_MirrorParameter: Correr
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 --- !u!1101 &-8285783518447162110

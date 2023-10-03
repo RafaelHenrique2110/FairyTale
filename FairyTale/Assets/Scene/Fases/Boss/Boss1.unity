@@ -4432,6 +4432,7 @@ MonoBehaviour:
   sprite_estamina: {fileID: 0}
   sprite_vida: {fileID: 850796907}
   txt_timePoder: {fileID: 421186715}
+  fillPoder: {fileID: 0}
   txt_vida: {fileID: 1061447954}
   txt_requisitos_quest: {fileID: 1187574739}
   txt_titulo_quest: {fileID: 494742306}
@@ -16628,7 +16629,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003948197}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 9fdf691096b0a5d44add1faac4a05ef3, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 29755a5f592698a48ba6a7f5c7b16ddb, type: 3}
   m_Controller: {fileID: 9100000, guid: d3669102bcd7648458f423c2f1c2e601, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0

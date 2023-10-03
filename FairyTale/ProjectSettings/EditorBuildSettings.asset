@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scene/Menu2.unity
     guid: 67f828e72905f604f99a5e48fdd04924
   - enabled: 1
-    path: Assets/Scene/SafeRoom.unity
+    path: Assets/Scene/Fases/SafeRoom/SafeRoom.unity
     guid: ad70dd3af3381194f8c2497a276476f6
   - enabled: 1
-    path: Assets/Scene/Fases/Fase1.unity
+    path: Assets/Scene/Fases/Fase1/Fase1.unity
     guid: bd76487f9214b354f9723c28026bd225
   - enabled: 1
-    path: Assets/Scene/Fases/Fase2.unity
+    path: Assets/Scene/Fases/Fase2/Fase2.unity
     guid: b71ed54d577e0604b8b7866731e2942b
   m_configObjects: {}

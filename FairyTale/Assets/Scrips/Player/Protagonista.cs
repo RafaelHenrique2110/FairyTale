@@ -61,7 +61,7 @@ public class Protagonista : MonoBehaviour
             GameController.instance.SelecionarSlot(Color.white, (Color.green));
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)  && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.Mouse0) )
         {
                 MirarRotate();
           
@@ -88,8 +88,9 @@ public class Protagonista : MonoBehaviour
           ResetarCombo();
         }
 
-        protagonista.UsarPoder(arma, anim);
+        
         transform.position = protagonista.Move(transform, speed, anim);
+            protagonista.UsarPoder(arma, anim);
         }
     }
     public void Dash()
