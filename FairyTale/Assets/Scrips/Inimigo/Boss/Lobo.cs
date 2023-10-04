@@ -30,7 +30,7 @@ public class Lobo : MonoBehaviour
     {
         lobo.Socar();
         transform.position = lobo.Mover(target, transform, speed, anin, lobo);
-       lobo.UsarArma(arma, GetAnimator, lobo);
+        lobo.UsarArma(arma, GetAnimator, lobo);
     }
 
 
@@ -46,7 +46,7 @@ public class Lobo : MonoBehaviour
 
         if (other.CompareTag("municão"))
         {
-            
+
             anin.SetBool("Dano", true);
             lobo.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
             lobo.AtualizarVida(sprite_vida);
@@ -62,7 +62,7 @@ public class Lobo : MonoBehaviour
             {
                 StartCoroutine(lobo.VoltarConciencia(anin));
             }
-            
+
 
         }
         if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
@@ -80,9 +80,9 @@ public class Lobo : MonoBehaviour
                 chapeuzinho.Chapeuzinhov.Socar();
                 chapeuzinho.HabilitarGravidade(true);
                 lobo.EntrarEmComa(gameObject);
-                StartCoroutine(lobo.VoltarDoComa(gameObject,50));
+                StartCoroutine(lobo.VoltarDoComa(gameObject, 50));
                 StartCoroutine(NotificarChapeuzinho(11));
-              
+
 
 
             }
@@ -94,10 +94,10 @@ public class Lobo : MonoBehaviour
         }
 
     }
-    public IEnumerator  NotificarChapeuzinho(float time)
+    public IEnumerator NotificarChapeuzinho(float time)
     {
         yield return new WaitForSeconds(time);
-        if(lobo.Vida <= 0)
+        if (lobo.Vida <= 0)
         {
             chapeuzinho.Chapeuzinhov.Seguir();
             chapeuzinho.Chapeuzinhov.Socar();

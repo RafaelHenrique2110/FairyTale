@@ -1,28 +1,24 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
 public class Player : MonoBehaviour
 {
-    private float vida = 0, forca = 0, escudo =0, estamina = 0, limiteEstamina, timePoder, limiteTimePoder, limiteVida;
-    
+    private float vida = 0, forca = 0, escudo = 0, estamina = 0, limiteEstamina, timePoder, limiteTimePoder, limiteVida;
+
     Definocao_movimentacaoPlayer definir_movimento;
     Definocao_movimentacaoPlayer movimento_Dash = new Definocao_movimentacaoPlayer(new Sem_Dash());
-    Definocao_movimentacaoPlayer movimento_Correr= new Definocao_movimentacaoPlayer(new Correr1());
+    Definocao_movimentacaoPlayer movimento_Correr = new Definocao_movimentacaoPlayer(new Correr1());
     DefinicaoCombate definir_combate_corpo_a_corpo;
     DefinicaoCombate definir_combate_distancia;
     DefinicaoCombate definir_combate;
-    DefinicaoCombate combate_espada= new DefinicaoCombate(new Corpo_A_Corpo1());
+    DefinicaoCombate combate_espada = new DefinicaoCombate(new Corpo_A_Corpo1());
     VarPoderesPlayer poderes;
     VarCombatePlayer combates;
     VarMovimentacaoPlayer movimentacoes;
     Definicao_Poder_Player definir_poder;
     Definicao_Poder_Player sem_poder = new Definicao_Poder_Player(new Sem_Poder());
- 
-   
+
+
     public Player(float limiteVida, float limiteForca, float limiteEscudo, float limiteEstamina, float limiteTimePoder)
     {
         vida = limiteVida;
@@ -32,16 +28,16 @@ public class Player : MonoBehaviour
         this.limiteEstamina = limiteEstamina;
         this.limiteTimePoder = limiteTimePoder;
         this.limiteVida = limiteVida;
-       
-     
+
+
     }
-    public  void AtualizarPlayer(Player playerAtualizado)
+    public void AtualizarPlayer(Player playerAtualizado)
     {
-        
-       // GameController.instance.DefinirPlayer(playerAtualizado);
+
+        // GameController.instance.DefinirPlayer(playerAtualizado);
         DefinirMaximoVida(playerAtualizado.LimmiteVida);
         DefinirVida(playerAtualizado.vida);
-       definir_combate_distancia = playerAtualizado.DefiniCombateDistancia;
+        definir_combate_distancia = playerAtualizado.DefiniCombateDistancia;
         definir_poder = playerAtualizado.DefiniPoder;
     }
 
@@ -52,11 +48,11 @@ public class Player : MonoBehaviour
     }
     public void Correr()
     {
-        definir_movimento = movimento_Correr; 
+        definir_movimento = movimento_Correr;
     }
-    public void DefinirMovimento( Definocao_movimentacaoPlayer correr)
+    public void DefinirMovimento(Definocao_movimentacaoPlayer correr)
     {
-        movimento_Correr= correr;
+        movimento_Correr = correr;
     }
     public void AplicarMovimentacao(VarMovimentacaoPlayer movimentacoes)
     {
@@ -64,14 +60,14 @@ public class Player : MonoBehaviour
     }
     public void AbilitarMovimentacao()
     {
-        movimento_Correr= movimentacoes.movimentacoes[2];
+        movimento_Correr = movimentacoes.movimentacoes[2];
     }
     public void Almentar()
     {
         if (timePoder < limiteTimePoder)
         {
             timePoder = timePoder + Time.deltaTime;
-            GameController.instance.AtualizarTimePoder(timePoder/limiteTimePoder);
+            GameController.instance.AtualizarTimePoder(timePoder / limiteTimePoder);
         }
 
     }
@@ -83,15 +79,15 @@ public class Player : MonoBehaviour
             GameController.instance.AtualizarEstaminaPlayer(estamina / limiteEstamina);
         }
     }
-    public  void TomarDano(float dano)
+    public void TomarDano(float dano)
     {
-        
+
         if (vida > 0)
         {
-            vida = GameController.instance.subitrair(vida, dano/escudo);
+            vida = GameController.instance.subitrair(vida, dano / escudo);
             GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
         }
-        
+
     }
     public void Curar(float n)
     {
@@ -100,11 +96,11 @@ public class Player : MonoBehaviour
             vida = GameController.instance.Somar(vida, n);
             GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
         }
-        
+
     }
     public void AumentaMaximoVida(float atribuicao)
     {
-        limiteVida = GameController.instance.Somar(limiteVida,atribuicao);
+        limiteVida = GameController.instance.Somar(limiteVida, atribuicao);
         vida = limiteVida;
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
         Debug.Log(limiteVida);
@@ -118,9 +114,9 @@ public class Player : MonoBehaviour
     {
         limiteVida = atribuicao;
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
-      
+
     }
-     void DefinirVida(float atribuicao)
+    void DefinirVida(float atribuicao)
     {
         this.vida = atribuicao;
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
@@ -152,7 +148,7 @@ public class Player : MonoBehaviour
     }
     public void AplicarCombate(VarCombatePlayer combates)
     {
-        this.combates = combates; 
+        this.combates = combates;
     }
     public void CombateCorpoACorpo()
     {
@@ -170,14 +166,14 @@ public class Player : MonoBehaviour
     }
     public void DefinirCombateDistancia(DefinicaoCombate combate)
     {
-       definir_combate_distancia = combate;
+        definir_combate_distancia = combate;
         CombateDistancia();
 
     }
     public void AplicarPoder(VarPoderesPlayer poderes)
     {
-       this.poderes = poderes;
-       
+        this.poderes = poderes;
+
     }
     public void DesabilitarPoder()
     {
@@ -193,9 +189,9 @@ public class Player : MonoBehaviour
         definir_poder = poder;
     }
 
-    public void Atacar(GameObject [] arma, Animator anim)
+    public void Atacar(GameObject[] arma, Animator anim)
     {
-                        
+
         definir_combate.Atacar(arma, anim);
     }
 
@@ -211,16 +207,16 @@ public class Player : MonoBehaviour
     bool liberarPoder;
     public void UsarPoder(GameObject[] arma, Animator anim)
     {
-        
+
         Almentar();
-       
-        if (Input.GetKeyDown("f") && timePoder >= limiteTimePoder) 
-        {        
-           // if (definir_poder!=sem_poder)
-           // {
-                DispausarPoder();
-                Debug.Log("aaoaooaoa");
-                timePoder =0;
+
+        if (Input.GetKeyDown("f") && timePoder >= limiteTimePoder)
+        {
+            // if (definir_poder!=sem_poder)
+            // {
+            DispausarPoder();
+            Debug.Log("aaoaooaoa");
+            timePoder = 0;
             GameController.instance.AtualizarTimePoder((int)timePoder);
             //  }
 
@@ -228,13 +224,13 @@ public class Player : MonoBehaviour
         }
         if (liberarPoder)
         {
-           escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
+            escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
         }
     }
     public void UsarDash()
     {
-        
-       // PerderEstaminaEstantanio(5);
+
+        // PerderEstaminaEstantanio(5);
         definir_movimento = movimento_Dash;
     }
     public void DefinirDash(Definocao_movimentacaoPlayer dash)
@@ -248,21 +244,21 @@ public class Player : MonoBehaviour
     public Vector3 Move(Transform dir, float speed, Animator anin)
     {
         //Debug.Log("limite" + limiteVida);
-        if (Input.GetKey(KeyCode.W))
+        if (!Input.GetKeyDown(KeyCode.A)&& !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.W))
         {
             dir.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (!Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.A))
         {
             dir.rotation = Quaternion.Euler(0, -90, 0);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D))
         {
             dir.rotation = Quaternion.Euler(0, 90, 0);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.S))
         {
-            dir.rotation = Quaternion.Euler(0,180 , 0);
+            dir.rotation = Quaternion.Euler(0, 180, 0);
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {

@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Quest/Ir ate o portal", order = 1)]
 public class Ir_ate_o_portal : So_Quest
 {
-    [SerializeField]  string titulo_quest = "Titulo ";
+    [SerializeField] string titulo_quest = "Titulo ";
     [SerializeField] string requisitos_quest;
     public override void ExecuteQuest()
     {
@@ -16,6 +14,6 @@ public class Ir_ate_o_portal : So_Quest
     }
     public void Alterar()
     {
-       
+
     }
 }

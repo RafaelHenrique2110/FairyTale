@@ -1,12 +1,11 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InfoGame : MonoBehaviour
 {
-   [SerializeField] float limiteVidaPlayer;
-   Player player;
-   [SerializeField] int moedas;
-    [SerializeField]  float barrasMelhoriasPlayer;
+    [SerializeField] float limiteVidaPlayer;
+    Player player;
+    [SerializeField] int moedas;
+    [SerializeField] float barrasMelhoriasPlayer;
     [SerializeField] int nivelBotaoDistancia;
     [SerializeField] int nivelBotaoGuerreiro;
     private static InfoGame instance;
@@ -34,12 +33,12 @@ public class InfoGame : MonoBehaviour
     }
     public void SavePlayer(Player player)
     {
-       
+
         this.player = player;
     }
     public void SaveMoedas(int moedas)
     {
-        this.moedas= moedas;
+        this.moedas = moedas;
     }
     public void SaveLoja(float barrasMelhoriasPlayer)
     {
@@ -50,7 +49,7 @@ public class InfoGame : MonoBehaviour
         this.nivelBotaoDistancia = botaoDistancia;
         this.nivelBotaoGuerreiro = botaoGuerreiro;
     }
-    public  Player GetPlayerSalvo()
+    public Player GetPlayerSalvo()
     {
         return player;
     }

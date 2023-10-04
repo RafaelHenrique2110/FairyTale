@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +24,11 @@ public class Chapeuzinho : MonoBehaviour
     }
     void FixedUpdate()
     {
-      
+
         ChapeuzunhoV.DetectarMovimento(sensores, anin);
         transform.position = ChapeuzunhoV.Mover(target, transform, speed, anin, ChapeuzunhoV);
-        ChapeuzunhoV.UsarArma(arma,anin,ChapeuzunhoV);
-       
+        ChapeuzunhoV.UsarArma(arma, anin, ChapeuzunhoV);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,7 +74,7 @@ public class Chapeuzinho : MonoBehaviour
     }
     public void HabilitarGravidade(bool habilitar)
     {
-        r.useGravity =habilitar;
+        r.useGravity = habilitar;
     }
 
     public Inimigo Chapeuzinhov { get { return ChapeuzunhoV; } }

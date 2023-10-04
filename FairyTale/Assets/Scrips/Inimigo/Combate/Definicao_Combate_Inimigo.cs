@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Definicao_Combate_Inimigo : MonoBehaviour
@@ -13,6 +11,6 @@ public class Definicao_Combate_Inimigo : MonoBehaviour
     {
         i_combate_player.Atacar(arma, anim, inimigo);
     }
-    
-   
+
+
 }

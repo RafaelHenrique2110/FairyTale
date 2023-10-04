@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +8,7 @@ public class PauseButton : MonoBehaviour
 
     public GameObject menuPausa;
 
- 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

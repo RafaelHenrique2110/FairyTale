@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Quest/Fale com o Chapeleiro", order = 1)]
 public class FalarComChapeleiro : So_Quest
@@ -14,5 +12,5 @@ public class FalarComChapeleiro : So_Quest
     {
         GameController.instance.AtualizarCanvasQuest(requisitos_quest, titulo_quest);
     }
-    
+
 }

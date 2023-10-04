@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,24 +17,24 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
     Inimigo minion = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
     void Start()
     {
-        
+
         GameController.instance.assistente.AdicionarObservador(this);
 
         minion.Patrulhar();
-       
+
 
     }
     void FixedUpdate()
     {
         minion.Socar();
-       minion.DetectarMovimento(sensores, anin);
-        transform.position = minion.Mover(target, transform, speed, anin,minion);
+        minion.DetectarMovimento(sensores, anin);
+        transform.position = minion.Mover(target, transform, speed, anin, minion);
     }
-    
+
 
     public void Notificar()
     {
-       
+
         minion.Seguir();
     }
 
@@ -51,7 +50,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             }
             anin.SetBool("Dano", true);
             minion.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
-            minion.AtualizarVida( sprite_vida);
+            minion.AtualizarVida(sprite_vida);
             Destroy(other.gameObject);
             StartCoroutine(minion.VoltarConciencia(anin));
 
@@ -67,7 +66,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
             minion.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
-            minion.AtualizarVida( sprite_vida);
+            minion.AtualizarVida(sprite_vida);
             StartCoroutine(minion.VoltarConciencia(anin));
 
         }
@@ -81,7 +80,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             Instantiate(inventario[i].gameObject, transform.position, transform.rotation);
         }
     }
-    
+
     public Inimigo Minion { get { return minion; } }
 
 }

@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Tank_2: MonoBehaviour, I_Poder_Player
+public class Tank_2 : MonoBehaviour, I_Poder_Player
 {
     float time = 6;
     public float Poder(GameObject arma, Animator anim, float n)

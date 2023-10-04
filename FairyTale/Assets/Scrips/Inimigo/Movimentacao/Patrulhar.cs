@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Patrulhar : MonoBehaviour, I_MovimentacaoInimigo
@@ -8,7 +6,7 @@ public class Patrulhar : MonoBehaviour, I_MovimentacaoInimigo
     int num = 0;
     public Vector3 MovimentacaoInimigo(Transform[] target, Transform dir, float speed, Animator anin, Inimigo inimigo)
     {
-       
+
         anin.SetBool("Correr", false);
         anin.SetBool("Andar", true);
         speed = 5;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DefinicaoCombate : MonoBehaviour
@@ -9,9 +7,9 @@ public class DefinicaoCombate : MonoBehaviour
     {
         this.i_combate_player = i_combate;
     }
-    public void Atacar(GameObject [] arma , Animator anim)
+    public void Atacar(GameObject[] arma, Animator anim)
     {
-        i_combate_player.Atacar(arma,anim);
+        i_combate_player.Atacar(arma, anim);
     }
 }
 

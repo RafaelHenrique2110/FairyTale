@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Correr2 : MonoBehaviour, I_movimentacaoPlayer

@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
-public enum stateCesta{IR, Voltar};
+public enum stateCesta { IR, Voltar };
 public class Cesta : MonoBehaviour
 {
-    [SerializeField]stateCesta state;
+    [SerializeField] stateCesta state;
     [SerializeField] float tepoIda;
     [SerializeField] float tepoVolta;
     [SerializeField] Vector3 dirIr;
@@ -41,10 +38,11 @@ public class Cesta : MonoBehaviour
     }
     void Voltar()
     {
-        dirVoltar= targetVoltar.position- transform.position;
-        if(dirVoltar.magnitude > 0.5){
-            transform.position+=dirVoltar.normalized * 20 * Time.deltaTime;
-            
+        dirVoltar = targetVoltar.position - transform.position;
+        if (dirVoltar.magnitude > 0.5)
+        {
+            transform.position += dirVoltar.normalized * 20 * Time.deltaTime;
+
 
         }
         if (dirVoltar.magnitude <= 0.5)
@@ -58,7 +56,7 @@ public class Cesta : MonoBehaviour
 
 
     }
-   
-   
+
+
 }
 

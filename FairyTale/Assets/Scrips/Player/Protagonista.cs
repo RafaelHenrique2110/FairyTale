@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Protagonista : MonoBehaviour
@@ -15,7 +11,7 @@ public class Protagonista : MonoBehaviour
     public int limiteCombo = 3;
     [SerializeField] float RaioComfonto;
     float speed = 0;
-    public int combo=2;
+    public int combo = 2;
     bool resetarCombo;
     public Animator anim;
     [SerializeField] VarPoderesPlayer poderes;
@@ -24,8 +20,8 @@ public class Protagonista : MonoBehaviour
     [SerializeField] GameObject[] arma;
     [SerializeField] Dashed dashed;
     Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
-     [SerializeField] bool ativado;
-  
+    [SerializeField] bool ativado;
+    bool travaMovimento;
 
 
 
@@ -38,42 +34,51 @@ public class Protagonista : MonoBehaviour
         protagonista.CombateCorpoACorpo();
         protagonista.DesabilitarPoder();
         protagonista.DesabilitarCombateDistancia();
-       
-       // protagonista.DesabilitarDash();
+
+        // protagonista.DesabilitarDash();
         // protagonista.AbilitarMovimentacao();
     }
     int itemSelecionado;
-    bool ativarAtaque=true;
+    bool ativarAtaque = true;
     private void Update()
     {
-        if( ativado){
-        DetectarInimigoProximo();
-        if (Input.GetKeyDown("1"))
+        if (ativado)
         {
-            itemSelecionado = 1;
-           protagonista.CombateCorpoACorpo();
-            GameController.instance.SelecionarSlot(Color.green, (Color.white));
-        }
-        if (Input.GetKeyDown("2"))
-        {
-            itemSelecionado = 2;
-            protagonista.CombateDistancia();
-            GameController.instance.SelecionarSlot(Color.white, (Color.green));
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) )
-        {
-                MirarRotate();
-          
-            if (combo > 0&& ativarAtaque)
+            DetectarInimigoProximo();
+            if (Input.GetKeyDown("1"))
             {
-                if (itemSelecionado !=2)
+                itemSelecionado = 1;
+                protagonista.CombateCorpoACorpo();
+                GameController.instance.SelecionarSlot(Color.green, (Color.white));
+            }
+            if (Input.GetKeyDown("2"))
+            {
+                itemSelecionado = 2;
+                protagonista.CombateDistancia();
+                GameController.instance.SelecionarSlot(Color.white, (Color.green));
+            }
+            if (travaMovimento == false && !Input.GetKey(KeyCode.Mouse0))
+            {
+                transform.position = protagonista.Move(transform, speed, anim);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                MirarRotate();
+                TravarMovimento();
+
+
+                if (combo > 0 && ativarAtaque)
                 {
-                    Invoke("DiminuirCombo", 0.5f);
-                    ativarAtaque = false;
-                }
-                
-                protagonista.Atacar(arma, anim);
+                    if (itemSelecionado != 2)
+                    {
+                        Invoke("DiminuirCombo", 0.5f);
+                        ativarAtaque = false;
+                    }
+
+                    protagonista.Atacar(arma, anim);
+                    Invoke("DistravarMovimento", 1f);
+
 
                 }
                 if (combo <= 1f)
@@ -83,28 +88,36 @@ public class Protagonista : MonoBehaviour
 
 
             }
-        if (resetarCombo)
-        {
-          ResetarCombo();
-        }
+            if (resetarCombo)
+            {
+                ResetarCombo();
+            }
+            
 
-        
-        transform.position = protagonista.Move(transform, speed, anim);
             protagonista.UsarPoder(arma, anim);
+
         }
+    }
+    public void DistravarMovimento()
+    {
+        travaMovimento = false;
+    }
+    public void TravarMovimento()
+    {
+        travaMovimento = true;
     }
     public void Dash()
     {
-        dashed.Dash(transform.forward, 5);
+        dashed.Dash(transform.forward, 2);
     }
     void DetectarInimigoProximo()
     {
-        for(int i = 0; i <  GameController.instance.inimmigos.Count; i++)
+        for (int i = 0; i < GameController.instance.inimmigos.Count; i++)
         {
-            float distancia= Vector3.Distance(GameController.instance.inimmigos[i].transform.position, transform.position);
-            if(distancia <= 3)
+            float distancia = Vector3.Distance(GameController.instance.inimmigos[i].transform.position, transform.position);
+            if (distancia <= 3)
             {
-              GameController.instance.playerConfronto = true;
+                GameController.instance.playerConfronto = true;
             }
             else if (distancia > 3)
             {
@@ -118,8 +131,9 @@ public class Protagonista : MonoBehaviour
         ativarAtaque = true;
 
     }
-    public void Ativar(bool definir){
-        ativado= definir;
+    public void Ativar(bool definir)
+    {
+        ativado = definir;
     }
     float tempoResetCombo = 1f;
     void ResetarCombo()
@@ -135,7 +149,7 @@ public class Protagonista : MonoBehaviour
 
 
     }
-   public void AtualizarConfigPlayer(Player player)
+    public void AtualizarConfigPlayer(Player player)
     {
         protagonista = player;
     }
@@ -157,7 +171,7 @@ public class Protagonista : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+
         if (other.CompareTag("municão"))
         {
             protagonista.TomarDano(1f);
@@ -183,7 +197,7 @@ public class Protagonista : MonoBehaviour
                 GameController.instance.GameOver();
             }
         }
-            if (other.CompareTag("moedas"))
+        if (other.CompareTag("moedas"))
         {
             GameController.instance.ADDMoedas(1);
             Destroy(other.gameObject);
@@ -195,12 +209,12 @@ public class Protagonista : MonoBehaviour
         }
         if (other.CompareTag("Vida"))
         {
-            if(protagonista.Vida< protagonista.LimmiteVida)
+            if (protagonista.Vida < protagonista.LimmiteVida)
             {
                 protagonista.Curar(8);
                 Destroy(other.gameObject);
             }
-           
+
         }
 
 
@@ -213,8 +227,8 @@ public class Protagonista : MonoBehaviour
         }
         else if (other.CompareTag("mudar_Combate") && Input.GetKey("e"))
         {
-           GameController.instance.AtualizarBotoesHabilidade();
-           GameController.instance.AtivarAprimoramentosPoderesPlayer();
+            GameController.instance.AtualizarBotoesHabilidade();
+            GameController.instance.AtivarAprimoramentosPoderesPlayer();
 
         }
     }
@@ -224,9 +238,9 @@ public class Protagonista : MonoBehaviour
         if (other.tag == "gato")
         {
             GameController.instance.ativarDialogo(false);
-        }        
+        }
     }
     public Player Player { get { return protagonista; } }
-   
+
 
 }

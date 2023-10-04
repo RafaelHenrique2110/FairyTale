@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +17,7 @@ public class Assistente : MonoBehaviour
 
     public void Notificar()
     {
-        for(int i = 0; i < _observadores.Count; i++)
+        for (int i = 0; i < _observadores.Count; i++)
         {
 
             _observadores[i].Notificar();

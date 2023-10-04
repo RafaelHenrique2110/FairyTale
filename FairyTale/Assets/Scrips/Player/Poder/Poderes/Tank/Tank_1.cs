@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tank_1 : MonoBehaviour, I_Poder_Player
 {
-    float time=3;
-    public float Poder(GameObject arma, Animator anim,float n)
+    float time = 3;
+    public float Poder(GameObject arma, Animator anim, float n)
     {
         Debug.Log(time);
         time = time - Time.deltaTime;
         if (time > 0)
         {
-            GameController.instance.material_player. color = Color.blue;
+            GameController.instance.material_player.color = Color.blue;
             return n = 20;
         }
         else
@@ -21,6 +19,6 @@ public class Tank_1 : MonoBehaviour, I_Poder_Player
             GameController.instance.material_player.color = Color.yellow;
             return n = 1;
         }
-       
+
     }
 }

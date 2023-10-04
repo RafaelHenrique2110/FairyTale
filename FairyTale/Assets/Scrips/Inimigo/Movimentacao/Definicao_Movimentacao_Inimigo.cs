@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Definicao_Movimentacao_Inimigo : MonoBehaviour
@@ -11,6 +9,6 @@ public class Definicao_Movimentacao_Inimigo : MonoBehaviour
     }
     public Vector3 Mover(Transform[] target, Transform dir, float speed, Animator anin, Inimigo inimigo)
     {
-        return dir.position = i_movimentacaoInimigo.MovimentacaoInimigo(target, dir, speed,anin,inimigo);
+        return dir.position = i_movimentacaoInimigo.MovimentacaoInimigo(target, dir, speed, anin, inimigo);
     }
 }

@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
 public class ColtrolerDialogo : MonoBehaviour
 {
@@ -21,12 +19,12 @@ public class ColtrolerDialogo : MonoBehaviour
     }
 
     public void ComecaDialogo(Dialogo dialogo)
-    {        
+    {
         nameText.text = dialogo.name;
 
         sentences.Clear();
 
-        foreach(string sentence in dialogo.sentences)
+        foreach (string sentence in dialogo.sentences)
         {
             sentences.Enqueue(sentence);
         }

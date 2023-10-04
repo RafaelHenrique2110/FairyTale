@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mover_Player : MonoBehaviour
@@ -21,7 +18,7 @@ public class Mover_Player : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         move.x = horizontal;
         move.z = vertical;
-       // Debug.Log(move);
+        // Debug.Log(move);
         dir.position += move * speed * Time.deltaTime;
         ///dir.Translate(move * speed * Time.deltaTime);
         return dir.position;

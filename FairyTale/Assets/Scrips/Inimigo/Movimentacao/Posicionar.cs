@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Posicionar : MonoBehaviour ,I_MovimentacaoInimigo
+public class Posicionar : MonoBehaviour, I_MovimentacaoInimigo
 {
 
     int posiTarget = 0;
@@ -22,19 +20,19 @@ public class Posicionar : MonoBehaviour ,I_MovimentacaoInimigo
         speed = 5;
         Vector3 dir2 = this.target.position - dir.position;
         distancia = Vector3.Distance(this.target.position, dir.position);
-        if (distancia >=0.1)
+        if (distancia >= 0.1)
         {
-           
+
             dir.rotation = Quaternion.LookRotation(dir2);
             dir.position += dir2.normalized * speed * Time.deltaTime;
         }
-         if (distancia <2f)
+        if (distancia < 2f)
         {
             Debug.Log("ATIVARmIRA");
             inimigo.Mirar();
             anin.SetBool("Correr", false);
         }
-       
+
         return dir.position;
     }
 }

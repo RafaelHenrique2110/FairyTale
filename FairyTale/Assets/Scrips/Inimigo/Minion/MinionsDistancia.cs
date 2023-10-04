@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,10 +17,10 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
     [SerializeField] Animator anin;
     [SerializeField] List<GameObject> inventario;
     Inimigo minion = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
-  
+
     void Start()
     {
-        
+
         GameController.instance.assistente.AdicionarObservador(this);
         minion.arma = arma;
         minion.Patrulhar();
@@ -31,11 +29,11 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
     }
     void FixedUpdate()
     {
-        
+
         minion.DetectarMovimento(sensores, anin);
-        transform.position = minion.Mover(target, transform, speed, anin,this.minion);
+        transform.position = minion.Mover(target, transform, speed, anin, this.minion);
     }
-   
+
     public void Notificar()
     {
         minion.Posicionar(Posicionamento);
@@ -49,11 +47,11 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
         {
             if (minion.Vida <= 0)
             {
-               DroparIten(inventario);
+                DroparIten(inventario);
             }
             anin.SetBool("Dano", true);
             minion.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
-           
+
             minion.AtualizarVida(sprite_vida);
             Destroy(other.gameObject);
             StartCoroutine(minion.VoltarConciencia(anin));
@@ -70,25 +68,25 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
-           //ChapeuzunhoV.Inpulso();
+            //ChapeuzunhoV.Inpulso();
             minion.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
             minion.AtualizarVida(sprite_vida);
-            StartCoroutine(minion.VoltarConciencia(anin)); 
+            StartCoroutine(minion.VoltarConciencia(anin));
 
         }
-        
-        
+
+
     }
     public void DroparIten(List<GameObject> inventario)
     {
 
         for (int i = 0; i < inventario.Count; i++)
         {
-             Instantiate(inventario[i], transform.position , transform.rotation);
-            
+            Instantiate(inventario[i], transform.position, transform.rotation);
+
         }
     }
-    public Inimigo Minion { get { return minion ; } }
+    public Inimigo Minion { get { return minion; } }
 
 
 
