@@ -341,13 +341,13 @@ public class GameController : MonoBehaviour
     void AtualizarLoja(Barras barra)
     {
 
-        ///  hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
+          hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
 
     }
     public void AtualizarMelhoriaHabilidades(int indexMeloriaGerreiro, int indexMeloriaDistancia)
     {
-        //  canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaGerreiro);
-        // canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaDistancia);
+         canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaGerreiro);
+        canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaDistancia);
     }
     public void DefinirProgresso()
     {
@@ -368,7 +368,7 @@ public class GameController : MonoBehaviour
     {
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
         ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
-        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+       ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
         if (SceneManager.GetActiveScene().name == "Fase1")
         {
             ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());

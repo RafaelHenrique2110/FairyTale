@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360a4cbf968fbbf4cb24c1c6842a37a5, type: 3}
   m_Name: MatarInimigos
   m_EditorClassIdentifier: 
-  proxQuest: {fileID: 0}
+  proxQuest: {fileID: 11400000, guid: 979e2ef912ab38c4f9db0199acb3287c, type: 2}
   inimigos_para_matar: 10
+  inimigos_Mortos: 0
   titulo_quest: Mate os inimigos!
-  requisitos_quest: 0/10
+  requisitos_quest: 5/10

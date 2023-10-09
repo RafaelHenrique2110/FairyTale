@@ -20,7 +20,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
 
         GameController.instance.assistente.AdicionarObservador(this);
 
-        minion.Patrulhar();
+        minion.Seguir();
 
 
     }

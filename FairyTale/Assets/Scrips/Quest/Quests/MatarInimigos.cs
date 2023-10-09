@@ -4,7 +4,7 @@ public class MatarInimigos : So_Quest
 {
     [SerializeField] So_Quest proxQuest;
     [SerializeField] int inimigos_para_matar = 10;
-    int inimigos_Mortos = 0;
+    [SerializeField] int inimigos_Mortos = 0;
     [SerializeField] string titulo_quest = "Titulo ";
     [SerializeField] string requisitos_quest;
 
@@ -21,7 +21,7 @@ public class MatarInimigos : So_Quest
     }
     public override void ExecuteQuest()
     {
-        Debug.Log("mate inimigos");
+       
         DefinirExecucaoQuest();
     }
     public override void AtualizarQuest()
