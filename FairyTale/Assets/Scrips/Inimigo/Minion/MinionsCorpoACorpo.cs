@@ -42,7 +42,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("municão"))
+        if (other.CompareTag("municaoPlayer"))
         {
             if (minion.Vida <= 0)
             {
@@ -55,7 +55,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             StartCoroutine(minion.VoltarConciencia(anin));
 
         }
-        if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
+        if (other.CompareTag("Espada"))
         {
             if (minion.Vida <= 0)
             {

@@ -182,7 +182,7 @@ public class Protagonista : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("municão"))
+        if (other.CompareTag("municaoInimigo"))
         {
             protagonista.TomarDano(1f);
             GameController.instance.Save();

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5695506394358375528}
   - component: {fileID: 940160840132245409}
   m_Layer: 0
-  m_Name: municao1
-  m_TagString: municaoPlayer
+  m_Name: municaoInimigo
+  m_TagString: municaoInimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79aecc023cddbe541847431058176091, type: 2}
+  - {fileID: 2100000, guid: 1b499ee9a52c1f545a5a18b310a509f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,8 +97,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.4606583
+  m_Center: {x: 0, y: 0.0020051003, z: -0.02829194}
 --- !u!114 &5695506394358375528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79aecc023cddbe541847431058176091, type: 2}
+  - {fileID: 2100000, guid: 1b499ee9a52c1f545a5a18b310a509f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
