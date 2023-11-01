@@ -46,7 +46,7 @@ public class Lobo : MonoBehaviour
 
         if (other.CompareTag("municão"))
         {
-
+            dashed.Dash(other.transform.forward, 5);
             anin.SetBool("Dano", true);
             lobo.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
             lobo.AtualizarVida(sprite_vida);

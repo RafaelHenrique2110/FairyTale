@@ -244,19 +244,19 @@ public class Player : MonoBehaviour
     public Vector3 Move(Transform dir, float speed, Animator anin)
     {
         //Debug.Log("limite" + limiteVida);
-        if (!Input.GetKeyDown(KeyCode.A)&& !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.W))
+        if (!Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.W))
         {
             dir.rotation = Quaternion.Euler(0, 0, 0);
         }
-        if (!Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.A))
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
             dir.rotation = Quaternion.Euler(0, -90, 0);
         }
-        if (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D))
+        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
             dir.rotation = Quaternion.Euler(0, 90, 0);
         }
-        if (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.S))
+        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
         {
             dir.rotation = Quaternion.Euler(0, 180, 0);
         }

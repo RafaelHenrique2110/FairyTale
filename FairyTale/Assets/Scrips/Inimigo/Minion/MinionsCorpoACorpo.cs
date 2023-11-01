@@ -14,6 +14,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
     [SerializeField] Rigidbody r;
     [SerializeField] Animator anin;
     [SerializeField] List<GameObject> inventario;
+    [SerializeField] Dashed dashed;
     Inimigo minion = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
     void Start()
     {
@@ -27,7 +28,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
     void FixedUpdate()
     {
         minion.Socar();
-        minion.DetectarMovimento(sensores, anin);
+        minion.UsarArma(arma,anin, minion);
         transform.position = minion.Mover(target, transform, speed, anin, minion);
     }
 
@@ -48,6 +49,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             {
                 DroparIten(inventario);
             }
+            dashed.Dash(other.transform.forward, 5);
             anin.SetBool("Dano", true);
             minion.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
             minion.AtualizarVida(sprite_vida);
@@ -55,13 +57,14 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             StartCoroutine(minion.VoltarConciencia(anin));
 
         }
-        if (other.CompareTag("Espada"))
+        if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
         {
             if (minion.Vida <= 0)
             {
                 DroparIten(inventario);
                 minion.Matar(this.gameObject);
             }
+            dashed.Dash(other.transform.forward, 5);
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
             anin.SetBool("Soco", false);
