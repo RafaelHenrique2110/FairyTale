@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 360a4cbf968fbbf4cb24c1c6842a37a5, type: 3}
-  m_Name: MatarInimigos
+  m_Script: {fileID: 11500000, guid: 041f71471e4a1e04680013df98afe6a7, type: 3}
+  m_Name: MataBoss
   m_EditorClassIdentifier: 
   proxQuest: {fileID: 11400000, guid: 979e2ef912ab38c4f9db0199acb3287c, type: 2}
-  inimigos_para_matar: 18
-  inimigos_Mortos: 0
-  titulo_quest: Mate os inimigos!
-  requisitos_quest: 0/18
+  titulo_quest: ' Chapeuzinho'
+  requisitos_quest: Derrote a Chapeuzinho

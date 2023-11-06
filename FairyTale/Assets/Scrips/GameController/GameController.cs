@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] GameObject BtnDialogo;
     [SerializeField] AudioSource audio_Correr;
+    [SerializeField] Chapeuzinho chapeuzinho;
 
     private void Start()
     {
@@ -388,5 +389,6 @@ public class GameController : MonoBehaviour
         BtnDialogo.SetActive(ativo);
     }
     public AudioSource GetAudioCorer() => audio_Correr;
+    public Chapeuzinho GetChapeuzinho() => chapeuzinho;
 }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1842158965}
-  m_IndirectSpecularColor: {r: 0.16669503, g: 0.23912135, b: 0.56283826, a: 1}
+  m_IndirectSpecularColor: {r: 0.16669488, g: 0.23912176, b: 0.5628399, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4452,7 +4452,7 @@ MonoBehaviour:
   poderes_player: {fileID: 0}
   combates_player: {fileID: 0}
   movimentacoes_player: {fileID: 0}
-  Quest: {fileID: 11400000, guid: a82bf0782483db549a2e481b40c7c9e6, type: 2}
+  Quest: {fileID: 11400000, guid: f02942d4d93677649a9872c707ddb877, type: 2}
   Portal: {fileID: 576238002}
   assistente: {fileID: 0}
   txtSlot1: {fileID: 2109166579}
@@ -4463,6 +4463,7 @@ MonoBehaviour:
   ObjInfoGame: {fileID: 0}
   BtnDialogo: {fileID: 495031970}
   audio_Correr: {fileID: 230357205}
+  chapeuzinho: {fileID: 4943324320269364160}
 --- !u!4 &230357203
 Transform:
   m_ObjectHideFlags: 0
@@ -11385,7 +11386,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671085639}
-  m_LocalRotation: {x: 0.40817973, y: 0.08657123, z: -0.038918965, w: 0.9079538}
+  m_LocalRotation: {x: 0.40817973, y: 0.08657127, z: -0.03891898, w: 0.9079538}
   m_LocalPosition: {x: -27.09, y: 16.1, z: -19.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35176,7 +35177,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075178968}
-  m_LocalRotation: {x: 0.40817973, y: 0.08657123, z: -0.038918965, w: 0.9079538}
+  m_LocalRotation: {x: 0.40817973, y: 0.08657127, z: -0.03891898, w: 0.9079538}
   m_LocalPosition: {x: -27.09, y: 16.1, z: -19.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
