@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     VarMovimentacaoPlayer movimentacoes;
     Definicao_Poder_Player definir_poder;
     Definicao_Poder_Player sem_poder = new Definicao_Poder_Player(new Sem_Poder());
+    
 
 
     public Player(float limiteVida, float limiteForca, float limiteEscudo, float limiteEstamina, float limiteTimePoder)
@@ -243,6 +244,7 @@ public class Player : MonoBehaviour
     }
     public Vector3 Move(Transform dir, float speed, Animator anin)
     {
+       
         //Debug.Log("limite" + limiteVida);
         if (!Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.W))
         {
@@ -267,6 +269,7 @@ public class Player : MonoBehaviour
         else
         {
             Esperar();
+            GameController.instance.GetAudioCorer().Stop();
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -288,6 +291,7 @@ public class Player : MonoBehaviour
     public VarPoderesPlayer Poderes { get { return poderes; } }
     public VarCombatePlayer Combates { get { return combates; } }
     public VarMovimentacaoPlayer Movimentacoes { get { return movimentacoes; } }
+    
 
 
 
