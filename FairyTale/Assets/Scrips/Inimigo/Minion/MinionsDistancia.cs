@@ -43,11 +43,12 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("municão"))
+        if (other.CompareTag("municaoPlayer"))
         {
             if (minion.Vida <= 0)
             {
                 DroparIten(inventario);
+                minion.Matar(this.gameObject);
             }
             anin.SetBool("Dano", true);
             minion.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
@@ -63,6 +64,7 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
             {
                 DroparIten(inventario);
                 minion.Matar(this.gameObject);
+
 
             }
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;

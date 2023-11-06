@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 5313064119586494790}
   - component: {fileID: 5313064119586494784}
   - component: {fileID: 7562494980049445008}
+  - component: {fileID: -651944904578061928}
   m_Layer: 3
   m_Name: InimigoCorpoACorpo
   m_TagString: Untagged
@@ -619,6 +620,20 @@ MonoBehaviour:
   anin: {fileID: 5313064119586494784}
   inventario:
   - {fileID: 3071626378376455667, guid: 0191adfe3cc98b14f958bafe56982271, type: 3}
+  dashed: {fileID: -651944904578061928}
+--- !u!114 &-651944904578061928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313064119586494789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c672237df0f15544bdb8d4898aef8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 0.3
 --- !u!1 &5313064120466916475
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,13 +971,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d742157a7ec4f594aae87b923253e7c0, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
 --- !u!4 &712453357301722559 stripped
 Transform:

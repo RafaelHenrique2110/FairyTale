@@ -22,6 +22,8 @@ public class Protagonista : MonoBehaviour
     Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
     [SerializeField] bool ativado;
     bool travaMovimento;
+    [SerializeField] GameObject trails;
+    [SerializeField] GameObject glow;
 
 
 
@@ -64,9 +66,10 @@ public class Protagonista : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+
                 MirarRotate();
                 TravarMovimento();
-
+                
 
                 if (combo > 0 && ativarAtaque)
                 {
@@ -75,7 +78,9 @@ public class Protagonista : MonoBehaviour
                         Invoke("DiminuirCombo", 0.5f);
                         ativarAtaque = false;
                     }
-
+                    trails.SetActive(true);
+                    glow.SetActive(true);
+                    Invoke("DisabilitarEfeitoEspada", 1.5f);
                     protagonista.Atacar(arma, anim);
                     Invoke("DistravarMovimento", 1f);
 
@@ -97,6 +102,11 @@ public class Protagonista : MonoBehaviour
             protagonista.UsarPoder(arma, anim);
 
         }
+    }
+    public void DisabilitarEfeitoEspada()
+    {
+        trails.SetActive(false);
+        glow.SetActive(false);
     }
     public void DistravarMovimento()
     {
@@ -172,7 +182,7 @@ public class Protagonista : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("municão"))
+        if (other.CompareTag("municaoInimigo"))
         {
             protagonista.TomarDano(1f);
             GameController.instance.Save();

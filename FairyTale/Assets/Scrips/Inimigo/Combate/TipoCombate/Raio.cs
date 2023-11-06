@@ -14,7 +14,7 @@ public class Raio : MonoBehaviour, I_Combate_Inimigo
             Debug.Log("RAAAIOOO");
             if (anim != null)
             {
-                GameController.instance.CriarMunicao("magia1", arma.transform);
+                GameController.instance.CriarMunicao("muniçãoInimigo", arma.transform);
             }
             tempo_disparo = 1;
         }
