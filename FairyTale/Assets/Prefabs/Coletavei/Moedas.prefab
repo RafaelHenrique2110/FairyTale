@@ -335,6 +335,10 @@ PrefabInstance:
       value: -1.3213
       objectReference: {fileID: 0}
     - target: {fileID: 7550337825485483278, guid: 8e747e64c9cb38a47bff19ba95986e1c, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550337825485483278, guid: 8e747e64c9cb38a47bff19ba95986e1c, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
       value: 0.41956553
       objectReference: {fileID: 0}
