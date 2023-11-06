@@ -24,6 +24,7 @@ public class Protagonista : MonoBehaviour
     bool travaMovimento;
     [SerializeField] GameObject trails;
     [SerializeField] GameObject glow;
+    
 
 
 
@@ -251,6 +252,7 @@ public class Protagonista : MonoBehaviour
         }
     }
     public Player Player { get { return protagonista; } }
+    
 
 
 }

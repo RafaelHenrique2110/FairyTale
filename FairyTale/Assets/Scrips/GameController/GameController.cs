@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject ObjInfoGame;
 
     [SerializeField] GameObject BtnDialogo;
+    [SerializeField] AudioSource audio_Correr;
 
     private void Start()
     {
@@ -386,5 +387,6 @@ public class GameController : MonoBehaviour
     {
         BtnDialogo.SetActive(ativo);
     }
+    public AudioSource GetAudioCorer() => audio_Correr;
 }
 
