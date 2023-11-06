@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +8,13 @@ public class Portal : MonoBehaviour
     {
         SceneManager.LoadScene(Scena); // Carrega a próxima cena
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision collision)
     {
-        ProximaCena(scena);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ProximaCena(scena);
+        }
+       
     }
 }
+   

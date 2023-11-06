@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Definicao_Poder_Player : MonoBehaviour
@@ -12,7 +10,7 @@ public class Definicao_Poder_Player : MonoBehaviour
     }
     public float UsarPoder(GameObject arma, Animator anin, float n)
     {
-       n= i_poder_player.Poder( arma, anin,n);
+        n = i_poder_player.Poder(arma, anin, n);
         return n;
     }
 }

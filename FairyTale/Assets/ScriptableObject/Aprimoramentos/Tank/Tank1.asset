@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexPoder: 2
   nomePoder: {fileID: 21300000, guid: d910470f817bb5647835516f8861ba30, type: 3}
-  descricao: Te concede um escudo que diminui o dano temporariamente que dura 3 segundos
+  descricao: Receba um escudo que diminui o dano temporariamente que dura 3 segundos
     e diminui o dano levado (tecla F)

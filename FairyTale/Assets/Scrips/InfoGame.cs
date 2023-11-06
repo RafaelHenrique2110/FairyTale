@@ -1,12 +1,13 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InfoGame : MonoBehaviour
 {
-   [SerializeField] float limiteVidaPlayer;
-   Player player;
-   [SerializeField] int moedas;
-    [SerializeField]  float barrasMelhoriasPlayer;
+    [SerializeField] float limiteVidaPlayer;
+    Player player;
+    [SerializeField] int moedas;
+    [SerializeField] float barrasMelhoriasPlayer;
+    [SerializeField] int nivelBotaoDistancia;
+    [SerializeField] int nivelBotaoGuerreiro;
     private static InfoGame instance;
 
     private void Awake()
@@ -32,18 +33,23 @@ public class InfoGame : MonoBehaviour
     }
     public void SavePlayer(Player player)
     {
-       
+
         this.player = player;
     }
     public void SaveMoedas(int moedas)
     {
-        this.moedas= moedas;
+        this.moedas = moedas;
     }
     public void SaveLoja(float barrasMelhoriasPlayer)
     {
         this.barrasMelhoriasPlayer = barrasMelhoriasPlayer;
     }
-   public  Player GetPlayerSalvo()
+    public void SaveNivelAprimoramentos(int botaoGuerreiro, int botaoDistancia)
+    {
+        this.nivelBotaoDistancia = botaoDistancia;
+        this.nivelBotaoGuerreiro = botaoGuerreiro;
+    }
+    public Player GetPlayerSalvo()
     {
         return player;
     }
@@ -51,6 +57,15 @@ public class InfoGame : MonoBehaviour
     {
         return moedas;
     }
+    public int GetNivelAprimoramentosGerreiro()
+    {
+        return nivelBotaoGuerreiro;
+    }
+    public int GetNivelAprimoramentosDistamcia()
+    {
+        return nivelBotaoDistancia;
+    }
+
     public float GetLojaSalva()
     {
         return barrasMelhoriasPlayer;

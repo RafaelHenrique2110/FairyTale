@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Corpo_A_Corpo2 : MonoBehaviour, I_Combate_Player
 {
     int tempo = 10;
     string[] animacao = new string[2];
-   
-    public void Atacar(GameObject []arma, Animator anim)
+
+    public void Atacar(GameObject[] arma, Animator anim)
     {
         arma[1].GetComponent<ArmaBranca>().Usar();
         animacao[0] = "Combate_Cima";

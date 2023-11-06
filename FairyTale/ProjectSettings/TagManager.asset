@@ -11,11 +11,18 @@ TagManager:
   - "munic\xE3o"
   - mao_inimigo
   - moedas
+  - gato
+  - Vida
+  - targetVoltar
+  - municaoInimigo
+  - municaoPlayer
+  - mao_do_inimigo
+  - cesta
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cenario
   - Water
   - UI
   - 

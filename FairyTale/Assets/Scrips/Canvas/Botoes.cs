@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 
 public class Botoes : MonoBehaviour
 {
-   [SerializeField] Image nome;
+    [SerializeField] Image nome;
     [SerializeField] TMP_Text descricao;
     [SerializeField] TMP_Text precoNivelBarra;
     int indexHabilidade;
-    [SerializeField] List<AbilidadePlayerScriptObject> habilidadesDisponiveis;
+    int indexLita;
+    [SerializeField] AbilidadePlayerScriptObject habilidade;
     [SerializeField] AbilidadePlayerScriptObject so;
-    int indexLita=0;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
 
@@ -23,77 +21,84 @@ public class Botoes : MonoBehaviour
     }
     public void AumentarNivelPlayer(int preco)
     {
-        
-        if(barra_nivel.Nivelvida < barra_nivel.LimiteNivelvida)
+
+        if (barra_nivel.Nivelvida < barra_nivel.LimiteNivelvida)
         {
-            if (GameController.instance.GetMoedas()>= preco)
+            if (GameController.instance.GetMoedas() >= preco)
             {
+
                 GameController.instance.AumentarVidaPlayer(25);
                 barra_nivel.AumentarNivelBarraVida();
                 GameController.instance.GastarMoedas(preco);
                 preco = preco * 2;
                 AtualizarPrecoCompraNivelVida(preco);
                 GameController.instance.Save();
-              
+
             }
-           
+
         }
-      
-       
+
+
     }
-     void AtualizarPrecoCompraNivelVida(int n)
+    void AtualizarPrecoCompraNivelVida(int n)
     {
-        precoNivelBarra.text = n.ToString()+".00 R$";
+        precoNivelBarra.text = n.ToString() + ".00 R$";
     }
     public void TrocarPoderPlayer()
     {
 
         GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+        //AtualizarBotaoHabilidades();
         FecharPainel();
 
     }
     public void TrocarCombatePlayer()
     {
         GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+        //AtualizarBotaoHabilidades();
         FecharPainel();
-        GameController.instance.AtualizarSlot("Ataque","Disparo");
+        GameController.instance.AtualizarSlot("Ataque", "Disparo");
 
     }
     public void TrocarDash()
     {
         GameController.instance.TrocarDash(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+        //  AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void TrocarMovimentacao()
     {
-        GameController.instance.TrocarMovimento( GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+        GameController.instance.TrocarMovimento(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
+        // AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void AtualizarBotaoHabilidades()
     {
-        if(indexLita< habilidadesDisponiveis.Count)
-        {
-            indexLita++;
-            so = habilidadesDisponiveis[indexLita];
-        }
-       
 
+        so = habilidade;
+        GameController.instance.Save();
+
+    }
+    public void AtualizarIndexMelhoriaHabilidades(int indexLista)
+    {
+        so = habilidade;
+        DefinirBotaoHabilidades();
     }
     public void DefinirBotaoHabilidades()
     {
         indexHabilidade = so.indexPoder;
-        nome.sprite  = so.nomePoder;
-        descricao.text= so.descricao;
-        
+        nome.sprite = so.nomePoder;
+        descricao.text = so.descricao;
+
 
     }
     public void CarrgarCena(string nomeCena)
     {
         GameController.instance.CarrgarCena(nomeCena);
+    }
+    public int GetIndexBotao()
+    {
+        return indexLita;
     }
 
 

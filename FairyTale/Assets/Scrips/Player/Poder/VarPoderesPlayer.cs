@@ -1,13 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class VarPoderesPlayer : MonoBehaviour
 {
-   public  List<Definicao_Poder_Player> poderes=new List<Definicao_Poder_Player>(5);
-    
-    
+    public List<Definicao_Poder_Player> poderes = new List<Definicao_Poder_Player>(5);
+
+
     private void Start()
     {
         poderes[0] = new Definicao_Poder_Player(new Sem_Poder());

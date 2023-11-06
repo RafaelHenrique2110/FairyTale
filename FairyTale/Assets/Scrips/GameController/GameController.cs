@@ -1,11 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
-using System;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -18,26 +15,27 @@ public class GameController : MonoBehaviour
     public List<GameObject> inimmigos;
     public List<AbilidadePlayerScriptObject> poderesPlayer;
     public GameObject armaPlaye;
-    public  GameObject player;
+    public GameObject player;
     public GameObject aprimoramentos_resistencia_player;
     public GameObject aprimoramentos_poderes_player;
     public bool playerConfronto;
     [SerializeField] Image sprite_estamina;
     [SerializeField] Image sprite_vida;
     [SerializeField] Text txt_timePoder;
+    [SerializeField] Image fillPoder;
     [SerializeField] Text txt_vida;
     [SerializeField] Text txt_requisitos_quest;
     [SerializeField] Text txt_titulo_quest;
     [SerializeField] float sensibilidadeMouse = 0;
-    [SerializeField]ListaCanvas canvas;
+    [SerializeField] ListaCanvas canvas;
     [SerializeField] int moedas;
     [SerializeField] TMP_Text txt_moedas;
     [SerializeField] GameObject painel_gameOver;
     List<MinionsDistancia> Observadores;
     public VarPoderesPlayer poderes_player;
     public VarCombatePlayer combates_player;
-    public VarMovimentacaoPlayer  movimentacoes_player;
-    Definicao_Quest defirQuest;
+    public VarMovimentacaoPlayer movimentacoes_player;
+    [SerializeField] So_Quest Quest;
     [SerializeField] GameObject Portal;
     public Assistente assistente;
 
@@ -47,7 +45,9 @@ public class GameController : MonoBehaviour
     [SerializeField] Image slot2;
     [SerializeField] GameObject hud;
     [SerializeField] GameObject ObjInfoGame;
-     
+
+    [SerializeField] GameObject BtnDialogo;
+
     private void Start()
     {
         assistente = new Assistente();
@@ -56,8 +56,10 @@ public class GameController : MonoBehaviour
         AdiquirirPoderesPlayer();
         AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
-        AplicarQuest(new Definicao_Quest(new Quest1()));
-         DefinirProgresso();
+        AplicarQuest(Quest);
+        AtualizarQuest();
+        DefinirProgresso();
+
 
     }
     private void Update()
@@ -67,13 +69,15 @@ public class GameController : MonoBehaviour
             TocarTimeAnimacao(player.GetComponent<Protagonista>().anim, animacao_combate_player);
         }
         ExecutarQuest();
-       
+
     }
-    
+
     //////FUN�OES Player///////
-    public void AtualizarTimePoder(int n)
+    public void AtualizarTimePoder(float n)
     {
         txt_timePoder.text = "" + n;
+        fillPoder.fillAmount = n;
+
     }
     public void AtualizarEstaminaPlayer(float n)
     {
@@ -82,7 +86,7 @@ public class GameController : MonoBehaviour
     }
     public void AtualizarVidaPlayer(float n)
     {
-        txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
+        //txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
         sprite_vida.fillAmount = n;
     }
 
@@ -93,20 +97,28 @@ public class GameController : MonoBehaviour
     {
         Player.AumentaMaximoVida(atribuicao);
         Save();
-       
+
     }
-    
+    void ResetarVidaPlayer()
+    {
+        Player.ResetarVidaPlayer();
+    }
+
     public void TrocarPoderPlayer(Definicao_Poder_Player poder)
     {
-       Player.DefinirPoder(poder);
+        Player.DefinirPoder(poder);
     }
     public void TrocaCombateDistanciaPlayer(DefinicaoCombate combate)
     {
         Player.DefinirCombateDistancia(combate);
     }
-    public void TrocarMovimento( Definocao_movimentacaoPlayer correr)
+    public void TrocarMovimento(Definocao_movimentacaoPlayer correr)
     {
-        Player.DefinirMovimento( correr);
+        Player.DefinirMovimento(correr);
+    }
+    public void AlterarValorQuest()
+    {
+        Quest.AlterarQuest();
     }
 
     public void AdiquirirPoderesPlayer()
@@ -125,9 +137,9 @@ public class GameController : MonoBehaviour
     {
         Player.DefinirDash(dash);
     }
-   public void DefinirPlayer(Player novaConfig)
+    public void DefinirPlayer(Player novaConfig)
     {
-       player.GetComponent<Protagonista>().AtualizarConfigPlayer(novaConfig);
+        player.GetComponent<Protagonista>().AtualizarConfigPlayer(novaConfig);
     }
     public bool CombateCorpoPlayer()
     {
@@ -147,7 +159,7 @@ public class GameController : MonoBehaviour
     }
     public void AtivarAprimoramentosPoderesPlayer()
     {
-       aprimoramentos_poderes_player.SetActive(true);
+        aprimoramentos_poderes_player.SetActive(true);
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,7 +172,7 @@ public class GameController : MonoBehaviour
         mouse += Input.GetAxis("Mouse X");
         rotate.rotation = Quaternion.Euler(0, mouse * sensibilidadeMouse, 0);
     }
-   
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //////FUN�OES GLOBAIS///////
@@ -176,7 +188,7 @@ public class GameController : MonoBehaviour
         switch (nomemunicao)
         {
             case "magia1": municao = Instantiate(municoes[0], arma.position, arma.rotation); break;
-            case "bomba": municao = Instantiate(municoes[4], arma.position, arma.rotation); break;
+            case "m": municao = Instantiate(municoes[4], arma.position, arma.rotation); break;
             case "magia2": municao = Instantiate(municoes[1], arma.position, arma.rotation); break;
             case "magia3": municao = Instantiate(municoes[2], arma.position, arma.rotation); break;
 
@@ -184,7 +196,7 @@ public class GameController : MonoBehaviour
         }
         return municao;
     }
-    
+
 
     public float subitrair(float n1, float n2)
     {
@@ -202,24 +214,21 @@ public class GameController : MonoBehaviour
     {
         if (vida > 0)
         {
-            vida =  subitrair(vida, dano);
-            
+            vida = subitrair(vida, dano);
+
         }
         else
         {
             AlterarValorQuest();
             inimmigos.Remove(obj);
-            Matar(obj);
-            
+
+
         }
         return vida;
     }
-    public void Matar(GameObject obj)
-    {
-        Destroy(obj);
-    }
-  
-    public void FinalizarAnimacao( float time, string animacao)
+
+
+    public void FinalizarAnimacao(float time, string animacao)
     {
         ativar_time_animacao = true;
         animacao_combate_player = animacao;
@@ -242,40 +251,41 @@ public class GameController : MonoBehaviour
         }
 
     }
+
     public void AdicionarInimigosLista(GameObject inimigo)
     {
         inimmigos.Add(inimigo);
     }
-    public void AplicarQuest(Definicao_Quest quest)
+    public void AplicarQuest(So_Quest quest)
     {
-        defirQuest= quest;
-    }
-    public void AlterarValorQuest()
-    {
-        defirQuest.AlterarQuest();
+        Quest = quest;
     }
     public void ExecutarQuest()
     {
-        defirQuest.ExecutarQuest();
+        Quest.ExecuteQuest();
 
     }
-    public  void AtualizarCanvasQuest(string txt1, string txt2)
+    public void AtualizarQuest()
     {
-        txt_requisitos_quest.text= txt1;
-        txt_titulo_quest.text= txt2;
+        Quest.AtualizarQuest();
+    }
+    public void AtualizarCanvasQuest(string txt1, string txt2)
+    {
+        txt_requisitos_quest.text = txt1;
+        txt_titulo_quest.text = txt2;
     }
     public void AtivarPortal()
     {
         Portal.gameObject.SetActive(true);
     }
-   
+
     public void AdicionarObserver(MinionsDistancia observer)
     {
         Observadores.Add(observer);
     }
     public void AtualizarBotoesHabilidade()
     {
-        for(int i = 0; i < canvas.GetBoestoes().Count; i++)
+        for (int i = 0; i < canvas.GetBoestoes().Count; i++)
         {
             canvas.GetBoestoes()[i].DefinirBotaoHabilidades();
         }
@@ -289,11 +299,11 @@ public class GameController : MonoBehaviour
     {
         moedas -= valor;
         AtualizarHudMoedas();
-    } 
+    }
     public void AtualizarHudMoedas()
     {
-       txt_moedas.text = moedas.ToString();
-        
+        txt_moedas.text = moedas.ToString();
+
     }
     public void AtualizarMoedas(int moedaSalva)
     {
@@ -307,6 +317,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
+        ResetarVidaPlayer();
 
     }
     public void AtualizarSlot(string slot1, string slot2)
@@ -319,38 +330,61 @@ public class GameController : MonoBehaviour
         slot1.color = Corslota1;
         slot2.color = Corsloat2;
     }
-    public void AbilitarHud(){
+    public void AbilitarHud()
+    {
         hud.gameObject.SetActive(true);
     }
-   public void AtivarPlayer(bool definir){
-          player.GetComponent<Protagonista>().Ativar(definir);
-   }
+    public void AtivarPlayer(bool definir)
+    {
+        player.GetComponent<Protagonista>().Ativar(definir);
+    }
     void AtualizarLoja(Barras barra)
     {
 
-      ///  hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
+          hud.GetComponent<Barras>().Equals( hud.GetComponent<Barras>());
 
     }
-   public void DefinirProgresso()
+    public void AtualizarMelhoriaHabilidades(int indexMeloriaGerreiro, int indexMeloriaDistancia)
+    {
+         canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaGerreiro);
+        canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().AtualizarIndexMelhoriaHabilidades(indexMeloriaDistancia);
+    }
+    public void DefinirProgresso()
     {
         ObjInfoGame = GameObject.Find("InfoGame");
-        InfoGame infoGame= ObjInfoGame.GetComponent<InfoGame>();
+        InfoGame infoGame = ObjInfoGame.GetComponent<InfoGame>();
         //player.GetOrAddComponent<Protagonista>().Player.DefinirMaximoVida(infoGame.limiteVidaPlayer);
         Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
         AtualizarMoedas(infoGame.GetMoedasSalvas());
         hud.GetComponent<Barras>().Atualizar(infoGame.GetLojaSalva());
+        if (SceneManager.GetActiveScene().name == "Fase1")
+        {
+            AtualizarMelhoriaHabilidades(infoGame.GetNivelAprimoramentosGerreiro(), infoGame.GetNivelAprimoramentosDistamcia());
+        }
 
-   }
+
+    }
     public void Save()
     {
-        ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
-        ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
-        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+        //ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
+       // ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
+      /// ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+       // if (SceneManager.GetActiveScene().name == "Fase1")
+       // {
+       //     ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
+      //  }
     }
+
     public int GetMoedas()
     {
         return moedas;
     }
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///
+
+    public void ativarDialogo(bool ativo)
+    {
+        BtnDialogo.SetActive(ativo);
+    }
 }
 

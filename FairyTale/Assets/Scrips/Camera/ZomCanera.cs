@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Cinemachine;
+using UnityEngine;
 
 public class ZomCanera : MonoBehaviour
 {
-    
+
     public float decreaseTime = 5f; // Tempo total para diminuir o ortho size
     public float targetOrthoSize = 5f; // Tamanho ortho size final desejado
 
@@ -26,8 +24,8 @@ public class ZomCanera : MonoBehaviour
         if (timer >= decreaseTime)
         {
             GameController.instance.AbilitarHud();
-             GameController.instance.AtivarPlayer(true);
-             
+            GameController.instance.AtivarPlayer(true);
+
             return;
         }
 

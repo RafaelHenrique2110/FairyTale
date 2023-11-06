@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ public class VarMovimentacaoPlayer : MonoBehaviour
 
     private void Start()
     {
-      
+
         movimentacoes[0] = new Definocao_movimentacaoPlayer(new Esperar());
         movimentacoes[1] = new Definocao_movimentacaoPlayer(new Andar_Player());
         movimentacoes[2] = new Definocao_movimentacaoPlayer(new Correr1());
@@ -17,6 +16,6 @@ public class VarMovimentacaoPlayer : MonoBehaviour
         movimentacoes[4] = new Definocao_movimentacaoPlayer(new Sem_Dash());
         movimentacoes[5] = new Definocao_movimentacaoPlayer(new Correr2());
 
-        
+
     }
 }

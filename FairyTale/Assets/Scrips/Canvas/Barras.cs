@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Barras : MonoBehaviour
 {
-    [SerializeField] float nivelVida; 
+    [SerializeField] float nivelVida;
     [SerializeField] float limiteNivelVida;
     [SerializeField] Text txt_nivel_vida_playe;
     [SerializeField] Image barra_nivel_vida_playe;
@@ -16,14 +13,15 @@ public class Barras : MonoBehaviour
     }
     public void AumentarNivelBarraVida()
     {
-        if(nivelVida< limiteNivelVida)
+        if (nivelVida < limiteNivelVida)
         {
             nivelVida++;
+            Debug.Log("NivelVida" + nivelVida);
             AtualizarNivelBarraVida(nivelVida);
             GameController.instance.Save();
         }
     }
-   public void Atualizar(float barra)
+    public void Atualizar(float barra)
     {
         this.nivelVida = barra;
         AtualizarNivelBarraVida(nivelVida);
@@ -31,7 +29,7 @@ public class Barras : MonoBehaviour
     void AtualizarNivelBarraVida(float nivel)
     {
         txt_nivel_vida_playe.text = "Nivel " + nivelVida;
-        barra_nivel_vida_playe.fillAmount = nivel/limiteNivelVida;
+        barra_nivel_vida_playe.fillAmount = nivel / limiteNivelVida;
     }
     public float Nivelvida { get { return nivelVida; } }
     public float LimiteNivelvida { get { return limiteNivelVida; } }
