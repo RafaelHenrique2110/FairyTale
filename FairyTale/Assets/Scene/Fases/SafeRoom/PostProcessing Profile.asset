@@ -130,13 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   type:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 0.197
+    m_Value: 0.181
   response:
     m_OverrideState: 1
     m_Value: 1
@@ -229,13 +229,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.7716533, y: 0.78118145, z: 1, w: 0.098887525}
+    m_Value: {x: 1, y: 0.4206521, z: 0.7241001, w: 0.098887525}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8952701, z: 0.6017232, w: 0.44495136}
+    m_Value: {x: 0.39346534, y: 0.8427185, z: 1, w: 0.44495136}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.8818654, y: 0.93303925, z: 1, w: 0.17233083}
+    m_Value: {x: 1, y: 0.8315617, z: 0.80905336, w: 0.17233083}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
