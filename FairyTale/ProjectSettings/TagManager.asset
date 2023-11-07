@@ -18,6 +18,8 @@ TagManager:
   - municaoPlayer
   - mao_do_inimigo
   - cesta
+  - terminarJogo
+  - mataPlayer
   layers:
   - Default
   - TransparentFX

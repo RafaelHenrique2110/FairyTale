@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Lobo : MonoBehaviour
 {
-    static float tamanhoVida = 50, tamanhoForca = 10, tamanhoEscudo = 5;
+    static float tamanhoVida = 20, tamanhoForca = 7, tamanhoEscudo = 2;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;
@@ -80,7 +80,7 @@ public class Lobo : MonoBehaviour
                 chapeuzinho.Chapeuzinhov.Socar();
                 chapeuzinho.HabilitarGravidade(true);
                 lobo.EntrarEmComa(gameObject);
-                StartCoroutine(lobo.VoltarDoComa(gameObject, 50));
+                StartCoroutine(lobo.VoltarDoComa(gameObject, 20));
                 StartCoroutine(NotificarChapeuzinho(11));
 
 

@@ -8,10 +8,10 @@ public class MateBoss : So_Quest
 
     public void DefinirExecucaoQuest()
     {
-      
+       
         if (GameController.instance.GetChapeuzinho().Chapeuzinhov.Vida <= 0)
         {
-            Debug.Log("VITORIAAAAAAAAAAAAAAAAA");
+            GameController.instance.AtivarPortalFinal();
         }
     }
     public override void ExecuteQuest()
@@ -21,6 +21,7 @@ public class MateBoss : So_Quest
     }
     public override void AtualizarQuest()
     {
+        Debug.Log("VITORIAAAAAAAAAAAAAAAAA");
         GameController.instance.AtualizarCanvasQuest(requisitos_quest, titulo_quest);
     }
     public override void AlterarQuest()

@@ -202,7 +202,7 @@ public class Protagonista : MonoBehaviour
 
         if (other.CompareTag("cesta"))
         {
-            protagonista.TomarDano(20f);
+            protagonista.TomarDano(10f);
             if (protagonista.Vida <= 0)
             {
                 GameController.instance.GameOver();
@@ -226,6 +226,14 @@ public class Protagonista : MonoBehaviour
                 Destroy(other.gameObject);
             }
 
+        }
+        if (other.CompareTag("terminarJogo"))
+        {
+            GameController.instance.Vitoria();
+        }
+        if (other.CompareTag("mataPlayer"))
+        {
+            GameController.instance.GameOver();
         }
 
 

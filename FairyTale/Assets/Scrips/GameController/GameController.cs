@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
     [SerializeField] int moedas;
     [SerializeField] TMP_Text txt_moedas;
     [SerializeField] GameObject painel_gameOver;
+    [SerializeField] GameObject painel_vitoria;
     List<MinionsDistancia> Observadores;
     public VarPoderesPlayer poderes_player;
     public VarCombatePlayer combates_player;
@@ -49,7 +50,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject BtnDialogo;
     [SerializeField] AudioSource audio_Correr;
     [SerializeField] Chapeuzinho chapeuzinho;
-
+    [SerializeField] GameObject portalFinal;
     private void Start()
     {
         assistente = new Assistente();
@@ -319,7 +320,13 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
-        ResetarVidaPlayer();
+    
+
+    }
+    public void Vitoria()
+    {
+        painel_vitoria.SetActive(true);
+
 
     }
     public void AtualizarSlot(string slot1, string slot2)
@@ -365,6 +372,10 @@ public class GameController : MonoBehaviour
         }
 
 
+    }
+    public void AtivarPortalFinal()
+    {
+        portalFinal.SetActive(true);
     }
     public void Save()
     {

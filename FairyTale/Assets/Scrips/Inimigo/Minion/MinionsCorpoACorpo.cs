@@ -45,25 +45,22 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
 
         if (other.CompareTag("municaoPlayer"))
         {
-            if (minion.Vida <= 0)
-            {
-                DroparIten(inventario);
-            }
+           
             dashed.Dash(other.transform.forward, 5);
             anin.SetBool("Dano", true);
             minion.PerderVida(other.GetComponent<Municao>().Dano, this.gameObject);
             minion.AtualizarVida(sprite_vida);
             Destroy(other.gameObject);
             StartCoroutine(minion.VoltarConciencia(anin));
+            if (minion.Vida <= 0)
+            {
+                DroparIten(inventario);
+            }
 
         }
         if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
         {
-            if (minion.Vida <= 0)
-            {
-                DroparIten(inventario);
-                minion.Matar(this.gameObject);
-            }
+           
             dashed.Dash(other.transform.forward, 5);
             minion.definir_combate_basico = minion.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
@@ -71,6 +68,11 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             minion.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
             minion.AtualizarVida(sprite_vida);
             StartCoroutine(minion.VoltarConciencia(anin));
+            if (minion.Vida <= 0)
+            {
+                DroparIten(inventario);
+                minion.Matar(this.gameObject);
+            }
 
         }
 
