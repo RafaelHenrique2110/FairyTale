@@ -7960,7 +7960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limiteVidaPlayer: 100
-  moedas: 0
+  moedas: 20
   barrasMelhoriasPlayer: 0
   nivelBotaoDistancia: 0
   nivelBotaoGuerreiro: 0

@@ -47,7 +47,7 @@ public class Protagonista : MonoBehaviour
     {
         if (ativado)
         {
-            DetectarInimigoProximo();
+            //  DetectarInimigoProximo();
             if (Input.GetKeyDown("1"))
             {
                 itemSelecionado = 1;

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Raio : MonoBehaviour, I_Combate_Inimigo
 {
     bool executando = true;
-    float tempo_disparo = 1;
+    float tempo_disparo = 4;
     public void Atacar(GameObject arma, Animator anim, Inimigo inimigo)
     {
 
@@ -16,7 +16,7 @@ public class Raio : MonoBehaviour, I_Combate_Inimigo
             {
                 GameController.instance.CriarMunicao("muniçãoInimigo", arma.transform);
             }
-            tempo_disparo = 1;
+            tempo_disparo = 4;
         }
 
 

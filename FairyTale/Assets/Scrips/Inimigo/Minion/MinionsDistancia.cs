@@ -30,7 +30,7 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
     void FixedUpdate()
     {
 
-        minion.DetectarMovimento(sensores, anin);
+       minion.UsarArma(arma, anin, minion);
         transform.position = minion.Mover(target, transform, speed, anin, this.minion);
     }
 

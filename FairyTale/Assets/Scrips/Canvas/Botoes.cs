@@ -48,14 +48,14 @@ public class Botoes : MonoBehaviour
     {
 
         GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
-        //AtualizarBotaoHabilidades();
+        AtualizarBotaoHabilidades();
         FecharPainel();
 
     }
     public void TrocarCombatePlayer()
     {
         GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
-        //AtualizarBotaoHabilidades();
+        AtualizarBotaoHabilidades();
         FecharPainel();
         GameController.instance.AtualizarSlot("Ataque", "Disparo");
 
@@ -63,13 +63,13 @@ public class Botoes : MonoBehaviour
     public void TrocarDash()
     {
         GameController.instance.TrocarDash(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        //  AtualizarBotaoHabilidades();
+         AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void TrocarMovimentacao()
     {
         GameController.instance.TrocarMovimento(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        // AtualizarBotaoHabilidades();
+        AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void AtualizarBotaoHabilidades()

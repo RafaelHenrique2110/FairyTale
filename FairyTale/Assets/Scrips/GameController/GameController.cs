@@ -191,7 +191,7 @@ public class GameController : MonoBehaviour
         switch (nomemunicao)
         {
             case "magia1": municao = Instantiate(municoes[0], arma.position, arma.rotation); break;
-            case "m": municao = Instantiate(municoes[4], arma.position, arma.rotation); break;
+            case "muniçãoInimigo": municao = Instantiate(municoes[4], arma.position, arma.rotation); break;
             case "magia2": municao = Instantiate(municoes[1], arma.position, arma.rotation); break;
             case "magia3": municao = Instantiate(municoes[2], arma.position, arma.rotation); break;
 
@@ -320,7 +320,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         painel_gameOver.SetActive(true);
-    
+        ResetarVidaPlayer();
 
     }
     public void Vitoria()
@@ -379,13 +379,13 @@ public class GameController : MonoBehaviour
     }
     public void Save()
     {
-        //ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
-       // ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
-      /// ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
-       // if (SceneManager.GetActiveScene().name == "Fase1")
-       // {
-       //     ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
-      //  }
+        ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
+        ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
+       ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+        if (SceneManager.GetActiveScene().name == "Fase1")
+        {
+            ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
+        }
     }
 
     public int GetMoedas()
