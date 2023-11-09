@@ -6020,6 +6020,8 @@ MonoBehaviour:
   audio_Correr: {fileID: 230357204}
   chapeuzinho: {fileID: 0}
   portalFinal: {fileID: 0}
+  removerEfeitoplayer: 0
+  timeRemoverEfeitoPLAYER: 0
 --- !u!4 &230357203
 Transform:
   m_ObjectHideFlags: 0
@@ -19866,7 +19868,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1003948204}
   - component: {fileID: 1003948203}
-  - component: {fileID: 1003948202}
   - component: {fileID: 1003948201}
   - component: {fileID: 1003948205}
   - component: {fileID: 1003948200}
@@ -19953,25 +19954,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &1003948202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003948197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39f22a6bee5e56646becb9d5d04b419d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poderes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1003948203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19988,7 +19970,7 @@ MonoBehaviour:
   RaioComfonto: 0
   combo: 3
   anim: {fileID: 1003948198}
-  poderes: {fileID: 1003948202}
+  poderes: {fileID: 0}
   combates: {fileID: 1003948201}
   movimentacoes: {fileID: 1003948200}
   arma:
@@ -19998,6 +19980,7 @@ MonoBehaviour:
   ativado: 0
   trails: {fileID: 1699050212}
   glow: {fileID: 1506071853}
+  poder: {fileID: 11400000, guid: b5b392a62f5592743b1703bbf56e9be9, type: 2}
 --- !u!4 &1003948204
 Transform:
   m_ObjectHideFlags: 0

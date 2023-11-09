@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 public class Protagonista : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class Protagonista : MonoBehaviour
     bool travaMovimento;
     [SerializeField] GameObject trails;
     [SerializeField] GameObject glow;
+    [SerializeField] Poder_SO poder;
     
 
 
@@ -40,6 +42,7 @@ public class Protagonista : MonoBehaviour
 
         // protagonista.DesabilitarDash();
         // protagonista.AbilitarMovimentacao();
+       
     }
     int itemSelecionado;
     bool ativarAtaque = true;
@@ -98,9 +101,29 @@ public class Protagonista : MonoBehaviour
             {
                 ResetarCombo();
             }
-            
+           // protagonista.UsarPoder(arma, anim);
+            protagonista.AlmentarTimePoder();
+            if (Input.GetKeyDown("f"))
+            {
+                
+                if (protagonista.LiberarPoder())
+                {
+                    protagonista.DefinirTimePoder();
+                    // escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
+                    if (poder != null)
+                    {
+                        ExecutarPoder();
+                    }
 
-            protagonista.UsarPoder(arma, anim);
+
+                }
+
+               
+
+            }
+           
+           
+            
 
         }
     }
@@ -135,6 +158,16 @@ public class Protagonista : MonoBehaviour
                 GameController.instance.playerConfronto = false;
             }
         }
+    }
+    public void SetPoder(Poder_SO novoPoder)
+    {
+        poder= novoPoder;
+    }
+    public void ExecutarPoder()
+    {
+        protagonista.PausarPoder();
+       protagonista.DefinirTimePoder();
+        poder.ExecutarPoder();
     }
     void DiminuirCombo()
     {
@@ -260,7 +293,10 @@ public class Protagonista : MonoBehaviour
         }
     }
     public Player Player { get { return protagonista; } }
-    
+    public Poder_SO GetPoder()
+    {
+        return poder;
+    }
 
 
 }

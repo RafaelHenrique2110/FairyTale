@@ -44,11 +44,12 @@ public class Botoes : MonoBehaviour
     {
         precoNivelBarra.text = n.ToString() + ".00 R$";
     }
-    public void TrocarPoderPlayer()
+    public void TrocarPoderPlayer(Poder_SO novoPoder)
     {
 
-        GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
-        AtualizarBotaoHabilidades();
+        GameController.instance.Protagonista.SetPoder(novoPoder);
+       // GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
+       // AtualizarBotaoHabilidades();
         FecharPainel();
 
     }

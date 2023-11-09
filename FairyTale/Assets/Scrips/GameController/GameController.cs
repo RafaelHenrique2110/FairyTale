@@ -51,6 +51,8 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource audio_Correr;
     [SerializeField] Chapeuzinho chapeuzinho;
     [SerializeField] GameObject portalFinal;
+   [SerializeField] bool removerEfeitoplayer;
+    [SerializeField] float timeRemoverEfeitoPLAYER;
     private void Start()
     {
         assistente = new Assistente();
@@ -72,6 +74,10 @@ public class GameController : MonoBehaviour
             TocarTimeAnimacao(player.GetComponent<Protagonista>().anim, animacao_combate_player);
         }
         ExecutarQuest();
+        if (removerEfeitoplayer)
+        {
+            RemoverEfeitoPlayer();
+        }
 
     }
 
@@ -95,6 +101,7 @@ public class GameController : MonoBehaviour
 
     public Player Player { get { return player.GetComponent<Protagonista>().Player; } }
     public Transform PlayerTransform { get { return player.transform; } }
+    public Protagonista Protagonista { get { return player.GetComponent<Protagonista>(); } }
 
     public void AumentarVidaPlayer(float atribuicao)
     {
@@ -156,6 +163,7 @@ public class GameController : MonoBehaviour
             return false;
         }
     }
+    
     public void AtivarAprimoramentosResistenciaPlayer()
     {
         aprimoramentos_resistencia_player.SetActive(true);
@@ -163,6 +171,21 @@ public class GameController : MonoBehaviour
     public void AtivarAprimoramentosPoderesPlayer()
     {
         aprimoramentos_poderes_player.SetActive(true);
+    }
+    public void AtivarRemoverEfeitoPoder(float tempo)
+    {
+        timeRemoverEfeitoPLAYER = tempo;
+        removerEfeitoplayer = true;
+    }
+    public void RemoverEfeitoPlayer()
+    {
+
+        timeRemoverEfeitoPLAYER -= Time.deltaTime;
+        if(timeRemoverEfeitoPLAYER <= 0)
+        {
+            Protagonista.GetPoder().RemoverEfeitoPoder();
+            removerEfeitoplayer = false;
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,24 +1,27 @@
 using UnityEngine;
+using System;
+using System.Collections;
 
-public class Tank_1 : MonoBehaviour, I_Poder_Player
+[CreateAssetMenu(fileName = "ScriptableObjects", menuName = "PoderesPlayer/Tank_1", order = 1)]
+public class Tank_1 : Poder_SO
 {
-    float time = 3;
-    public float Poder(GameObject arma, Animator anim, float n)
+    [SerializeField] float limiteTime;
+    [SerializeField] float valEscudo;
+    [SerializeField] Color colorEscudo;
+    [SerializeField] Color colorSemEscudo;
+    public override void ExecutarPoder()
     {
-        Debug.Log(time);
-        time = time - Time.deltaTime;
-        if (time > 0)
-        {
-            GameController.instance.material_player.color = Color.blue;
-            return n = 20;
-        }
-        else
-        {
-            time = 3;
-            GameController.instance.Player.PausarPoder();
-            GameController.instance.material_player.color = Color.yellow;
-            return n = 1;
-        }
+     
+        GameController.instance.material_player.color = colorEscudo;
+        GameController.instance.Player.AumentaEscudo(valEscudo);
+        GameController.instance.AtivarRemoverEfeitoPoder(limiteTime);
 
     }
+    public override void RemoverEfeitoPoder()
+    {
+        // GameController.instance.Player.PausarPoder();
+        GameController.instance.material_player.color = colorSemEscudo;
+        GameController.instance.Player.AumentaEscudo(valEscudo);
+    }
+
 }
