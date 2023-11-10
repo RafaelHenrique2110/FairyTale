@@ -8,6 +8,8 @@ public class Botoes : MonoBehaviour
     [SerializeField] Image nome;
     [SerializeField] TMP_Text descricao;
     [SerializeField] TMP_Text precoNivelBarra;
+    [SerializeField] Sprite novoSprite;
+    [SerializeField] Button nexBotao;
     int indexHabilidade;
     int indexLita;
     [SerializeField] AbilidadePlayerScriptObject habilidade;
@@ -48,9 +50,17 @@ public class Botoes : MonoBehaviour
     {
 
         GameController.instance.Protagonista.SetPoder(novoPoder);
+        GetComponent<Image>().sprite = novoSprite;
+        //GetComponent<Button>().interactable = false;
+        if (nexBotao != null)
+        {
+            nexBotao.interactable = true;
+        }
+       
+
        // GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
        // AtualizarBotaoHabilidades();
-        FecharPainel();
+      //  FecharPainel();
 
     }
     public void TrocarCombatePlayer()
