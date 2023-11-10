@@ -279,7 +279,7 @@ public class Protagonista : MonoBehaviour
         }
         else if (other.CompareTag("mudar_Combate") && Input.GetKey("e"))
         {
-            GameController.instance.AtualizarBotoesHabilidade();
+           // GameController.instance.AtualizarBotoesHabilidade();
             GameController.instance.AtivarAprimoramentosPoderesPlayer();
 
         }
