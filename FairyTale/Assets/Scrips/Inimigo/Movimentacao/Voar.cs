@@ -4,20 +4,28 @@ public class Voar : MonoBehaviour, I_MovimentacaoInimigo
 {
 
     Vector3 dir2 = new Vector3(0, 5, 0);
+    Vector3 dir3;
+
     public Vector3 MovimentacaoInimigo(Transform[] targets, Transform dir, float speed, Animator anin, Inimigo inimigo)
     {
+        Vector3 dir3 = new Vector3(0, 5, 0);
         anin.SetBool("Andar", false);
         speed = 5;
         Rotacionar(dir);
-        if (dir.position.y < dir2.y)
+        dir2.x = GameController.instance.player.transform.position.x - dir.position.x;
+        dir2.z = GameController.instance.player.transform.position.z - dir.position.z;
+        dir.position += dir2.normalized * speed * Time.deltaTime;
+        if (dir.position.y < dir3.y)
         {
-            dir.position += dir2.normalized * speed * Time.deltaTime;
-        }
+            
+            dir.position += dir3.normalized * speed * Time.deltaTime;
+        };
         return dir.position;
     }
     void Rotacionar(Transform dir)
     {
-        Vector3 dir3 = (GameController.instance.player.transform.position - dir.position);
+        Vector3 dir3 = GameController.instance.player.transform.position - dir.position;
+        dir3.y = 0;
         dir.rotation = Quaternion.LookRotation(dir3);
     }
 
