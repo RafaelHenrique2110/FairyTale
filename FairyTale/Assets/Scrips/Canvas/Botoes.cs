@@ -8,6 +8,8 @@ public class Botoes : MonoBehaviour
     [SerializeField] Image nome;
     [SerializeField] TMP_Text descricao;
     [SerializeField] TMP_Text precoNivelBarra;
+    [SerializeField] Sprite novoSprite;
+    [SerializeField] Button nexBotao;
     int indexHabilidade;
     int indexLita;
     [SerializeField] AbilidadePlayerScriptObject habilidade;
@@ -44,18 +46,27 @@ public class Botoes : MonoBehaviour
     {
         precoNivelBarra.text = n.ToString() + ".00 R$";
     }
-    public void TrocarPoderPlayer()
+    public void TrocarPoderPlayer(Poder_SO novoPoder)
     {
 
-        GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
-        //AtualizarBotaoHabilidades();
-        FecharPainel();
+        GameController.instance.Protagonista.SetPoder(novoPoder);
+        GetComponent<Image>().sprite = novoSprite;
+        //GetComponent<Button>().interactable = false;
+        if (nexBotao != null)
+        {
+            nexBotao.interactable = true;
+        }
+       
+
+       // GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
+       // AtualizarBotaoHabilidades();
+      //  FecharPainel();
 
     }
     public void TrocarCombatePlayer()
     {
         GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
-        //AtualizarBotaoHabilidades();
+        AtualizarBotaoHabilidades();
         FecharPainel();
         GameController.instance.AtualizarSlot("Ataque", "Disparo");
 
@@ -63,13 +74,13 @@ public class Botoes : MonoBehaviour
     public void TrocarDash()
     {
         GameController.instance.TrocarDash(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        //  AtualizarBotaoHabilidades();
+         AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void TrocarMovimentacao()
     {
         GameController.instance.TrocarMovimento(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
-        // AtualizarBotaoHabilidades();
+        AtualizarBotaoHabilidades();
         FecharPainel();
     }
     public void AtualizarBotaoHabilidades()

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Chapeuzinho : MonoBehaviour
 {
-    static float tamanhoVida = 500, tamanhoForca = 100, tamanhoEscudo = 20;
+    static float tamanhoVida =  50, tamanhoForca = 100, tamanhoEscudo = 7;
     public float speed = 0;
     public GameObject[] sensores;
     public Transform[] target;
@@ -16,6 +16,7 @@ public class Chapeuzinho : MonoBehaviour
     [SerializeField] List<GameObject> inventario;
     [SerializeField] Dashed dashed;
     Inimigo ChapeuzunhoV = new Inimigo(tamanhoVida, tamanhoForca, tamanhoEscudo);
+    [SerializeField] GameObject lobo;
 
     private void Start()
     {
@@ -49,10 +50,7 @@ public class Chapeuzinho : MonoBehaviour
         }
         if (other.CompareTag("Espada") && GameController.instance.CombateCorpoPlayer())
         {
-            if (ChapeuzunhoV.Vida <= 0)
-            {
-                DroparIten(inventario);
-            }
+           
             dashed.Dash(other.transform.forward, 5);
             ChapeuzunhoV.definir_combate_basico = ChapeuzunhoV.Definir_Combate_Desabilitado;
             anin.SetBool("Dano", true);
@@ -60,6 +58,12 @@ public class Chapeuzinho : MonoBehaviour
             ChapeuzunhoV.PerderVida(other.GetComponent<ArmaBranca>().Dano, this.gameObject);
             ChapeuzunhoV.AtualizarVida(sprite_vida);
             StartCoroutine(ChapeuzunhoV.VoltarConciencia(anin));
+            if (ChapeuzunhoV.Vida <= 0)
+            {
+                DroparIten(inventario);
+                Destroy(gameObject);
+                Destroy(lobo.gameObject);
+            }
 
         }
 
@@ -76,6 +80,5 @@ public class Chapeuzinho : MonoBehaviour
     {
         r.useGravity = habilitar;
     }
-
     public Inimigo Chapeuzinhov { get { return ChapeuzunhoV; } }
 }

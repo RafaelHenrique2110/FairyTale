@@ -102,7 +102,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CORASAO PRETO_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 513
+        width: 236
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0219eead28e81c04f8dc0f4164df6475
+      internalID: 1087965815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CORASAO PRETO_1
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 537
+        width: 236
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb69c12b7b30224cbb5fe4f20812fce
+      internalID: -81825706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CORASAO PRETO_2
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 299
+        width: 236
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726011deff64f7940be771af56191eca
+      internalID: -34081455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CORASAO PRETO_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 62
+        width: 236
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08dd27af612ba14a908318c8641f256
+      internalID: 1913994586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CORASAO PRETO_4
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 56
+        width: 236
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954ab7929bb1b4f46be13361b4ba18a5
+      internalID: 1103519929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CORASAO PRETO_4: 1103519929
+      CORASAO PRETO_0: 1087965815
+      CORASAO PRETO_2: -34081455
+      CORASAO PRETO_1: -81825706
+      CORASAO PRETO_3: 1913994586
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

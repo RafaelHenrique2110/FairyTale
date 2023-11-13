@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
     [SerializeField] int moedas;
     [SerializeField] TMP_Text txt_moedas;
     [SerializeField] GameObject painel_gameOver;
+    [SerializeField] GameObject painel_vitoria;
     List<MinionsDistancia> Observadores;
     public VarPoderesPlayer poderes_player;
     public VarCombatePlayer combates_player;
@@ -48,7 +49,10 @@ public class GameController : MonoBehaviour
 
     [SerializeField] GameObject BtnDialogo;
     [SerializeField] AudioSource audio_Correr;
-
+    [SerializeField] Chapeuzinho chapeuzinho;
+    [SerializeField] GameObject portalFinal;
+   [SerializeField] bool removerEfeitoplayer;
+    [SerializeField] float timeRemoverEfeitoPLAYER;
     private void Start()
     {
         assistente = new Assistente();
@@ -70,6 +74,10 @@ public class GameController : MonoBehaviour
             TocarTimeAnimacao(player.GetComponent<Protagonista>().anim, animacao_combate_player);
         }
         ExecutarQuest();
+        if (removerEfeitoplayer)
+        {
+            RemoverEfeitoPlayer();
+        }
 
     }
 
@@ -93,6 +101,7 @@ public class GameController : MonoBehaviour
 
     public Player Player { get { return player.GetComponent<Protagonista>().Player; } }
     public Transform PlayerTransform { get { return player.transform; } }
+    public Protagonista Protagonista { get { return player.GetComponent<Protagonista>(); } }
 
     public void AumentarVidaPlayer(float atribuicao)
     {
@@ -154,6 +163,7 @@ public class GameController : MonoBehaviour
             return false;
         }
     }
+    
     public void AtivarAprimoramentosResistenciaPlayer()
     {
         aprimoramentos_resistencia_player.SetActive(true);
@@ -161,6 +171,21 @@ public class GameController : MonoBehaviour
     public void AtivarAprimoramentosPoderesPlayer()
     {
         aprimoramentos_poderes_player.SetActive(true);
+    }
+    public void AtivarRemoverEfeitoPoder(float tempo)
+    {
+        timeRemoverEfeitoPLAYER = tempo;
+        removerEfeitoplayer = true;
+    }
+    public void RemoverEfeitoPlayer()
+    {
+
+        timeRemoverEfeitoPLAYER -= Time.deltaTime;
+        if(timeRemoverEfeitoPLAYER <= 0)
+        {
+            Protagonista.GetPoder().RemoverEfeitoPoder();
+            removerEfeitoplayer = false;
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -189,7 +214,7 @@ public class GameController : MonoBehaviour
         switch (nomemunicao)
         {
             case "magia1": municao = Instantiate(municoes[0], arma.position, arma.rotation); break;
-            case "m": municao = Instantiate(municoes[4], arma.position, arma.rotation); break;
+            case "muniçãoInimigo": municao = Instantiate(municoes[4], arma.position, arma.rotation); break;
             case "magia2": municao = Instantiate(municoes[1], arma.position, arma.rotation); break;
             case "magia3": municao = Instantiate(municoes[2], arma.position, arma.rotation); break;
 
@@ -321,6 +346,12 @@ public class GameController : MonoBehaviour
         ResetarVidaPlayer();
 
     }
+    public void Vitoria()
+    {
+        painel_vitoria.SetActive(true);
+
+
+    }
     public void AtualizarSlot(string slot1, string slot2)
     {
         txtSlot1.text = slot1;
@@ -365,15 +396,19 @@ public class GameController : MonoBehaviour
 
 
     }
+    public void AtivarPortalFinal()
+    {
+        portalFinal.SetActive(true);
+    }
     public void Save()
     {
-        //ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
-       // ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
-      /// ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
-       // if (SceneManager.GetActiveScene().name == "Fase1")
-       // {
-       //     ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
-      //  }
+        ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
+        ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
+       ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+        if (SceneManager.GetActiveScene().name == "Fase1")
+        {
+            ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
+        }
     }
 
     public int GetMoedas()
@@ -388,5 +423,6 @@ public class GameController : MonoBehaviour
         BtnDialogo.SetActive(ativo);
     }
     public AudioSource GetAudioCorer() => audio_Correr;
+    public Chapeuzinho GetChapeuzinho() => chapeuzinho;
 }
 

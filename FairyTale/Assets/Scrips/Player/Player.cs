@@ -63,13 +63,18 @@ public class Player : MonoBehaviour
     {
         movimento_Correr = movimentacoes.movimentacoes[2];
     }
-    public void Almentar()
+    public void AlmentarTimePoder()
     {
         if (timePoder < limiteTimePoder)
         {
             timePoder = timePoder + Time.deltaTime;
             GameController.instance.AtualizarTimePoder(timePoder / limiteTimePoder);
         }
+        if(timePoder >= limiteTimePoder)
+        {
+            DispausarPoder();
+        }
+      
 
     }
     void PerderEstamina(float perda)
@@ -206,26 +211,28 @@ public class Player : MonoBehaviour
         liberarPoder = true;
     }
     bool liberarPoder;
+
+    public void DefinirTimePoder()
+    {
+        timePoder = 0;
+        GameController.instance.AtualizarTimePoder((int)timePoder);
+      
+    }
     public void UsarPoder(GameObject[] arma, Animator anim)
     {
 
-        Almentar();
+        AlmentarTimePoder();
 
         if (Input.GetKeyDown("f") && timePoder >= limiteTimePoder)
         {
-            // if (definir_poder!=sem_poder)
-            // {
-            DispausarPoder();
-            Debug.Log("aaoaooaoa");
-            timePoder = 0;
-            GameController.instance.AtualizarTimePoder((int)timePoder);
-            //  }
 
 
         }
         if (liberarPoder)
         {
-            escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
+           // escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
+
+
         }
     }
     public void UsarDash()
@@ -291,6 +298,11 @@ public class Player : MonoBehaviour
     public VarPoderesPlayer Poderes { get { return poderes; } }
     public VarCombatePlayer Combates { get { return combates; } }
     public VarMovimentacaoPlayer Movimentacoes { get { return movimentacoes; } }
+    public bool LiberarPoder()
+    {
+        return liberarPoder;
+    }
+    
     
 
 
