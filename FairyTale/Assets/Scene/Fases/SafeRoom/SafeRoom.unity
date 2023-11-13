@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 563520528}
-  m_IndirectSpecularColor: {r: 0.16669488, g: 0.23912176, b: 0.5628399, a: 1}
+  m_IndirectSpecularColor: {r: 0.16669425, g: 0.23912054, b: 0.5628369, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14853,6 +14853,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
+  novoSprite: {fileID: 0}
+  nexBotao: {fileID: 0}
   habilidade: {fileID: 0}
   so: {fileID: 0}
   painel: {fileID: 0}
@@ -19073,6 +19075,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
+  novoSprite: {fileID: 0}
+  nexBotao: {fileID: 0}
   habilidade: {fileID: 0}
   so: {fileID: 0}
   painel: {fileID: 0}
@@ -28780,6 +28784,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
+  novoSprite: {fileID: 0}
+  nexBotao: {fileID: 0}
   habilidade: {fileID: 0}
   so: {fileID: 0}
   painel: {fileID: 0}
@@ -34307,6 +34313,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 0}
+  novoSprite: {fileID: 0}
+  nexBotao: {fileID: 0}
   habilidade: {fileID: 0}
   so: {fileID: 0}
   painel: {fileID: 2046222294}
@@ -38288,6 +38296,8 @@ MonoBehaviour:
   nome: {fileID: 0}
   descricao: {fileID: 0}
   precoNivelBarra: {fileID: 1069585622}
+  novoSprite: {fileID: 0}
+  nexBotao: {fileID: 0}
   habilidade: {fileID: 0}
   so: {fileID: 0}
   painel: {fileID: 1069585621}
