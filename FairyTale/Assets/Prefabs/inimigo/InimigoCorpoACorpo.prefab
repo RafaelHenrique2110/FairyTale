@@ -957,6 +957,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: mao_inimigo
       objectReference: {fileID: 0}
+    - target: {fileID: -2275732404809926040, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8740200b6a8b9bb4c9befddf264d6a9d, type: 2}
+    - target: {fileID: -2275732404809926040, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8740200b6a8b9bb4c9befddf264d6a9d, type: 2}
     - target: {fileID: 919132149155446097, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
       propertyPath: m_Name
       value: lenhador_Retopo_Rig
@@ -980,6 +988,14 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883055501056520601, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883055501056520601, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.078
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 953891d476f4db84caaee6443cf8bd55, type: 3}
