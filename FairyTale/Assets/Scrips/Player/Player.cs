@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
 
     }
-    void DefinirVida(float atribuicao)
+    public void DefinirVida(float atribuicao)
     {
         this.vida = atribuicao;
         GameController.instance.AtualizarVidaPlayer(vida / limiteVida);

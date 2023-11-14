@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-[CreateAssetMenu(fileName = "ScriptableObjects", menuName = "PoderesPlayer/Tank_1", order = 1)]
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/PoderesPlayer/Tank_1", order = 1)]
 public class Tank_1 : Poder_SO
 {
     [SerializeField] float limiteTime;
