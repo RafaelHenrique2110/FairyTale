@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Tank_1
   m_EditorClassIdentifier: 
   limiteTime: 3
-  valEscudo: 20
+  valEscudo: 100
   colorEscudo: {r: 0.27349493, g: 0.12941174, b: 0.8980392, a: 0}
   colorSemEscudo: {r: 0.9056604, g: 0.89998364, b: 0.09825563, a: 0}
