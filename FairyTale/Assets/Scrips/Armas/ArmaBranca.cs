@@ -43,7 +43,10 @@ public class ArmaBranca : MonoBehaviour
         Invoke("DesativarArma", 0.1f);
         // ativar = true;
     }
-
+    public void SetDano(int valor)
+    {
+        dano = valor;
+    }
 
     public float Dano { get { return dano; } }
 }

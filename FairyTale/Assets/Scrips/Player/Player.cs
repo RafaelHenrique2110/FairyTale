@@ -3,24 +3,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float vida = 0, forca = 0, escudo = 0, estamina = 0, limiteEstamina, timePoder, limiteTimePoder, limiteVida;
+    private float vida = 0, forca = 0, escudo = 0, estamina = 0, limiteEstamina, timePoder, timePoder2, limiteTimePoder, limiteTimePoder2, limiteVida;
 
     Definocao_movimentacaoPlayer definir_movimento;
     Definocao_movimentacaoPlayer movimento_Dash = new Definocao_movimentacaoPlayer(new Sem_Dash());
     Definocao_movimentacaoPlayer movimento_Correr = new Definocao_movimentacaoPlayer(new Correr1());
-    DefinicaoCombate definir_combate_corpo_a_corpo;
-    DefinicaoCombate definir_combate_distancia;
-    DefinicaoCombate definir_combate;
-    DefinicaoCombate combate_espada = new DefinicaoCombate(new Corpo_A_Corpo1());
-    VarPoderesPlayer poderes;
-    VarCombatePlayer combates;
     VarMovimentacaoPlayer movimentacoes;
-    Definicao_Poder_Player definir_poder;
-    Definicao_Poder_Player sem_poder = new Definicao_Poder_Player(new Sem_Poder());
-    
 
 
-    public Player(float limiteVida, float limiteForca, float limiteEscudo, float limiteEstamina, float limiteTimePoder)
+    public Player(float limiteVida, float limiteForca, float limiteEscudo, float limiteEstamina, float limiteTimePoder, float limiteTimePoder2)
     {
         vida = limiteVida;
         forca = limiteForca;
@@ -28,6 +19,7 @@ public class Player : MonoBehaviour
         estamina = limiteEstamina;
         this.limiteEstamina = limiteEstamina;
         this.limiteTimePoder = limiteTimePoder;
+        this.limiteTimePoder2 = limiteTimePoder2;
         this.limiteVida = limiteVida;
 
 
@@ -38,8 +30,6 @@ public class Player : MonoBehaviour
         // GameController.instance.DefinirPlayer(playerAtualizado);
         DefinirMaximoVida(playerAtualizado.LimmiteVida);
         DefinirVida(playerAtualizado.vida);
-        definir_combate_distancia = playerAtualizado.DefiniCombateDistancia;
-        definir_poder = playerAtualizado.DefiniPoder;
     }
 
     public void Esperar()
@@ -75,6 +65,20 @@ public class Player : MonoBehaviour
             DispausarPoder();
         }
       
+
+    }
+    public void AlmentarTimePoder2()
+    {
+        if (timePoder2 < limiteTimePoder2)
+        {
+            timePoder2 = timePoder2 + Time.deltaTime;
+            GameController.instance.AtualizarTimePoder2(timePoder2 / limiteTimePoder2);
+        }
+        if (timePoder2 >= limiteTimePoder2)
+        {
+            DispausarPoder2();
+        }
+
 
     }
     void PerderEstamina(float perda)
@@ -152,65 +156,25 @@ public class Player : MonoBehaviour
 
         }
     }
-    public void AplicarCombate(VarCombatePlayer combates)
-    {
-        this.combates = combates;
-    }
-    public void CombateCorpoACorpo()
-    {
-        definir_combate_corpo_a_corpo = combate_espada;
-        definir_combate = definir_combate_corpo_a_corpo;
-    }
-    public void CombateDistancia()
-    {
-        definir_combate = definir_combate_distancia;
-
-    }
-    public void DesabilitarCombateDistancia()
-    {
-        definir_combate_distancia = combates.combates[0];
-    }
-    public void DefinirCombateDistancia(DefinicaoCombate combate)
-    {
-        definir_combate_distancia = combate;
-        CombateDistancia();
-
-    }
-    public void AplicarPoder(VarPoderesPlayer poderes)
-    {
-        this.poderes = poderes;
-
-    }
-    public void DesabilitarPoder()
-    {
-        definir_poder = sem_poder;
-    }
-    public void PegarEscudo()
-    {
-        GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[2]);
-
-    }
-    public void DefinirPoder(Definicao_Poder_Player poder)
-    {
-        definir_poder = poder;
-    }
-
-    public void Atacar(GameObject[] arma, Animator anim)
-    {
-
-        definir_combate.Atacar(arma, anim);
-    }
-
-
+   
     public void PausarPoder()
     {
         liberarPoder = false;
+    }
+    public void PausarPoder2()
+    {
+        liberarPoder2 = false;
     }
     public void DispausarPoder()
     {
         liberarPoder = true;
     }
+    public void DispausarPoder2()
+    {
+        liberarPoder2 = true;
+    }
     bool liberarPoder;
+     bool liberarPoder2;
 
     public void DefinirTimePoder()
     {
@@ -218,23 +182,13 @@ public class Player : MonoBehaviour
         GameController.instance.AtualizarTimePoder((int)timePoder);
       
     }
-    public void UsarPoder(GameObject[] arma, Animator anim)
+    public void DefinirTimePoder2()
     {
+        timePoder2 = 0;
+        GameController.instance.AtualizarTimePoder2((int)timePoder2);
 
-        AlmentarTimePoder();
-
-        if (Input.GetKeyDown("f") && timePoder >= limiteTimePoder)
-        {
-
-
-        }
-        if (liberarPoder)
-        {
-           // escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
-
-
-        }
     }
+   
     public void UsarDash()
     {
 
@@ -289,21 +243,19 @@ public class Player : MonoBehaviour
         dir.position = definir_movimento.Mover(dir, speed, anin);
         return dir.position;
     }
-    public DefinicaoCombate DefiniCombate { get { return definir_combate; } }
-    public Definicao_Poder_Player DefiniPoder { get { return definir_poder; } }
-    public DefinicaoCombate DefiniCombateDistancia { get { return definir_combate_distancia; } }
-    public Definicao_Poder_Player Definir_Poder { get { return definir_poder; } }
     public float Vida { get { return vida; } }
     public float LimmiteVida { get { return limiteVida; } }
-    public VarPoderesPlayer Poderes { get { return poderes; } }
-    public VarCombatePlayer Combates { get { return combates; } }
     public VarMovimentacaoPlayer Movimentacoes { get { return movimentacoes; } }
     public bool LiberarPoder()
     {
         return liberarPoder;
     }
-    
-    
+    public bool LiberarPoder2()
+    {
+        return liberarPoder2;
+    }
+
+
 
 
 

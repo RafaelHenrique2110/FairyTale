@@ -9,37 +9,34 @@ public class Protagonista : MonoBehaviour
     static int limiteEscudo = 1;
     static int limiteEstamina = 10;
     static int limiteTimePoder = 20;
+    static int limiteTimePoder2 = 20;
     public int limiteCombo = 3;
     [SerializeField] float RaioComfonto;
     float speed = 0;
     public int combo = 2;
     bool resetarCombo;
     public Animator anim;
-    [SerializeField] VarPoderesPlayer poderes;
-    [SerializeField] VarCombatePlayer combates;
     [SerializeField] VarMovimentacaoPlayer movimentacoes;
-    [SerializeField] GameObject[] arma;
+    public GameObject[] arma;
     [SerializeField] Dashed dashed;
-    Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder);
+    Player protagonista = new Player(limiteVida, limiteForca, limiteEscudo, limiteEstamina, limiteTimePoder, limiteTimePoder2);
     [SerializeField] bool ativado;
     bool travaMovimento;
-    [SerializeField] GameObject trails;
+     public GameObject trails;
     [SerializeField] GameObject glow;
     [SerializeField] Poder_SO poder;
-    
+    [SerializeField] Poder_SO poder2;
+    [SerializeField] combate_So combate;
+
 
 
 
     private void Start()
     {
-        protagonista.AplicarPoder(poderes);
-        protagonista.AplicarCombate(combates);
+        
         protagonista.AplicarMovimentacao(movimentacoes);
         protagonista.Esperar();
-        protagonista.CombateCorpoACorpo();
-        protagonista.DesabilitarPoder();
-        protagonista.DesabilitarCombateDistancia();
-
+    
         // protagonista.DesabilitarDash();
         // protagonista.AbilitarMovimentacao();
        
@@ -54,13 +51,11 @@ public class Protagonista : MonoBehaviour
             if (Input.GetKeyDown("1"))
             {
                 itemSelecionado = 1;
-                protagonista.CombateCorpoACorpo();
                 GameController.instance.SelecionarSlot(Color.green, (Color.white));
             }
             if (Input.GetKeyDown("2"))
             {
                 itemSelecionado = 2;
-                protagonista.CombateDistancia();
                 GameController.instance.SelecionarSlot(Color.white, (Color.green));
             }
             if (travaMovimento == false && !Input.GetKey(KeyCode.Mouse0))
@@ -73,7 +68,8 @@ public class Protagonista : MonoBehaviour
 
                 MirarRotate();
                 TravarMovimento();
-                
+                Combater();
+
 
                 if (combo > 0 && ativarAtaque)
                 {
@@ -85,11 +81,11 @@ public class Protagonista : MonoBehaviour
                     trails.SetActive(true);
                     glow.SetActive(true);
                     Invoke("DisabilitarEfeitoEspada", 1.5f);
-                    protagonista.Atacar(arma, anim);
                     Invoke("DistravarMovimento", 1f);
 
 
                 }
+
                 if (combo <= 1f)
                 {
                     resetarCombo = true;
@@ -101,8 +97,9 @@ public class Protagonista : MonoBehaviour
             {
                 ResetarCombo();
             }
-           // protagonista.UsarPoder(arma, anim);
+            // protagonista.UsarPoder(arma, anim);
             protagonista.AlmentarTimePoder();
+             protagonista.AlmentarTimePoder2();
             if (Input.GetKeyDown("f"))
             {
                 
@@ -121,9 +118,27 @@ public class Protagonista : MonoBehaviour
                
 
             }
-           
-           
-            
+            if (Input.GetKeyDown("q"))
+            {
+
+                if (protagonista.LiberarPoder2())
+                {
+                    protagonista.DefinirTimePoder2();
+                    // escudo = definir_poder.UsarPoder(GameController.instance.armaPlaye, anim, escudo);
+                    if (poder2 != null)
+                    {
+                        ExecutarPoder2();
+                    }
+
+
+                }
+
+
+
+            }
+
+
+
 
         }
     }
@@ -163,11 +178,29 @@ public class Protagonista : MonoBehaviour
     {
         poder= novoPoder;
     }
+    public void SetCombate(combate_So novoCombate)
+    {
+        combate = novoCombate;
+    }
+    public void SetPoder2(Poder_SO novoPoder)
+    {
+        poder2 = novoPoder;
+    }
     public void ExecutarPoder()
     {
         protagonista.PausarPoder();
        protagonista.DefinirTimePoder();
         poder.ExecutarPoder();
+    }
+    public void ExecutarPoder2()
+    {
+        protagonista.PausarPoder2();
+        protagonista.DefinirTimePoder2();
+        poder2.ExecutarPoder();
+    }
+    public void Combater()
+    {
+        combate.ExecutarCombate();
     }
     void DiminuirCombo()
     {
@@ -297,6 +330,12 @@ public class Protagonista : MonoBehaviour
     {
         return poder;
     }
+    public Poder_SO GetPoder2()
+    {
+        return poder2;
+    }
+
+    public Animator GetAnimaitor() => anim;
 
 
 }
