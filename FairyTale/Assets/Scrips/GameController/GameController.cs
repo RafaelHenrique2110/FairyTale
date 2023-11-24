@@ -234,7 +234,8 @@ public class GameController : MonoBehaviour
         {
             AlterarValorQuest();
             inimmigos.Remove(obj);
-
+            
+           
 
         }
         return vida;

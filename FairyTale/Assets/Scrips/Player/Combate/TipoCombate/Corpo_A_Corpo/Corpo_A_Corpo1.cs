@@ -16,16 +16,15 @@ public class Corpo_A_Corpo1 : combate_So
         animacao[1] = "Combate_Lado_Normal";
         protagonista.GetAnimaitor().SetBool("Correr", false);
         protagonista.GetAnimaitor().SetBool("Andar", false);
-
+        armaobj.GetComponent<ArmaBranca>().SetDano(protagonista.GetDano());
         armaobj.GetComponent<ArmaBranca>().Usar();
-        armaobj.GetComponent<ArmaBranca>().SetDano(dano);
-      
+        
         if (GameController.instance.ativar_time_animacao == false)
         {
             
             int index = Random.Range(0, 2);
             protagonista.GetAnimaitor().SetBool(animacao[1], true);
-            GameController.instance.FinalizarAnimacao(0.3f, animacao[1]);
+            GameController.instance.FinalizarAnimacao(0.1f, animacao[1]);
         }
     }
 

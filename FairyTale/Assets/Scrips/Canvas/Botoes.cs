@@ -80,6 +80,12 @@ public class Botoes : MonoBehaviour
         //  FecharPainel();
 
     }
+    public void MelhorarForça(int dano)
+    {
+        Protagonista protagonista = GameController.instance.PlayerTransform.GetComponent<Protagonista>();
+        GetComponent<Image>().sprite = novoSprite;
+        protagonista.SetDano(dano);
+    }
     public void TrocarCombatePlayer(combate_So novoCombate)
     {
         GameController.instance.Protagonista.SetCombate(novoCombate);

@@ -205,9 +205,9 @@ public class Player : MonoBehaviour
     }
     public Vector3 Move(Transform dir, float speed, Animator anin)
     {
-       
-        //Debug.Log("limite" + limiteVida);
-        if (!Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.W))
+
+        ////Debug.Log("limite" + limiteVida);
+        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.W))
         {
             dir.rotation = Quaternion.Euler(0, 0, 0);
         }

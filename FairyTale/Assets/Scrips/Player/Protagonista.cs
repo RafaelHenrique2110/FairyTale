@@ -27,6 +27,7 @@ public class Protagonista : MonoBehaviour
     [SerializeField] Poder_SO poder;
     [SerializeField] Poder_SO poder2;
     [SerializeField] combate_So combate;
+    [SerializeField] int dano;
 
 
 
@@ -48,16 +49,16 @@ public class Protagonista : MonoBehaviour
         if (ativado)
         {
             //  DetectarInimigoProximo();
-            if (Input.GetKeyDown("1"))
-            {
-                itemSelecionado = 1;
-                GameController.instance.SelecionarSlot(Color.green, (Color.white));
-            }
-            if (Input.GetKeyDown("2"))
-            {
-                itemSelecionado = 2;
-                GameController.instance.SelecionarSlot(Color.white, (Color.green));
-            }
+            //if (Input.GetKeyDown("1"))
+            //{
+            //    itemSelecionado = 1;
+            //    GameController.instance.SelecionarSlot(Color.green, (Color.white));
+            //}
+            //if (Input.GetKeyDown("2"))
+            //{
+            //    itemSelecionado = 2;
+            //    GameController.instance.SelecionarSlot(Color.white, (Color.green));
+            //}
             if (travaMovimento == false && !Input.GetKey(KeyCode.Mouse0))
             {
                 transform.position = protagonista.Move(transform, speed, anim);
@@ -173,6 +174,14 @@ public class Protagonista : MonoBehaviour
                 GameController.instance.playerConfronto = false;
             }
         }
+    }
+    public void SetDano(int dano)
+    {
+       this.dano = dano;
+    }
+    public int GetDano()
+    {
+        return dano;
     }
     public void SetPoder(Poder_SO novoPoder)
     {

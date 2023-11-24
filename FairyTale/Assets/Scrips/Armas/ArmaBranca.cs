@@ -34,6 +34,8 @@ public class ArmaBranca : MonoBehaviour
     }
     public void Usar()
     {
+        Protagonista protagonista = GameController.instance.PlayerTransform.GetComponent<Protagonista>();
+        dano = protagonista.GetDano();
         Invoke("AtavarArma", 1f);
 
     }
