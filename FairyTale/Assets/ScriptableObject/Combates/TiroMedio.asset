@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56855d6e3175111459bdaa98b49d0140, type: 3}
-  m_Name: Tank_1
+  m_Script: {fileID: 11500000, guid: 6dd0f579b1d13c14b90c1fb147ec04e9, type: 3}
+  m_Name: TiroMedio
   m_EditorClassIdentifier: 
-  limiteTime: 10
-  valEscudo: 100
-  colorEscudo: {r: 0.27349493, g: 0.12941174, b: 0.8980392, a: 0}
-  colorSemEscudo: {r: 0.9056604, g: 0.89998364, b: 0.09825563, a: 0}
+  "muni\xE7\xE3o": {fileID: 2531782210020037649, guid: 25d3cfb52ff7fbe4e9f351c6680d8df4, type: 3}

@@ -1,12 +1,14 @@
 using UnityEngine;
-
-public class Bomba : MonoBehaviour, I_Poder_Player
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/PoderesPlayer/ Spawnar", order = 1)]
+public class Bomba : Poder_SO
 {
-    public float Poder(GameObject arma, Animator anim, float n)
+    Transform target;
+    [SerializeField] GameObject munição;
+
+    public override void ExecutarPoder()
     {
-        GameController.instance.CriarMunicao("bomba", arma.transform);
-        GameController.instance.Player.PausarPoder();
-        return 1f;
+        target = GameController.instance.armaPlaye.transform;
+        Instantiate(munição, target.transform.position, target.transform.rotation);
     }
 }
 

@@ -63,12 +63,42 @@ public class Botoes : MonoBehaviour
       //  FecharPainel();
 
     }
-    public void TrocarCombatePlayer()
+    public void TrocarPoderPlayer2(Poder_SO novoPoder)
     {
-        GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
-        AtualizarBotaoHabilidades();
-        FecharPainel();
-        GameController.instance.AtualizarSlot("Ataque", "Disparo");
+
+        GameController.instance.Protagonista.SetPoder2(novoPoder);
+        GetComponent<Image>().sprite = novoSprite;
+        //GetComponent<Button>().interactable = false;
+        if (nexBotao != null)
+        {
+            nexBotao.interactable = true;
+        }
+
+
+        // GameController.instance.TrocarPoderPlayer(GameController.instance.poderes_player.poderes[indexHabilidade]);
+        // AtualizarBotaoHabilidades();
+        //  FecharPainel();
+
+    }
+    public void MelhorarForça(int dano)
+    {
+        Protagonista protagonista = GameController.instance.PlayerTransform.GetComponent<Protagonista>();
+        GetComponent<Image>().sprite = novoSprite;
+        protagonista.SetDano(dano);
+    }
+    public void TrocarCombatePlayer(combate_So novoCombate)
+    {
+        GameController.instance.Protagonista.SetCombate(novoCombate);
+        GetComponent<Image>().sprite = novoSprite;
+        //GetComponent<Button>().interactable = false;
+        if (nexBotao != null)
+        {
+            nexBotao.interactable = true;
+        }
+        //GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
+        //AtualizarBotaoHabilidades();
+        //FecharPainel();
+        //GameController.instance.AtualizarSlot("Ataque", "Disparo");
 
     }
     public void TrocarDash()

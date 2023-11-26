@@ -21,7 +21,7 @@ public class InfoGame : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        player = new Player(limiteVidaPlayer, 0, 0, 0, 0);
+        player = new Player(limiteVidaPlayer, 0, 0, 0, 0,0);
 
     }
     private void OnDestroy()

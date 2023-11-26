@@ -22,7 +22,9 @@ public class GameController : MonoBehaviour
     [SerializeField] Image sprite_estamina;
     [SerializeField] Image sprite_vida;
     [SerializeField] Text txt_timePoder;
+    [SerializeField] Text txt_timePoder2;
     [SerializeField] Image fillPoder;
+    [SerializeField] Image fillPoder2;
     [SerializeField] Text txt_vida;
     [SerializeField] Text txt_requisitos_quest;
     [SerializeField] Text txt_titulo_quest;
@@ -33,8 +35,6 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject painel_gameOver;
     [SerializeField] GameObject painel_vitoria;
     List<MinionsDistancia> Observadores;
-    public VarPoderesPlayer poderes_player;
-    public VarCombatePlayer combates_player;
     public VarMovimentacaoPlayer movimentacoes_player;
     [SerializeField] So_Quest Quest;
     [SerializeField] GameObject Portal;
@@ -57,9 +57,6 @@ public class GameController : MonoBehaviour
     {
         assistente = new Assistente();
         instance = this;
-
-        AdiquirirPoderesPlayer();
-        AdiquirirCombatesPlayer();
         AdiquirirMovimentacaoPlayer();
         AplicarQuest(Quest);
         AtualizarQuest();
@@ -88,6 +85,12 @@ public class GameController : MonoBehaviour
         fillPoder.fillAmount = n;
 
     }
+    public void AtualizarTimePoder2(float n)
+    {
+
+        fillPoder2.fillAmount = n;
+
+    }
     public void AtualizarEstaminaPlayer(float n)
     {
 
@@ -114,14 +117,6 @@ public class GameController : MonoBehaviour
         Player.ResetarVidaPlayer();
     }
 
-    public void TrocarPoderPlayer(Definicao_Poder_Player poder)
-    {
-        Player.DefinirPoder(poder);
-    }
-    public void TrocaCombateDistanciaPlayer(DefinicaoCombate combate)
-    {
-        Player.DefinirCombateDistancia(combate);
-    }
     public void TrocarMovimento(Definocao_movimentacaoPlayer correr)
     {
         Player.DefinirMovimento(correr);
@@ -131,14 +126,6 @@ public class GameController : MonoBehaviour
         Quest.AlterarQuest();
     }
 
-    public void AdiquirirPoderesPlayer()
-    {
-        poderes_player = Player.Poderes;
-    }
-    public void AdiquirirCombatesPlayer()
-    {
-        combates_player = Player.Combates;
-    }
     public void AdiquirirMovimentacaoPlayer()
     {
         movimentacoes_player = Player.Movimentacoes;
@@ -247,7 +234,8 @@ public class GameController : MonoBehaviour
         {
             AlterarValorQuest();
             inimmigos.Remove(obj);
-
+            
+           
 
         }
         return vida;
