@@ -53,6 +53,8 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject portalFinal;
    [SerializeField] bool removerEfeitoplayer;
     [SerializeField] float timeRemoverEfeitoPLAYER;
+    [SerializeField] Image indentificadorPoder;
+    [SerializeField] Image indentificadorPoder2;
     private void Start()
     {
         assistente = new Assistente();
@@ -137,6 +139,14 @@ public class GameController : MonoBehaviour
     public void DefinirPlayer(Player novaConfig)
     {
         player.GetComponent<Protagonista>().AtualizarConfigPlayer(novaConfig);
+    }
+    public void SetIndentificadorPoder(Sprite sprite)
+    {
+       indentificadorPoder.sprite = sprite;
+    }
+    public void SetIndentificadorPoder2(Sprite sprite)
+    {
+        indentificadorPoder2.sprite = sprite;
     }
     public bool CombateCorpoPlayer()
     {
