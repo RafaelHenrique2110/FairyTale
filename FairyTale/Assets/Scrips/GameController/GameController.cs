@@ -242,7 +242,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            AlterarValorQuest();
+           // AlterarValorQuest();
             inimmigos.Remove(obj);
             
            
