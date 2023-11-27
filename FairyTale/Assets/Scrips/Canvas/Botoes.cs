@@ -20,6 +20,7 @@ public class Botoes : MonoBehaviour
     public void FecharPainel()
     {
         painel.SetActive(false);
+        GameController.instance.AtivarPlayer(true);
     }
     public void AumentarNivelPlayer(int preco)
     {

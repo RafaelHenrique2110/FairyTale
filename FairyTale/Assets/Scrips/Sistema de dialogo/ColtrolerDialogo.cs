@@ -46,5 +46,6 @@ public class ColtrolerDialogo : MonoBehaviour
     void EndDialogue()
     {
         menuDialogo.SetActive(false);
+        GameController.instance.AtivarPlayer(true);
     }
 }

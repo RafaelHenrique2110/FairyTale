@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Text txt_timePoder2;
     [SerializeField] Image fillPoder;
     [SerializeField] Image fillPoder2;
-    [SerializeField] Text txt_vida;
+    [SerializeField] TMP_Text txt_vida;
     [SerializeField] Text txt_requisitos_quest;
     [SerializeField] Text txt_titulo_quest;
     [SerializeField] float sensibilidadeMouse = 0;
@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour
     }
     public void AtualizarVidaPlayer(float n)
     {
-        //txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
+        txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
         sprite_vida.fillAmount = n;
     }
 

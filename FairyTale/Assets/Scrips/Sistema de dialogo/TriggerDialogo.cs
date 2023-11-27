@@ -7,5 +7,6 @@ public class TriggerDialogo : MonoBehaviour
     public void ativaDialogo()
     {
         FindObjectOfType<ColtrolerDialogo>().ComecaDialogo(dialogo);
+      GameController.instance.AtivarPlayer(false);
     }
 }
