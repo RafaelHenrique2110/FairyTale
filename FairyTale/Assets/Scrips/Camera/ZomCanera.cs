@@ -9,8 +9,8 @@ public class ZomCanera : MonoBehaviour
 
     private CinemachineVirtualCamera virtualCamera;
     private float initialOrthoSize;
-    private float timer;
-
+   public float timer;
+    public bool ativado= true;
     private void Start()
     {
         virtualCamera = GetComponent<CinemachineVirtualCamera>();
@@ -20,22 +20,27 @@ public class ZomCanera : MonoBehaviour
 
     private void Update()
     {
-        // Verificar se o ortho size já foi diminuído completamente
-        if (timer >= decreaseTime)
+        if (ativado)
         {
-            GameController.instance.AbilitarHud();
-            GameController.instance.AtivarPlayer(true);
+            // Verificar se o ortho size já foi diminuído completamente
+            if (timer >= decreaseTime)
+            {
+                GameController.instance.AbilitarHud();
+                GameController.instance.AtivarPlayer(true);
+                ativado = false;
+                return;
+            }
 
-            return;
+
+            timer += Time.deltaTime;
+
+            // Calcular o ortho size atual com base no tempo decorrido
+            float t = timer / decreaseTime;
+            float currentOrthoSize = Mathf.Lerp(initialOrthoSize, targetOrthoSize, t);
+
+            // Atualizar o ortho size da câmera virtual
+            virtualCamera.m_Lens.OrthographicSize = currentOrthoSize;
         }
-
-        timer += Time.deltaTime;
-
-        // Calcular o ortho size atual com base no tempo decorrido
-        float t = timer / decreaseTime;
-        float currentOrthoSize = Mathf.Lerp(initialOrthoSize, targetOrthoSize, t);
-
-        // Atualizar o ortho size da câmera virtual
-        virtualCamera.m_Lens.OrthographicSize = currentOrthoSize;
+      
     }
 }

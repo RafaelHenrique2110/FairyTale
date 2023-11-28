@@ -292,6 +292,7 @@ public class Protagonista : MonoBehaviour
         if (other.CompareTag("gato"))
         {
             GameController.instance.ativarDialogo(true);
+           
         }
         if (other.CompareTag("Vida"))
         {
@@ -318,6 +319,7 @@ public class Protagonista : MonoBehaviour
         if (other.tag == "Chapeleiro" && Input.GetKey("e"))
         {
             GameController.instance.AtivarAprimoramentosResistenciaPlayer();
+            GameController.instance.AtivarPlayer(false);
         }
         else if (other.CompareTag("mudar_Combate") && Input.GetKey("e"))
         {

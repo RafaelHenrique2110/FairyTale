@@ -40,6 +40,6 @@ public class PauseButton : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("Menu2");
+        SceneManager.LoadScene("Menu");
     }
 }

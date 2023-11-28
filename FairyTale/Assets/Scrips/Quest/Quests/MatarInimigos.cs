@@ -32,6 +32,7 @@ public class MatarInimigos : So_Quest
     {
         inimigos_Mortos++;
         AtualizarQuest();
+        
     }
 
 }

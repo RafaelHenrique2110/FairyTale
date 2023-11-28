@@ -16,10 +16,13 @@ public class Botoes : MonoBehaviour
     [SerializeField] AbilidadePlayerScriptObject so;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
+    [SerializeField] Sprite indentificadorPoder;
+    [SerializeField] Sprite indentificadorPoder2;
 
     public void FecharPainel()
     {
         painel.SetActive(false);
+        GameController.instance.AtivarPlayer(true);
     }
     public void AumentarNivelPlayer(int preco)
     {
@@ -48,7 +51,7 @@ public class Botoes : MonoBehaviour
     }
     public void TrocarPoderPlayer(Poder_SO novoPoder)
     {
-
+        GameController.instance.SetIndentificadorPoder(indentificadorPoder);
         GameController.instance.Protagonista.SetPoder(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;
@@ -65,7 +68,7 @@ public class Botoes : MonoBehaviour
     }
     public void TrocarPoderPlayer2(Poder_SO novoPoder)
     {
-
+        GameController.instance.SetIndentificadorPoder2(indentificadorPoder2);
         GameController.instance.Protagonista.SetPoder2(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;

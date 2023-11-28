@@ -55,6 +55,7 @@ public class MinionsCorpoACorpo : MonoBehaviour, I_Observer
             if (minion.Vida <= 0)
             {
                 DroparIten(inventario);
+                minion.Matar(this.gameObject);
             }
 
         }
