@@ -504,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &170507939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2396,8 +2396,8 @@ RectTransform:
   - {fileID: 314149825}
   - {fileID: 60737740}
   - {fileID: 1984159771}
-  - {fileID: 639304953}
   - {fileID: 1287103801}
+  - {fileID: 666998059}
   m_Father: {fileID: 425112797}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3253,7 +3253,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638194964}
   m_CullTransparentMesh: 1
---- !u!1 &639304952
+--- !u!1 &666998058
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3261,9 +3261,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 639304953}
-  - component: {fileID: 639304955}
-  - component: {fileID: 639304954}
+  - component: {fileID: 666998059}
+  - component: {fileID: 666998061}
+  - component: {fileID: 666998060}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -3271,33 +3271,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &639304953
+--- !u!224 &666998059
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639304952}
+  m_GameObject: {fileID: 666998058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 565086188}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -363}
-  m_SizeDelta: {x: 1308.2, y: 163.3371}
+  m_AnchoredPosition: {x: 69.728, y: -375.72}
+  m_SizeDelta: {x: 1308.2, y: 94.2122}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &639304954
+--- !u!114 &666998060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639304952}
+  m_GameObject: {fileID: 666998058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Luis Felipe Matsya, Roque Anderson, Daniel Pinheiro\r"
+  m_text: "Daniel Pinheiro, Roque Anderson, Lip\xE3o"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
   m_sharedMaterial: {fileID: -4392837861553736558, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
@@ -3380,13 +3380,13 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &639304955
+--- !u!222 &666998061
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639304952}
+  m_GameObject: {fileID: 666998058}
   m_CullTransparentMesh: 1
 --- !u!1 &673830593
 GameObject:
@@ -5290,7 +5290,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 565086188}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6909,11 +6909,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ana Luiza - Game Designer, Concept art, Roteiro e Produtora de \xE1udio\r\nJo\xE3o
-    Victor - VFX,  Modelador de Personagem e Programador auxiliar\r\nRafael Henrique
-    - Programador ( Mec\xE2nicas de gameplay, intera\xE7\xE3o e combate  )\r\nVitor
-    Costa - Modelador 3d ( Cen\xE1rio e Personagens )\r\nYrving Souza - Game Designer,
-    Concept art, diretor de arte e modelador 3d\r\n"
+  m_text: "Ana Luiza - Game Design, HUD e interface, Roteiro e \xE1udio\nJo\xE3o
+    Victor - VFX, Modelagem de Personagens, Programa\xE7\xE3o (auxiliar)\nRafael
+    Henrique - Programa\xE7\xE3o (Mec\xE2nicas de gameplay, intera\xE7\xE3o e combate)\nVitor
+    Costa - Modelagem 3d ( Cen\xE1rio e Personagens )\nYrving Souza - Game Design,
+    Dire\xE7\xE3o de arte, modelagem de assets e personagens"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
   m_sharedMaterial: {fileID: -4392837861553736558, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
