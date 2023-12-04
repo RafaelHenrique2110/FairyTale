@@ -5,6 +5,7 @@ public class AbilidadePlayerScriptObject : ScriptableObject
 {
     public int indexPoder;
     public Sprite nomePoder;
+    public string titulo;
     public string descricao;
 
 }
