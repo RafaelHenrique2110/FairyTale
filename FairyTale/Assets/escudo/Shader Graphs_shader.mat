@@ -44,9 +44,9 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _velocity: 0.5
+    - _velocity: 0.43
     m_Colors:
-    - _Color_emission: {r: 0, g: 6.964404, b: 0.6008506, a: 0}
+    - _Color_emission: {r: 0, g: 409.6, b: 36.14118, a: 0}
     - _Tilling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &511497686440291470
