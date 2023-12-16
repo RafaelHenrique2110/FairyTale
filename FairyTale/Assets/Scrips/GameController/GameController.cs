@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Text txt_timePoder2;
     [SerializeField] Image fillPoder;
     [SerializeField] Image fillPoder2;
-    [SerializeField] Text txt_vida;
+    [SerializeField] TMP_Text txt_vida;
     [SerializeField] Text txt_requisitos_quest;
     [SerializeField] Text txt_titulo_quest;
     [SerializeField] float sensibilidadeMouse = 0;
@@ -53,6 +53,8 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject portalFinal;
    [SerializeField] bool removerEfeitoplayer;
     [SerializeField] float timeRemoverEfeitoPLAYER;
+    [SerializeField] Image indentificadorPoder;
+    [SerializeField] Image indentificadorPoder2;
     private void Start()
     {
         assistente = new Assistente();
@@ -98,7 +100,7 @@ public class GameController : MonoBehaviour
     }
     public void AtualizarVidaPlayer(float n)
     {
-        //txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
+        txt_vida.text = (int)Player.Vida + "/" + (int)Player.LimmiteVida;
         sprite_vida.fillAmount = n;
     }
 
@@ -137,6 +139,14 @@ public class GameController : MonoBehaviour
     public void DefinirPlayer(Player novaConfig)
     {
         player.GetComponent<Protagonista>().AtualizarConfigPlayer(novaConfig);
+    }
+    public void SetIndentificadorPoder(Sprite sprite)
+    {
+       indentificadorPoder.sprite = sprite;
+    }
+    public void SetIndentificadorPoder2(Sprite sprite)
+    {
+        indentificadorPoder2.sprite = sprite;
     }
     public bool CombateCorpoPlayer()
     {
@@ -232,7 +242,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            AlterarValorQuest();
+           // AlterarValorQuest();
             inimmigos.Remove(obj);
             
            

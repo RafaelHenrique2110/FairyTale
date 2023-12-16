@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class Botoes : MonoBehaviour
+public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Image nome;
     [SerializeField] TMP_Text descricao;
@@ -16,11 +17,37 @@ public class Botoes : MonoBehaviour
     [SerializeField] AbilidadePlayerScriptObject so;
     [SerializeField] GameObject painel;
     [SerializeField] Barras barra_nivel;
+    [SerializeField] Sprite indentificadorPoder;
+    [SerializeField] Sprite indentificadorPoder2;
+    [SerializeField] GameObject painelDescricaoPoder;
+    [SerializeField] Poder_SO novoPoder;
+    [SerializeField] combate_So novoCombate;
 
     public void FecharPainel()
     {
         painel.SetActive(false);
+        GameController.instance.AtivarPlayer(true);
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("FOI");
+        painelDescricaoPoder.SetActive(true);
+        if (novoPoder != null)
+        {
+            painelDescricaoPoder.GetComponent<PaineLPoder>().SetPainel(novoPoder.titulo, novoPoder.descricao);
+        }
+        if(novoCombate != null)
+        {
+            painelDescricaoPoder.GetComponent<PaineLPoder>().SetPainel( novoCombate.titulo, novoCombate.descricao);
+        }
+        
+    }
+    public  void OnPointerExit(PointerEventData eventData)
+    {
+        painelDescricaoPoder.SetActive(false);
+    }
+   
     public void AumentarNivelPlayer(int preco)
     {
 
@@ -48,7 +75,7 @@ public class Botoes : MonoBehaviour
     }
     public void TrocarPoderPlayer(Poder_SO novoPoder)
     {
-
+        GameController.instance.SetIndentificadorPoder(indentificadorPoder);
         GameController.instance.Protagonista.SetPoder(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;
@@ -65,7 +92,7 @@ public class Botoes : MonoBehaviour
     }
     public void TrocarPoderPlayer2(Poder_SO novoPoder)
     {
-
+        GameController.instance.SetIndentificadorPoder2(indentificadorPoder2);
         GameController.instance.Protagonista.SetPoder2(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;

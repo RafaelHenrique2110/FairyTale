@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1041699624}
-  m_IndirectSpecularColor: {r: 0.16669488, g: 0.23912176, b: 0.5628399, a: 1}
+  m_IndirectSpecularColor: {r: 0.16669485, g: 0.23912176, b: 0.5628399, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22615,6 +22615,7 @@ Transform:
   - {fileID: 1035155182}
   - {fileID: 1760626770}
   - {fileID: 30882411}
+  - {fileID: 992005086}
   - {fileID: 105499164}
   - {fileID: 1228113047}
   - {fileID: 1227099503}
@@ -22651,7 +22652,6 @@ Transform:
   - {fileID: 245294854}
   - {fileID: 1858111809}
   - {fileID: 1899577265}
-  - {fileID: 992005086}
   - {fileID: 570049667}
   - {fileID: 1121209681}
   - {fileID: 735483402}
@@ -24794,7 +24794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132c1239d65d8404dac6756844821ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scena: SafeRoom
+  scena: Boss1
 --- !u!65 &642930700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24806,8 +24806,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7456017, y: 1, z: 1.8490813}
+  m_Center: {x: -0.37280083, y: 0, z: 0.015844425}
 --- !u!23 &642930701
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30781,7 +30781,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803131860}
-  m_LocalRotation: {x: 0.413166, y: 0.080679335, z: -0.036779094, w: 0.90632886}
+  m_LocalRotation: {x: 0.413166, y: 0.08067933, z: -0.0367791, w: 0.90632886}
   m_LocalPosition: {x: -805.47, y: 320.28, z: -618.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34581,7 +34581,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892054060}
-  m_LocalRotation: {x: 0.413166, y: 0.080679335, z: -0.036779094, w: 0.90632886}
+  m_LocalRotation: {x: 0.413166, y: 0.08067933, z: -0.0367791, w: 0.90632886}
   m_LocalPosition: {x: -805.47, y: 320.28, z: -618.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34604,6 +34604,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decreaseTime: 2
   targetOrthoSize: 5.3
+  timer: 0
+  ativado: 1
 --- !u!114 &892054063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38184,7 +38186,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 597631792}
-  m_RootOrder: 750
+  m_RootOrder: 714
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &992005087
 BoxCollider:

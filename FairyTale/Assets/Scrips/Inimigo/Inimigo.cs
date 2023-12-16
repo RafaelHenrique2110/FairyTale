@@ -138,7 +138,9 @@ public class Inimigo : MonoBehaviour
     }
     public void Matar(GameObject obj)
     {
+        GameController.instance.AlterarValorQuest();
         Destroy(obj);
+       
     }
 
     public IEnumerator VoltarConciencia(Animator anim)

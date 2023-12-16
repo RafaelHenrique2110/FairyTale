@@ -5,10 +5,12 @@ using UnityEngine;
 public class AddVida: Poder_SO
 {
    [SerializeField] float vida;
+    [SerializeField] Sprite indentificadorPoder;
+    
     public override void ExecutarPoder()
     {
         GameController.instance.Player.Curar(vida);
-           
+       
 
     }
 }

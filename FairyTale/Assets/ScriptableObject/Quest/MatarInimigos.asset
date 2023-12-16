@@ -16,4 +16,4 @@ MonoBehaviour:
   inimigos_para_matar: 18
   inimigos_Mortos: 0
   titulo_quest: Mate os inimigos!
-  requisitos_quest: 0/18
+  requisitos_quest: 7/18
