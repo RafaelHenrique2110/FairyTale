@@ -11,7 +11,7 @@ public class mainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ExibirImagemTemporariamente()); // Inicia a rotina para exibir a imagem temporariamente
+        
     }
 
     // Update is called once per frame
@@ -26,12 +26,6 @@ public class mainMenu : MonoBehaviour
         SceneManager.LoadScene(proximaCenaIndex); // Carrega a próxima cena
     }
 
-    IEnumerator ExibirImagemTemporariamente()
-    {
-        imagem.enabled = true; // Ativa a imagem
-        yield return new WaitForSeconds(2f); // Espera 2 segundos
-        imagem.enabled = false; // Desativa a imagem
-    }
 
     public void SairDoJogo()
     {
