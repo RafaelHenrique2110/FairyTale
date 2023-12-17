@@ -10046,7 +10046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &462506969
 Transform:
   m_ObjectHideFlags: 0
@@ -14678,7 +14678,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0100458, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -20522,6 +20522,7 @@ MonoBehaviour:
   poder2: {fileID: 0}
   combate: {fileID: 11400000, guid: 14eb3b07105053343ba18a2b9d7b4451, type: 2}
   dano: 0
+  escudo: {fileID: 462506968}
 --- !u!4 &1003948204
 Transform:
   m_ObjectHideFlags: 0
