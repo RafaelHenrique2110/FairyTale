@@ -273,7 +273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1029.7, y: 772.6054}
+  m_AnchoredPosition: {x: 1029.7, y: 809}
   m_SizeDelta: {x: 355.4955, y: 121.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60737741
@@ -2396,8 +2396,8 @@ RectTransform:
   - {fileID: 314149825}
   - {fileID: 60737740}
   - {fileID: 1984159771}
+  - {fileID: 639304953}
   - {fileID: 1287103801}
-  - {fileID: 666998059}
   m_Father: {fileID: 425112797}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3253,7 +3253,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638194964}
   m_CullTransparentMesh: 1
---- !u!1 &666998058
+--- !u!1 &639304952
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3261,9 +3261,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 666998059}
-  - component: {fileID: 666998061}
-  - component: {fileID: 666998060}
+  - component: {fileID: 639304953}
+  - component: {fileID: 639304955}
+  - component: {fileID: 639304954}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -3271,33 +3271,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &666998059
+--- !u!224 &639304953
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666998058}
+  m_GameObject: {fileID: 639304952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 565086188}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.728, y: -375.72}
-  m_SizeDelta: {x: 1308.2, y: 94.2122}
+  m_AnchoredPosition: {x: 80, y: -390}
+  m_SizeDelta: {x: 1308.2, y: 163.3371}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &666998060
+--- !u!114 &639304954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666998058}
+  m_GameObject: {fileID: 639304952}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Daniel Pinheiro, Roque Anderson, Lip\xE3o"
+  m_text: "Lip\xE3o Garrocho, Roque Anderson, Daniel Pinheiro\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
   m_sharedMaterial: {fileID: -4392837861553736558, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
@@ -3380,13 +3380,13 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &666998061
+--- !u!222 &639304955
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666998058}
+  m_GameObject: {fileID: 639304952}
   m_CullTransparentMesh: 1
 --- !u!1 &673830593
 GameObject:
@@ -5290,11 +5290,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 565086188}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1040, y: 287}
+  m_AnchoredPosition: {x: 1040, y: 246}
   m_SizeDelta: {x: 440.7202, y: 151.2312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287103802
@@ -6984,7 +6984,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.728, y: -18}
+  m_AnchoredPosition: {x: 69.728, y: -20}
   m_SizeDelta: {x: 1308.2, y: 379.4158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984159772
@@ -7007,11 +7007,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ana Luiza - Game Design, HUD e interface, Roteiro e \xE1udio\nJo\xE3o
-    Victor - VFX, Modelagem de Personagens, Programa\xE7\xE3o (auxiliar)\nRafael
-    Henrique - Programa\xE7\xE3o (Mec\xE2nicas de gameplay, intera\xE7\xE3o e combate)\nVitor
-    Costa - Modelagem 3d ( Cen\xE1rio e Personagens )\nYrving Souza - Game Design,
-    Dire\xE7\xE3o de arte, modelagem de assets e personagens"
+  m_text: "Yrving Souza - Game Design, Concept de personagens, dire\xE7\xE3o de arte,
+    modelagem 3d (Protagonista, Chapeuzinho, Aranha e assets de cen\xE1rio), Environment,
+    ilumina\xE7\xE3o e post processing \r\nRafael Henrique \u2013 Programador principal
+    (Mec\xE2nicas de gameplay, intera\xE7\xE3o, combate, habilidades, economia, IA
+    dos inimigos e anima\xE7\xF5es de personagens), Modelagem (Chapeleiro) \r\nAna
+    Luiza - Game Design (arvore de habilidades e economia), Roteiro, Elementos de
+    HUD, Elementos de \xE1udio e m\xFAsicas, Anima\xE7\xE3o do lobo \r\nJo\xE3o Victor
+    \u2013 VFX (Combate, habilidades e environment), Modelagem e texturiza\xE7\xE3o
+    de personagens (lobo, lenhador), Programa\xE7\xE3o de VFX e efeitos sonoros \r\nVitor
+    Costa - Modelagem de personagens (Golem) e assets de cen\xE1rio \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
   m_sharedMaterial: {fileID: -4392837861553736558, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
@@ -7038,8 +7043,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.3
-  m_fontSizeBase: 50.3
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
