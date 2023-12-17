@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proxQuest: {fileID: 11400000, guid: 979e2ef912ab38c4f9db0199acb3287c, type: 2}
   inimigos_para_matar: 18
-  inimigos_Mortos: 7
+  inimigos_Mortos: 0
   titulo_quest: Mate os inimigos!
   requisitos_quest: 7/18

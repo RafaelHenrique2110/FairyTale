@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class Botoes : MonoBehaviour
+public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Image nome;
     [SerializeField] TMP_Text descricao;
@@ -18,12 +19,35 @@ public class Botoes : MonoBehaviour
     [SerializeField] Barras barra_nivel;
     [SerializeField] Sprite indentificadorPoder;
     [SerializeField] Sprite indentificadorPoder2;
+    [SerializeField] GameObject painelDescricaoPoder;
+    [SerializeField] Poder_SO novoPoder;
+    [SerializeField] combate_So novoCombate;
 
     public void FecharPainel()
     {
         painel.SetActive(false);
         GameController.instance.AtivarPlayer(true);
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("FOI");
+        painelDescricaoPoder.SetActive(true);
+        if (novoPoder != null)
+        {
+            painelDescricaoPoder.GetComponent<PaineLPoder>().SetPainel(novoPoder.titulo, novoPoder.descricao);
+        }
+        if(novoCombate != null)
+        {
+            painelDescricaoPoder.GetComponent<PaineLPoder>().SetPainel( novoCombate.titulo, novoCombate.descricao);
+        }
+        
+    }
+    public  void OnPointerExit(PointerEventData eventData)
+    {
+        painelDescricaoPoder.SetActive(false);
+    }
+   
     public void AumentarNivelPlayer(int preco)
     {
 

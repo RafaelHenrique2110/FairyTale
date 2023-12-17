@@ -11,8 +11,9 @@ public class Tank_1 : Poder_SO
     [SerializeField] Color colorSemEscudo;
     public override void ExecutarPoder()
     {
-     
-        GameController.instance.material_player.color = colorEscudo;
+      
+       GameController.instance.Protagonista.GetEscudo().SetActive(true);
+      //  GameController.instance.material_player.color = colorEscudo;
         GameController.instance.Player.AumentaEscudo(valEscudo);
         GameController.instance.AtivarRemoverEfeitoPoder(limiteTime);
 
@@ -22,6 +23,7 @@ public class Tank_1 : Poder_SO
         // GameController.instance.Player.PausarPoder();
         GameController.instance.material_player.color = colorSemEscudo;
         GameController.instance.Player.AumentaEscudo(valEscudo);
+        GameController.instance.Protagonista.GetEscudo().SetActive(false);
     }
 
 }

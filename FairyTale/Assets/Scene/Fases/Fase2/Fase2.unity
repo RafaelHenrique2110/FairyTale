@@ -3852,6 +3852,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &107150796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12403,6 +12408,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &345424337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12806,6 +12816,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &354993312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14671,6 +14686,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &417749609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19241,6 +19261,11 @@ MonoBehaviour:
   so: {fileID: 0}
   painel: {fileID: 0}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &542714490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20224,6 +20249,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed6418d1074505b4b99fb3642a9a2006, type: 3}
   m_PrefabInstance: {fileID: 558477243}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &560156966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560156967}
+  - component: {fileID: 560156970}
+  - component: {fileID: 560156969}
+  - component: {fileID: 560156968}
+  m_Layer: 0
+  m_Name: escudo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560156967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560156966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.005, y: 0.39501953, z: 0.141}
+  m_LocalScale: {x: 3.0779104, y: 3.07791, z: 3.0779104}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1637476129}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &560156968
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560156966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &560156969
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560156966}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 48e61425afb92464fa85f2da3c3f7671, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &560156970
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560156966}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &561703939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22590,6 +22712,7 @@ Transform:
   - {fileID: 25452616}
   - {fileID: 15575207}
   - {fileID: 2063347177}
+  - {fileID: 992005086}
   - {fileID: 103945863}
   - {fileID: 1936609485}
   - {fileID: 2111889777}
@@ -22615,7 +22738,6 @@ Transform:
   - {fileID: 1035155182}
   - {fileID: 1760626770}
   - {fileID: 30882411}
-  - {fileID: 992005086}
   - {fileID: 105499164}
   - {fileID: 1228113047}
   - {fileID: 1227099503}
@@ -23360,6 +23482,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 0cd2efc79b75cd044ba4d62afc182011, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &619934828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24653,6 +24780,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &640997223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25160,7 +25292,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f3b3d130f79312341b3e9a87b7b4a0cd, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3b3d130f79312341b3e9a87b7b4a0cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -25305,6 +25437,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &658812182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27221,6 +27358,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &709340547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28276,6 +28418,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &749997350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28522,6 +28669,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &750481449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30781,7 +30933,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803131860}
-  m_LocalRotation: {x: 0.413166, y: 0.08067933, z: -0.0367791, w: 0.90632886}
+  m_LocalRotation: {x: 0.413166, y: 0.080679335, z: -0.036779094, w: 0.90632886}
   m_LocalPosition: {x: -805.47, y: 320.28, z: -618.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31721,6 +31873,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &822630251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34581,7 +34738,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892054060}
-  m_LocalRotation: {x: 0.413166, y: 0.08067933, z: -0.0367791, w: 0.90632886}
+  m_LocalRotation: {x: 0.413166, y: 0.080679335, z: -0.036779094, w: 0.90632886}
   m_LocalPosition: {x: -805.47, y: 320.28, z: -618.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34635,7 +34792,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.0100458, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -35253,6 +35410,8 @@ MonoBehaviour:
   portalFinal: {fileID: 0}
   removerEfeitoplayer: 0
   timeRemoverEfeitoPLAYER: 0
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
 --- !u!82 &911403914
 AudioSource:
   m_ObjectHideFlags: 0
@@ -38186,7 +38345,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 597631792}
-  m_RootOrder: 714
+  m_RootOrder: 689
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &992005087
 BoxCollider:
@@ -38357,6 +38516,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &993405417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42104,6 +42268,11 @@ MonoBehaviour:
   so: {fileID: 0}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!65 &1108951328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59954,6 +60123,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 1a199b6bffe263e40b2594117aca1aa8, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &1563396748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63787,6 +63961,7 @@ Transform:
   - {fileID: 1020459153}
   - {fileID: 1371237748}
   - {fileID: 1639530553}
+  - {fileID: 560156967}
   m_Father: {fileID: 747596720}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -71858,6 +72033,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &1824500886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72823,6 +73003,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &1846655013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74520,6 +74705,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &1890089263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82868,6 +83058,11 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: 4b83a480db77b4e4696239e6cfc9ebca, type: 2}
   painel: {fileID: 620645790}
   barra_nivel: {fileID: 0}
+  indentificadorPoder: {fileID: 0}
+  indentificadorPoder2: {fileID: 0}
+  painelDescricaoPoder: {fileID: 0}
+  novoPoder: {fileID: 0}
+  novoCombate: {fileID: 0}
 --- !u!114 &2096742024
 MonoBehaviour:
   m_ObjectHideFlags: 0
