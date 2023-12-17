@@ -23,7 +23,7 @@ public class MinionsDistancia : MonoBehaviour, I_Observer
 
         GameController.instance.assistente.AdicionarObservador(this);
         minion.arma = arma;
-        minion.Posicionar(Posicionamento);
+        minion.Seguir();
         minion.PegarRaio();
 
     }
