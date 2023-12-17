@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22454a09a6e0c3b4abdb14b173b66608, type: 3}
   m_Name: AddVida
   m_EditorClassIdentifier: 
+  titulo: 
+  descricao: 
   vida: 10
+  indentificadorPoder: {fileID: 0}
+  limiteTime: 4

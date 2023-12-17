@@ -13,7 +13,7 @@ public class Tank_1 : Poder_SO
     {
       
        GameController.instance.Protagonista.GetEscudo().SetActive(true);
-        GameController.instance.material_player.color = colorEscudo;
+      //  GameController.instance.material_player.color = colorEscudo;
         GameController.instance.Player.AumentaEscudo(valEscudo);
         GameController.instance.AtivarRemoverEfeitoPoder(limiteTime);
 
