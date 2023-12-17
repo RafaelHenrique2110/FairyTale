@@ -28,6 +28,7 @@ public class Protagonista : MonoBehaviour
     [SerializeField] Poder_SO poder2;
     [SerializeField] combate_So combate;
     [SerializeField] int dano;
+    [SerializeField] GameObject escudo;
 
 
 
@@ -347,6 +348,8 @@ public class Protagonista : MonoBehaviour
     }
 
     public Animator GetAnimaitor() => anim;
+    public GameObject GetEscudo() => escudo;
+
 
 
 }
