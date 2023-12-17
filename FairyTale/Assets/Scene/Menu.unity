@@ -273,7 +273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1029.7, y: 772.6054}
+  m_AnchoredPosition: {x: 1029.7, y: 809}
   m_SizeDelta: {x: 355.4955, y: 121.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60737741
@@ -3288,7 +3288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -363}
+  m_AnchoredPosition: {x: 80, y: -390}
   m_SizeDelta: {x: 1308.2, y: 163.3371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639304954
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Luis Felipe Matsya, Roque Anderson, Daniel Pinheiro\r"
+  m_text: "Lip\xE3o Garrocho, Roque Anderson, Daniel Pinheiro\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
   m_sharedMaterial: {fileID: -4392837861553736558, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
@@ -5294,7 +5294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1040, y: 287}
+  m_AnchoredPosition: {x: 1040, y: 246}
   m_SizeDelta: {x: 440.7202, y: 151.2312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287103802
@@ -6984,7 +6984,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.728, y: -18}
+  m_AnchoredPosition: {x: 69.728, y: -20}
   m_SizeDelta: {x: 1308.2, y: 379.4158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984159772
@@ -7007,11 +7007,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ana Luiza - Game Designer, Concept art, Roteiro e Produtora de \xE1udio\r\nJo\xE3o
-    Victor - VFX,  Modelador de Personagem e Programador auxiliar\r\nRafael Henrique
-    - Programador ( Mec\xE2nicas de gameplay, intera\xE7\xE3o e combate  )\r\nVitor
-    Costa - Modelador 3d ( Cen\xE1rio e Personagens )\r\nYrving Souza - Game Designer,
-    Concept art, diretor de arte e modelador 3d\r\n"
+  m_text: "Yrving Souza - Game Design, Concept de personagens, dire\xE7\xE3o de arte,
+    modelagem 3d (Protagonista, Chapeuzinho, Aranha e assets de cen\xE1rio), Environment,
+    ilumina\xE7\xE3o e post processing \r\nRafael Henrique \u2013 Programador principal
+    (Mec\xE2nicas de gameplay, intera\xE7\xE3o, combate, habilidades, economia, IA
+    dos inimigos e anima\xE7\xF5es de personagens), Modelagem (Chapeleiro) \r\nAna
+    Luiza - Game Design (arvore de habilidades e economia), Roteiro, Elementos de
+    HUD, Elementos de \xE1udio e m\xFAsicas, Anima\xE7\xE3o do lobo \r\nJo\xE3o Victor
+    \u2013 VFX (Combate, habilidades e environment), Modelagem e texturiza\xE7\xE3o
+    de personagens (lobo, lenhador), Programa\xE7\xE3o de VFX e efeitos sonoros \r\nVitor
+    Costa - Modelagem de personagens (Golem) e assets de cen\xE1rio \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
   m_sharedMaterial: {fileID: -4392837861553736558, guid: 57b01591de613254ead58d28b2c0e0fb, type: 2}
@@ -7038,8 +7043,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.3
-  m_fontSizeBase: 50.3
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
