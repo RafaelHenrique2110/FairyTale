@@ -5,7 +5,6 @@ using UnityEngine;
 public class AddVida: Poder_SO
 {
    [SerializeField] float vida;
-    [SerializeField] Sprite indentificadorPoder;
     [SerializeField] float limiteTime;
 
     public override void ExecutarPoder()
@@ -15,6 +14,7 @@ public class AddVida: Poder_SO
         GameController.instance.Player.Curar(vida);
        // GameController.instance.AtivarRemoverEfeitoPoder(limiteTime);
         Destroy(vfxcura, limiteTime);
+
 
 
     }

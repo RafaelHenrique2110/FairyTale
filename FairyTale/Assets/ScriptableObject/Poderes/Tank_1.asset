@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56855d6e3175111459bdaa98b49d0140, type: 3}
   m_Name: Tank_1
   m_EditorClassIdentifier: 
+  titulo: 
+  descricao: 
+  indentificadorPoder: {fileID: -462580089, guid: 847b28ad28e65784fb92f22e580a742c, type: 3}
   limiteTime: 10
   valEscudo: 100
   colorEscudo: {r: 1, g: 1, b: 1, a: 0}

@@ -30,6 +30,7 @@ public class Protagonista : MonoBehaviour
     [SerializeField] int dano;
     [SerializeField] GameObject escudo;
     [SerializeField] GameObject vfxCura;
+    public GameObject armatarget;
 
 
 
@@ -39,10 +40,11 @@ public class Protagonista : MonoBehaviour
         
         protagonista.AplicarMovimentacao(movimentacoes);
         protagonista.Esperar();
-    
+      GameController.instance.DefinirProgresso();
+
         // protagonista.DesabilitarDash();
         // protagonista.AbilitarMovimentacao();
-       
+
     }
     int itemSelecionado;
     bool ativarAtaque = true;
@@ -348,6 +350,7 @@ public class Protagonista : MonoBehaviour
         return poder2;
     }
 
+    public combate_So GetCombate() => combate;
     public Animator GetAnimaitor() => anim;
     public GameObject GetEscudo() => escudo;
     public GameObject VfxCura() => vfxCura;
