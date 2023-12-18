@@ -25089,6 +25089,7 @@ MonoBehaviour:
   dano: 2
   escudo: {fileID: 153521500}
   vfxCura: {fileID: 1048249674}
+  armatarget: {fileID: 0}
 --- !u!4 &681845406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 66af1869a8806e043bde95171d087d06, type: 3}
