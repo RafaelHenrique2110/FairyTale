@@ -6,6 +6,7 @@ public class Poder_SO : ScriptableObject
 {
     public string titulo;
     public string descricao;
+  [SerializeField]  Sprite indentificadorPoder;
     virtual public void ExecutarPoder()
     {
 
@@ -14,4 +15,6 @@ public class Poder_SO : ScriptableObject
     {
 
     }
+    public Sprite GetIndentificadorPoder()=> indentificadorPoder;
+    
 }

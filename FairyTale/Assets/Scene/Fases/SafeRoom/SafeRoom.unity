@@ -8241,6 +8241,9 @@ MonoBehaviour:
   barrasMelhoriasPlayer: 0
   nivelBotaoDistancia: 0
   nivelBotaoGuerreiro: 0
+  poder1: {fileID: 0}
+  poder2: {fileID: 0}
+  combate: {fileID: 0}
 --- !u!4 &320523364
 Transform:
   m_ObjectHideFlags: 0
@@ -32479,7 +32482,7 @@ GameObject:
   - component: {fileID: 1797381184}
   - component: {fileID: 1797381183}
   m_Layer: 5
-  m_Name: INDENTIFICADOR
+  m_Name: INDENTIFICADOR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

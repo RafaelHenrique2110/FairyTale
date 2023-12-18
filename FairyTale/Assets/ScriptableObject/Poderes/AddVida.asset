@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titulo: 
   descricao: 
+  indentificadorPoder: {fileID: 1264372816, guid: 847b28ad28e65784fb92f22e580a742c, type: 3}
   vida: 10
-  indentificadorPoder: {fileID: 0}
   limiteTime: 4

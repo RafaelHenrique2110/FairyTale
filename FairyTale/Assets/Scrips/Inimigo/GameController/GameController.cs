@@ -59,10 +59,19 @@ public class GameController : MonoBehaviour
     {
         assistente = new Assistente();
         instance = this;
+        if (indentificadorPoder == null)
+        {
+            indentificadorPoder = GameObject.Find("INDENTIFICADOR").GetComponent<Image>();
+        }
+        if(indentificadorPoder2 == null)
+        {
+            indentificadorPoder2 = GameObject.Find("INDENTIFICADOR2").GetComponent<Image>();
+        }
         AdiquirirMovimentacaoPlayer();
         AplicarQuest(Quest);
         AtualizarQuest();
         DefinirProgresso();
+       
 
 
     }
@@ -384,7 +393,21 @@ public class GameController : MonoBehaviour
         ObjInfoGame = GameObject.Find("InfoGame");
         InfoGame infoGame = ObjInfoGame.GetComponent<InfoGame>();
         //player.GetOrAddComponent<Protagonista>().Player.DefinirMaximoVida(infoGame.limiteVidaPlayer);
-        Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
+        if (infoGame.GetPoder1()!= null)
+        {
+            Protagonista.SetPoder(infoGame.GetPoder1());
+            SetIndentificadorPoder(infoGame.GetPoder1().GetIndentificadorPoder());
+        }
+        if (infoGame.GetPoder2() != null)
+        {
+            Protagonista.SetPoder2(infoGame.GetPoder2());
+            SetIndentificadorPoder2(infoGame.GetPoder2().GetIndentificadorPoder());
+        }
+        if (infoGame.GetCombate() != null)
+        {
+            Protagonista.SetCombate(infoGame.GetCombate());
+        }  
+       Player.AtualizarPlayer(infoGame.GetPlayerSalvo());
         AtualizarMoedas(infoGame.GetMoedasSalvas());
         hud.GetComponent<Barras>().Atualizar(infoGame.GetLojaSalva());
         if (SceneManager.GetActiveScene().name == "Fase1")
@@ -403,6 +426,9 @@ public class GameController : MonoBehaviour
         ObjInfoGame.GetComponent<InfoGame>().SavePlayer(Player);
         ObjInfoGame.GetComponent<InfoGame>().SaveMoedas(moedas);
        ObjInfoGame.GetComponent<InfoGame>().SaveLoja(hud.GetComponent<Barras>().Nivelvida);
+        ObjInfoGame.GetComponent<InfoGame>().SavePoder1(Protagonista.GetPoder());
+        ObjInfoGame.GetComponent<InfoGame>().SavePoder2(Protagonista.GetPoder2());
+        ObjInfoGame.GetComponent<InfoGame>().SaveCombate(Protagonista.GetCombate());
         if (SceneManager.GetActiveScene().name == "Fase1")
         {
             ObjInfoGame.GetComponent<InfoGame>().SaveNivelAprimoramentos(canvas.GetComponent<ListaCanvas>().GetBoestoes()[0].GetComponent<Botoes>().GetIndexBotao(), canvas.GetComponent<ListaCanvas>().GetBoestoes()[1].GetComponent<Botoes>().GetIndexBotao());
