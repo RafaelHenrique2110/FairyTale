@@ -132,6 +132,7 @@ public class Inimigo : MonoBehaviour
         if (!GameController.instance.GetAudioDanoInimigo().isPlaying)
         {
             GameController.instance.GetAudioDanoInimigo().Play();
+            Debug.Log("vida lobo "+ vida);
         }
        
 
@@ -139,6 +140,11 @@ public class Inimigo : MonoBehaviour
     public void GanharVida(float quntidade)
     {
         vida = GameController.instance.Somar(vida, quntidade);
+
+    }
+    public void SetVida(float quntidade)
+    {
+        vida = quntidade;
 
     }
     public void Matar(GameObject obj)
@@ -165,7 +171,7 @@ public class Inimigo : MonoBehaviour
         Lobo lobo = OB.GetComponent<Lobo>();
         lobo.GetAnimator.SetBool("Dano", false);
         OB.transform.Rotate(0, 0, 0);
-        GanharVida(vida);
+        SetVida(vida);
         AtualizarVida(lobo.GetSpriteVida);
         Seguir();
 

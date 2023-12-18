@@ -278,10 +278,19 @@ public class Protagonista : MonoBehaviour
                 GameController.instance.GameOver();
             }
         }
+        if (other.CompareTag("mao_lobo"))
+        {
+            GameController.instance.Save();
+            protagonista.TomarDano(0.6f);
+            if (protagonista.Vida <= 0)
+            {
+                GameController.instance.GameOver();
+            }
+        }
 
         if (other.CompareTag("cesta"))
         {
-            protagonista.TomarDano(10f);
+            protagonista.TomarDano(6.5f);
             if (protagonista.Vida <= 0)
             {
                 GameController.instance.GameOver();

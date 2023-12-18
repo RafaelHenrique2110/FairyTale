@@ -56,6 +56,8 @@ public class Lobo : MonoBehaviour
                 chapeuzinho.Chapeuzinhov.Seguir();
                 chapeuzinho.Chapeuzinhov.Socar();
                 lobo.EntrarEmComa(gameObject);
+                StartCoroutine(lobo.VoltarDoComa(gameObject, 20));
+                StartCoroutine(NotificarChapeuzinho(11));
 
             }
             if (lobo.Vida > 0)
@@ -83,13 +85,12 @@ public class Lobo : MonoBehaviour
                 StartCoroutine(lobo.VoltarDoComa(gameObject, 20));
                 StartCoroutine(NotificarChapeuzinho(11));
 
-
-
             }
             if (lobo.Vida > 0)
             {
                 StartCoroutine(lobo.VoltarConciencia(anin));
             }
+           
 
         }
 
