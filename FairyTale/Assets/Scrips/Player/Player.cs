@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         {
             estamina = estamina - perda * Time.deltaTime;
             GameController.instance.AtualizarEstaminaPlayer(estamina / limiteEstamina);
+           
         }
     }
     public void TomarDano(float dano)
@@ -96,6 +97,11 @@ public class Player : MonoBehaviour
         {
             vida = GameController.instance.subitrair(vida, dano / escudo);
             GameController.instance.AtualizarVidaPlayer(vida / limiteVida);
+            if (!GameController.instance.GetAudioDano().isPlaying)
+            {
+                GameController.instance.GetAudioDano().Play();
+            }
+           
         }
 
     }
@@ -136,6 +142,11 @@ public class Player : MonoBehaviour
     {
         escudo = GameController.instance.Somar(escudo, atribuicao);
     }
+    public void SetEscudo(float atribuicao)
+    {
+        escudo = atribuicao;
+    }
+
     void PerderEstaminaEstantanio(float perda)
     {
         if (estamina > 0)

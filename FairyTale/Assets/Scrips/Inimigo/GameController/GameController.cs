@@ -49,6 +49,15 @@ public class GameController : MonoBehaviour
 
     [SerializeField] GameObject BtnDialogo;
     [SerializeField] AudioSource audio_Correr;
+    [SerializeField] AudioSource audio_Espatada;
+    [SerializeField] AudioSource audio_Dano;
+    [SerializeField] AudioSource audio_DanoInimigo;
+    [SerializeField] AudioSource audio_Melhoria;
+    [SerializeField] AudioSource audio_MelhoriaVida;
+    [SerializeField] AudioSource audio_Coletavel;
+    [SerializeField] AudioSource audio_RecarregarVida;
+    [SerializeField] AudioSource audio_Missel;
+    [SerializeField] AudioSource audio_Tiro;
     [SerializeField] Chapeuzinho chapeuzinho;
     [SerializeField] GameObject portalFinal;
    [SerializeField] bool removerEfeitoplayer;
@@ -447,6 +456,17 @@ public class GameController : MonoBehaviour
         BtnDialogo.SetActive(ativo);
     }
     public AudioSource GetAudioCorer() => audio_Correr;
+    public AudioSource GetAudioEspadada() => audio_Espatada;
+    public AudioSource GetAudioDano () =>  audio_Dano;
+    public AudioSource GetAudioDanoInimigo() => audio_DanoInimigo;
+    public AudioSource GetAudioMelhoria() => audio_Melhoria;
+    public AudioSource GetAudioMelhoriaVida() => audio_MelhoriaVida;
+    public AudioSource GetAudioColetavel() => audio_Coletavel;
+    public AudioSource GetAudioMissel() => audio_Missel;
+    public AudioSource GetAudioTecarregarVida() => audio_RecarregarVida;
+    public AudioSource GetAudioTiro() => audio_Tiro;
     public Chapeuzinho GetChapeuzinho() => chapeuzinho;
+
+
 }
 

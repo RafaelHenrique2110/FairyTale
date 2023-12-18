@@ -8,6 +8,7 @@ public class Bomba : Poder_SO
     public override void ExecutarPoder()
     {
         target = GameController.instance.armaPlaye.transform;
+        GameController.instance.GetAudioMissel().Play();
         Instantiate(munição, target.transform.position, target.transform.rotation);
     }
 }

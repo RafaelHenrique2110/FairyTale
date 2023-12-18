@@ -44,7 +44,7 @@ public class Lobo : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("municão"))
+        if (other.CompareTag("municaoPlayer"))
         {
             dashed.Dash(other.transform.forward, 5);
             anin.SetBool("Dano", true);

@@ -75,6 +75,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void TrocarPoderPlayer(Poder_SO novoPoder)
     {
+        GameController.instance.GetAudioMelhoria().Play();
         GameController.instance.SetIndentificadorPoder(indentificadorPoder);
         GameController.instance.Protagonista.SetPoder(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
@@ -93,6 +94,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void TrocarPoderPlayer2(Poder_SO novoPoder)
     {
+        GameController.instance.GetAudioMelhoria().Play();
         GameController.instance.SetIndentificadorPoder2(indentificadorPoder2);
         GameController.instance.Protagonista.SetPoder2(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
@@ -115,9 +117,11 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         GetComponent<Image>().sprite = novoSprite;
         protagonista.SetDano(dano);
         GameController.instance.Save();
+        GameController.instance.GetAudioMelhoria().Play();
     }
     public void TrocarCombatePlayer(combate_So novoCombate)
     {
+        GameController.instance.GetAudioMelhoria().Play();
         GameController.instance.Protagonista.SetCombate(novoCombate);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;

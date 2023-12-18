@@ -22,7 +22,7 @@ public class Tank_1 : Poder_SO
     {
         // GameController.instance.Player.PausarPoder();
         GameController.instance.material_player.color = colorSemEscudo;
-        GameController.instance.Player.AumentaEscudo(valEscudo);
+        GameController.instance.Player.SetEscudo(1);
         GameController.instance.Protagonista.GetEscudo().SetActive(false);
     }
 

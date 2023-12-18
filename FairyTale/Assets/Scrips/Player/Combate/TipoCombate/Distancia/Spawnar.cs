@@ -7,6 +7,7 @@ public class Spawnar : combate_So
     
     public override void ExecutarCombate()
     {
+        GameController.instance.GetAudioTiro().Play();
         target = GameController.instance.armaPlaye.transform;
         Instantiate(munição,target.transform.position,target.transform.rotation);
     }

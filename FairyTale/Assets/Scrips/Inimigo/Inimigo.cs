@@ -129,6 +129,11 @@ public class Inimigo : MonoBehaviour
     public void PerderVida(float dano, GameObject obj)
     {
         vida = GameController.instance.RemoverVida(dano, vida, obj);
+        if (!GameController.instance.GetAudioDanoInimigo().isPlaying)
+        {
+            GameController.instance.GetAudioDanoInimigo().Play();
+        }
+       
 
     }
     public void GanharVida(float quntidade)
