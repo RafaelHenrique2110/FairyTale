@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b912e84d4f10b5c4c9b90c714be20f29, type: 3}
   m_Name: Missel
   m_EditorClassIdentifier: 
+  titulo: 
+  descricao: 
+  indentificadorPoder: {fileID: -1092710793, guid: 636326336930efe4faee27deedd977e3, type: 3}
   "muni\xE7\xE3o": {fileID: 1878295011366236332, guid: b041ab4e5e4d9af4dbf92bc17b2b477d, type: 3}

@@ -79,6 +79,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         GameController.instance.Protagonista.SetPoder(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;
+        GameController.instance.Save();
         if (nexBotao != null)
         {
             nexBotao.interactable = true;
@@ -96,6 +97,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         GameController.instance.Protagonista.SetPoder2(novoPoder);
         GetComponent<Image>().sprite = novoSprite;
         //GetComponent<Button>().interactable = false;
+        GameController.instance.Save();
         if (nexBotao != null)
         {
             nexBotao.interactable = true;
@@ -112,6 +114,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         Protagonista protagonista = GameController.instance.PlayerTransform.GetComponent<Protagonista>();
         GetComponent<Image>().sprite = novoSprite;
         protagonista.SetDano(dano);
+        GameController.instance.Save();
     }
     public void TrocarCombatePlayer(combate_So novoCombate)
     {
@@ -122,6 +125,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             nexBotao.interactable = true;
         }
+        GameController.instance.Save();
         //GameController.instance.TrocaCombateDistanciaPlayer(GameController.instance.combates_player.combates[indexHabilidade]);
         //AtualizarBotaoHabilidades();
         //FecharPainel();
@@ -139,6 +143,7 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         GameController.instance.TrocarMovimento(GameController.instance.movimentacoes_player.movimentacoes[indexHabilidade]);
         AtualizarBotaoHabilidades();
         FecharPainel();
+        GameController.instance.Save();
     }
     public void AtualizarBotaoHabilidades()
     {
@@ -154,9 +159,9 @@ public class Botoes : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void DefinirBotaoHabilidades()
     {
-        indexHabilidade = so.indexPoder;
-        nome.sprite = so.nomePoder;
-        descricao.text = so.descricao;
+        //indexHabilidade = so.indexPoder;
+        //.sprite = so.nomePoder;
+        //.text = so.descricao;
 
 
     }
